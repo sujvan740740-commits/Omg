@@ -1,1 +1,624 @@
+<!DOCTYPE html>
 
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "outline-variant": "#4d4635", "on-secondary-container": "#5b3800", "on-tertiary-fixed": "#261a00", "primary-fixed": "#ffe088", "primary": "#f2ca50", "on-secondary-fixed-variant": "#653e00", "background": "#131313", "secondary-fixed": "#ffddb8", "on-error-container": "#ffdad6", "on-surface-variant": "#d0c5af", "on-secondary": "#472a00", "tertiary-fixed-dim": "#e8c16f", "on-secondary-fixed": "#2a1700", "primary-container": "#d4af37", "surface-dim": "#131313", "surface-variant": "#353534", "inverse-on-surface": "#313030", "secondary-fixed-dim": "#ffb95f", "on-background": "#e5e2e1", "on-tertiary": "#3f2e00", "surface-container-high": "#2a2a2a", "error-container": "#93000a", "inverse-primary": "#735c00", "tertiary": "#f1c976", "surface-container": "#201f1f", "tertiary-container": "#d3ae5d", "on-primary-fixed": "#241a00", "surface-tint": "#e9c349", "on-error": "#690005", "on-primary": "#3c2f00", "inverse-surface": "#e5e2e1", "on-primary-fixed-variant": "#574500", "surface-container-lowest": "#0e0e0e", "secondary": "#ffb95f", "on-primary-container": "#554300", "tertiary-fixed": "#ffdf9e", "surface-bright": "#3a3939", "on-surface": "#e5e2e1", "on-tertiary-fixed-variant": "#5b4300", "secondary-container": "#ee9800", "on-tertiary-container": "#594100", "surface": "#131313", "error": "#ffb4ab", "outline": "#99907c", "surface-container-low": "#1c1b1b", "primary-fixed-dim": "#e9c349", "surface-container-highest": "#353534" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "space-xl": "2.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter-mobile": "1rem", "gutter": "1.5rem", "margin": "3.5rem", "margin-mobile": "1.25rem" }, fontFamily: { "title-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "display-hero": ["Playfair Display"], "headline-lg": ["Playfair Display"], "headline-md": ["Playfair Display"], "label-caps": ["Space Grotesk"], "headline-lg-mobile": ["Playfair Display"], "display-hero-mobile": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Space Grotesk"] }, fontSize: { "title-lg": ["20px", { lineHeight: "28px", fontWeight: "600" }], "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }], "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "500" }], "display-hero": ["64px", { lineHeight: "72px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-lg": ["44px", { lineHeight: "52px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-md": ["32px", { lineHeight: "40px", fontWeight: "500" }], "label-caps": ["11px", { lineHeight: "16px", letterSpacing: "0.18em", fontWeight: "600" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", fontWeight: "600" }], "display-hero-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "20px", fontWeight: "400" }], "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }], "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.04em", fontWeight: "500" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.65)]"><div class="h-20 w-full px-margin-mobile lg:px-margin flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="Brand logo. - Primary color: #d4af37
+- Font: playfairDisplay
+- Mode: dark
+- Roundness: rounded-sm
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VQD7-qua-ClmEkxtArcAaBT05HQCQif-SxUY8jTarkfXDdmhDUSb928ZdzO-LaJG4SfMpd7y_rAUMst1Pfo9e2y_xaZEwvh2EQ0fQ7mygRlc8qt8Wm9xOJa6_cBloEif7OjWM7gYjeAqlYHe5ad_j2IXsOalhnnaZTP9ALqxN-ud9tXXnGI9GlzytHIDJ3cp3nHxR4pkfjQZ7Q3Twz5f6ZjvWyST_KP-JmtXAf16kYj8iRMjQTe0NN02D5"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-title-lg text-title-lg tracking-tight text-on-surface font-semibold">Suzan's Corner</span><span class="font-label-caps text-label-caps text-primary px-space-xs py-0.5 rounded bg-surface-container-high">भिमाद</span></div><span class="font-label-caps text-label-caps tracking-widest text-outline uppercase">Newroad Khaja Ghar • Tanahun</span></div></div><nav class="hidden xl:flex items-center gap-space-md bg-surface-container-lowest/70 px-space-md py-space-xs rounded-full shadow-[0_1px_12px_rgba(0,0,0,0.5)]" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a aria-current="page" class="px-space-md py-space-xs transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="curated-menu" href="#">Curated Menu</a><a class="px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-label-md text-label-md" data-path="our-heritage" href="#">Our Heritage</a><a class="px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-label-md text-label-md" data-path="beverages-and-bar" href="#">Aila &amp; Spirits</a><a class="px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-label-md text-label-md" data-path="table-reservation" href="#">Private Dining</a><a class="px-space-md py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-label-md text-label-md" data-path="location-and-contact" href="#">Bhimad Lounge</a></nav><div class="flex items-center gap-space-sm sm:gap-space-md"><div class="flex items-center bg-surface-container-low p-1 rounded-full shadow-[inset_0_1px_3px_rgba(0,0,0,0.6)]"><button class="px-space-sm py-0.5 rounded-full font-label-caps text-label-caps bg-primary text-on-primary transition-colors" type="button">EN</button><button class="px-space-sm py-0.5 rounded-full font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" type="button">नेपाली</button></div><a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-sm rounded-lg bg-primary hover:bg-secondary text-on-primary font-label-md text-label-md font-semibold tracking-wider transition-all shadow-[0_0_16px_rgba(212,175,55,0.25)]" data-path="table-reservation" href="#">Reserve Table</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Location & Status Scrim Bar -->
+<section class="relative w-full bg-surface-container-lowest py-space-sm px-margin-mobile lg:px-margin border-b border-primary/20">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="flex h-2.5 w-2.5 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-primary font-semibold">भिमाद, तनहुँ (Bhimad, Tanahun)</span>
+<span class="text-outline text-xs hidden sm:inline">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant hidden sm:inline">Daily Authentic Newari Khaja, Momos &amp; Fresh Brews</span>
+</div>
+<div class="flex items-center gap-space-md font-label-caps text-label-caps">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">schedule</span>
+          ०७:०० बिहान - ०९:३० राती
+        </span>
+<a class="text-primary hover:text-secondary flex items-center gap-1 font-semibold transition-colors" href="tel:+9779800000000">
+<span class="material-symbols-outlined text-[15px]">call</span>
+          +977 9800000000
+        </a>
+</div>
+</div>
+</section>
+<!-- Hero Sanctuary Showcase with Image_11 Storefront integration -->
+<section class="relative w-full overflow-hidden bg-surface-dim pt-space-xl pb-space-xl lg:py-24 px-margin-mobile lg:px-margin">
+<!-- Ambient Gold Radial Glows -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -right-32 w-[30rem] h-[30rem] rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
+<!-- Left Narrative Column -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container-high w-fit shadow-inner">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-primary">सुजन'स कर्नर • न्यूरोड खाजा घर, भिमाद</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">
+          Modern Himalayan Flavors &amp; Haute Newari Heritage in <span class="text-primary italic">Bhimad, Tanahun.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          भिमादको मुटुमा अवस्थित सुजन'स कर्नर न्यूरोड खाजा घर—जहाँ परम्परागत नेपाली स्वाद, हातले भरिएका ताजा मोमो, क्रिस्पी छोइला, र समय् बजी आधुनिक आत्मीयताका साथ पस्किइन्छ।
+        </p>
+<!-- Signature Features Ribbon -->
+<div class="grid grid-cols-3 gap-space-sm pt-space-sm">
+<div class="bg-surface-container-low p-space-sm rounded-lg shadow-sm flex flex-col">
+<span class="font-label-caps text-label-caps text-primary uppercase">ताजा &amp; दैनिक</span>
+<span class="font-title-lg text-title-lg text-on-surface font-medium">100% Handcrafted</span>
+<span class="font-body-sm text-body-sm text-outline">दैनिक हातले तयार पारिने मःमः</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg shadow-sm flex flex-col">
+<span class="font-label-caps text-label-caps text-primary uppercase">लोकेसन</span>
+<span class="font-title-lg text-title-lg text-on-surface font-medium">भिमाद बजार-०६</span>
+<span class="font-body-sm text-body-sm text-outline">तनहुँ, गण्डकी प्रदेश</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg shadow-sm flex flex-col">
+<span class="font-label-caps text-label-caps text-primary uppercase">व्यवस्था</span>
+<span class="font-title-lg text-title-lg text-on-surface font-medium">Parking Ready</span>
+<span class="font-body-sm text-body-sm text-outline">बाइक र जिप पार्किङ सहित</span>
+</div>
+</div>
+<!-- Action Matrix -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-sm">
+<a class="px-space-lg py-space-sm rounded-lg bg-primary hover:bg-secondary text-on-primary font-label-md text-label-md font-semibold tracking-wider transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)] flex items-center gap-2" href="#curated-bhimad-menu">
+<span class="material-symbols-outlined text-[20px]">restaurant_menu</span>
+            हाम्रो परिकार हेर्नुहोस् (Explore Menu)
+          </a>
+<a class="px-space-lg py-space-sm rounded-lg bg-surface-container-high hover:bg-surface-variant text-primary font-label-md text-label-md font-medium tracking-wide transition-all shadow-sm flex items-center gap-2" href="https://maps.google.com/?q=Bhimad+Tanahun+Nepal" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">directions</span>
+            Google Maps मा डिरेक्सन
+          </a>
+<a class="px-space-md py-space-sm rounded-lg bg-surface-container-low hover:text-primary text-on-surface-variant font-label-md text-label-md flex items-center gap-2 transition-all" href="https://wa.me/9779800000000" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+            WhatsApp Order
+          </a>
+</div>
+</div>
+<!-- Right Column: Iconic Bhimad Storefront Card (Using IMAGE_11) -->
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-2xl overflow-hidden bg-surface-container-low shadow-[0_16px_40px_rgba(0,0,0,0.8)] group">
+<div class="aspect-[3/4] sm:aspect-[4/5] w-full overflow-hidden relative">
+<img alt="Suzan's Corner Newroad Khaja Ghar storefront building in Bhimad, Tanahun with iconic mountain jeep parked in front" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_f5t3I7pT-o2EKjZAE0I9rQ1OZUPjbwkV9TaGp7Pumks4VJUXau_-GkOblgVLd_cGwcBiEaPdSZmHQgti9ZmMVASN2XCDsOUZ1dAhYMrut08sZhrp7hZdqMIa6U5vfGZf3-E69ibVADUTcNT90cuAcXvVY6YEiS8eTBiLZzh2zHwq87Ndg01lwEzIebcZUddaxSVQaDEtZxJNUZlXGiP1aDOqfkn8aa_qq9ZcYx6MeYvWUMQjo3_uH43n8TtJ9yH0D3k"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+</div>
+<!-- Overlay Badge & Location Meta -->
+<div class="absolute bottom-0 left-0 right-0 p-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-primary bg-surface-container-lowest/90 backdrop-blur-md px-space-xs py-1 rounded">
+                भवन तथा क्याफे • Bhimad Main Road
+              </span>
+<span class="font-label-caps text-label-caps text-secondary-fixed bg-surface-container-lowest/80 px-2 py-1 rounded">
+                4X4 Gateway to Tanahun
+              </span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">
+              Suzan's Corner (सुजन'स कर्नर)
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              The signature turquoise &amp; teakwood lounge on Bhimad Newroad, opposite Shivalaya corridor.
+            </p>
+</div>
+</div>
+<!-- Floating Testimonial Pill -->
+<div class="absolute -bottom-6 -left-4 sm:-left-8 bg-surface-container-highest/95 backdrop-blur-md px-space-md py-space-sm rounded-xl shadow-xl flex items-center gap-space-sm hidden sm:flex">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">local_fire_department</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-primary uppercase">Tanahun's Local Choice</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">ताजा बाफिलो मःमः र सुकुटी</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Culinary Heritage & Authentic Momo Craft Section (Image_13, Image_14, Image_12) -->
+<section class="w-full bg-surface-container-lowest py-space-xl px-margin-mobile lg:px-margin relative">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- Section Heading -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex items-center gap-space-xs">
+<span class="w-8 h-[2px] bg-primary"></span>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">आर्टिसनल परम्परा र सीप</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-medium">
+            Hand-Pinched Perfection &amp; Pure Joy in Every Bite
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            सुजन'स कर्नरमा हरेक मःमः बिहानै ताजा मसला, स्थानीय सामग्री, र शुद्ध घरायसी तरिकाले हातैले जोडेर बनाइन्छ।
+          </p>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[28px]">eco</span>
+<div>
+<div class="font-label-caps text-label-caps text-primary">१००% स्वच्छ सामग्री</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">स्थानीय तनहुँको शुद्ध मसला</div>
+</div>
+</div>
+</div>
+<!-- Bento Visual Mosaic of Hand-crafted Momos and Smiling Child Enjoying Food -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-stretch">
+<!-- Card 1: Artisanal Crescent Momo Tray (IMAGE_13) -->
+<div class="md:col-span-4 rounded-xl bg-surface-container overflow-hidden group shadow-lg flex flex-col">
+<div class="relative h-64 sm:h-72 overflow-hidden">
+<img alt="Freshly hand-folded crescent momos arranged precisely on a metallic steel culinary tray" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1QXHEm9dztvUhtkNIDZIaeRlXBP8w8m3QXTFy7DqZSJGrmM4V7-AYXJQW9Dc3ND5O9Rt3DNLng0soytgWKc6ktf0B5EHDPy07SMfKzK_NTjsbTx2Mn5rOkj682-1PtqRdAy3kCNockqoC66MVZO0yPVwQu3SxrofqbPhvdjBAa0zUwrwhAF9MT7nAzd_NSvsH-EPiz4ZRF-e6nb2qHFIq5mKvHn7qo9UQHomDnJEWv04s568pcYJQSVZlOWqxnEo75pk"/>
+<div class="absolute top-space-xs right-space-xs bg-surface-container-lowest/80 backdrop-blur-md px-2 py-1 rounded font-label-caps text-label-caps text-primary">
+              Crescent Pleat
+            </div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs flex-grow justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">पारम्परिक खुम्च्याइ</span>
+<h4 class="font-title-lg text-title-lg text-on-surface">हस्तनिर्मित क्रिसेन्ट डम्प्लिङ</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                सटीक शिल्पकला र रसदार भराइ—स्टिम गर्दा बाफिलो रस भित्रै सुरक्षित रहने विशेष ढाँचा।
+              </p>
+</div>
+<span class="font-label-caps text-label-caps text-primary mt-space-sm">रु १८० / प्लेट बाट सुरु</span>
+</div>
+</div>
+<!-- Card 2: Joyful Child Relishing Hot Momo (IMAGE_12) Center Feature -->
+<div class="md:col-span-4 rounded-xl bg-surface-container-high overflow-hidden group shadow-xl flex flex-col relative">
+<div class="relative h-72 sm:h-80 overflow-hidden">
+<img alt="Young child joyfully relishing a steaming hot juicy momo with spicy chutney at Suzan's Corner" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3jNO1NJM4Cmq6yY8EJBQsOrdH6e4YyJoBiGixm5A6K3Q9D80c9xsaWDTpA1Aihcm3XYhYwUEulTZeVl-AM4ND8i4Tqiqtsrd26pGG-xT6VvSw9YWztFjwBJ1nI6y1G4KmV_5KXJpryPX3bzG2nLdEFvhRaF3lAuUJ5aMwUJzhW6nJMTo0CwE6vrrWa_Uf7NqvF34OO_KCGDHL_NjVLH2CTJzVd1Pod8D4u139bBUcs4sUknZC_So3FazTHSRSuqVRs2w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-high via-transparent to-transparent"></div>
+<div class="absolute top-space-sm left-space-sm bg-primary text-on-primary font-label-caps text-label-caps px-space-sm py-1 rounded font-bold uppercase shadow">
+              घरकै माया र ताजापन
+            </div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs flex-grow justify-between">
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">“Suzan's Momo” — बालबालिकादेखि ज्येष्ठ नागरिकसम्मको प्रिय</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                आमाको भान्साको जस्तै न्यानो र पोषिलो। नक्कली अजिनोमोटोबिना प्राकृतिक हिमाली स्वादमा तयार पारिएको।
+              </p>
+</div>
+<div class="flex items-center gap-space-xs text-primary font-label-caps text-label-caps pt-space-xs">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+              भिमादवासीको पहिलो रोजाइ
+            </div>
+</div>
+</div>
+<!-- Card 3: Round Swirl Momo Craft (IMAGE_14) -->
+<div class="md:col-span-4 rounded-xl bg-surface-container overflow-hidden group shadow-lg flex flex-col">
+<div class="relative h-64 sm:h-72 overflow-hidden">
+<img alt="Round swirl-patterned momos meticulously prepared on a floral presentation tray" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATqqpufUUVbE6IAe_M6bvteUp5xae7oi5ddA1lMpoGnGxXa-Dq1BLw3xgGgH9BW2Fu21L_IXujclhPjTFPRujLDX2mUILuSx4jz-hHIuOnpGW9KHPkS48YgblAWL84NB4fzeYUchh9N5hDi1iKuUFXp53z_CWZ4-TjCUbiN7Wj83HyHw9-8U1LgRPXYRLQrQZXh3SAhDFtBbybVwgkBHtauhZwMMaYgTdlG3jcKyiKo8DqnMozOe3kWVBB5ch3ILGpU0g"/>
+<div class="absolute top-space-xs right-space-xs bg-surface-container-lowest/80 backdrop-blur-md px-2 py-1 rounded font-label-caps text-label-caps text-primary">
+              Spiral Swirl
+            </div>
+</div>
+<div class="p-space-md flex flex-col gap-space-xs flex-grow justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">कलात्मक चक्र</span>
+<h4 class="font-title-lg text-title-lg text-on-surface">झोल तथा सादा घुमाउरो मःमः</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                सिल्पी चक्रिय मुजा—सुजन'स विशेष टमाटर र तिलको झोलसँग पस्कन विशेष रूपमा उपयुक्त।
+              </p>
+</div>
+<span class="font-label-caps text-label-caps text-primary mt-space-sm">झोल मःमः रु २१० / प्लेट</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Grand Feast Showcase (Image_22) and Curated Bhimad Khaja Menu -->
+<section class="w-full bg-surface py-space-xl px-margin-mobile lg:px-margin relative" id="curated-bhimad-menu">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- Section Banner Feature with IMAGE_22 -->
+<div class="relative rounded-2xl overflow-hidden bg-surface-container-lowest shadow-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+<div class="lg:col-span-7 h-72 sm:h-96 lg:h-[460px] relative overflow-hidden">
+<img alt="Grand Newari Khaja feast with steaming momos, spicy choila, crispy baji beaten rice, aloo sadheko, and traditional condiments on dark slate board" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WQwOgPvaZu5qReZCpFXB8msf0b-NZJPn36fgrN04wT9XBOqRxkDTfr10KAdK1xkM3IvTfXRkwRceHfLO5oHXuydmXrWVwTZon1DCWTVRJH0bDLpsjKuFDOoKJnREBrxIGj4lQ9xawdlhfClyUpTHWoJxBk15Iiv_Qz4-fzyWXKwFx9rhlpCUH6h1lnqwF50wVa9BZ_Vlg962KH1fQCCDpgNEHqGqAMhtL4A3sXKSHoEbMXAIwec66n7O4g"/>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-surface-container-lowest lg:block hidden"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent lg:hidden block"></div>
+</div>
+<div class="lg:col-span-5 p-space-md lg:p-space-xl flex flex-col gap-space-sm">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-primary font-semibold">भिमाद सिग्नेचर रोयल भोज</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">The Grand Newroad Khaja Platter</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              दैनिक तयार हुने क्रिस्पी च्यूरा, पोलेको सुगन्धित छोइला, भटमास साँधेको, आलुको अचार, र तातो ताजा मःमःको बेजोड सम्मिश्रण।
+            </p>
+<div class="flex items-baseline gap-space-sm pt-space-xs">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">रु ४५०</span>
+<span class="font-body-sm text-body-sm text-outline">पूर्ण सेट (२ जनाको लागि पर्याप्त)</span>
+</div>
+<div class="pt-space-sm flex gap-space-sm">
+<a class="px-space-md py-space-sm rounded-lg bg-primary hover:bg-secondary text-on-primary font-label-md text-label-md font-semibold tracking-wider transition-all flex items-center gap-1 shadow" href="tel:+9779800000000">
+<span class="material-symbols-outlined text-[18px]">room_service</span>
+                अहिले अर्डर गर्नुहोस्
+              </a>
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-md text-label-md transition-all" onclick="document.getElementById('res-modal').classList.remove('hidden')" type="button">
+                टेबल सुरक्षित गर्नुहोस्
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Menu Category Tabs & Price Matrix -->
+<div class="flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase">अथिति सत्कार • परिकार सूची</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">हाम्रा चर्चित परिकारहरू (Curated Menu)</h3>
+</div>
+<div class="flex flex-wrap gap-space-xs bg-surface-container-low p-1.5 rounded-xl">
+<button class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold shadow">सबै (All)</button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md">ताजा मःमः</button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md">नेवारी खाजा सेट</button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md">सेकुवा &amp; सुकुटी</button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md">चिया / कफी / ड्रिंक्स</button>
+</div>
+</div>
+<!-- Menu Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Item 1 -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-start justify-between">
+<h4 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">ताजा बाफिलो मःमः (Steamed Momo)</h4>
+<span class="font-label-md text-label-md text-primary font-bold">रु १८०</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary bg-primary/10 px-2 py-0.5 rounded w-fit">Best Seller भिमाद</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                पातलो खोल र जुसी भराइ, स्थानीय टिम्मुर र तिलको स्पेशल अचारसँग पस्किइने।
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-outline font-label-caps text-label-caps border-t border-surface-variant/40">
+<span>BUFF / CHICKEN / VEG</span>
+<span class="text-on-surface">१० पिस</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-start justify-between">
+<h4 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">स्पेशल झोल मःमः (Signature Jhol Momo)</h4>
+<span class="font-label-md text-label-md text-primary font-bold">रु २१०</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary bg-secondary/10 px-2 py-0.5 rounded w-fit">Tanahun Winter Warmth</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                गुलियो-अमिलो-पिरो तिल, भटमास, र लसुनको परम्परागत न्यानो तातो सुपमा डुबाइएको।
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-outline font-label-caps text-label-caps border-t border-surface-variant/40">
+<span>DEEP FLAVOR SOUP</span>
+<span class="text-on-surface">१० पिस</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-start justify-between">
+<h4 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">पोलेको छोइला सेट (Smoked Choila Set)</h4>
+<span class="font-label-md text-label-md text-primary font-bold">रु २६०</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary bg-primary/10 px-2 py-0.5 rounded w-fit">न्यूरोड परम्परा</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                तोरीको तेल र मेथी झानेको परम्परागत छोइला, क्रिस्पी भिमादे च्यूरा र अचारसहित।
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-outline font-label-caps text-label-caps border-t border-surface-variant/40">
+<span>AUTHENTIC NEWARI</span>
+<span class="text-on-surface">खाजा सेट</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-start justify-between">
+<h4 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">क्रिस्पी सुकुटी साँधेको (Spicy Sukuti)</h4>
+<span class="font-label-md text-label-md text-primary font-bold">रु २९०</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary bg-secondary/10 px-2 py-0.5 rounded w-fit">Evening Companion</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                काठको आगोमा सुकाइएको सुकुटी, हरियो खुर्सानी, प्याज, कागती र धनियाँसँग मोथिएको।
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-outline font-label-caps text-label-caps border-t border-surface-variant/40">
+<span>FIRE SMOKED</span>
+<span class="text-on-surface">स्याक्स</span>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-start justify-between">
+<h4 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">कोइलामा सेकेको सेकुवा (Charcoal Sekuwa)</h4>
+<span class="font-label-md text-label-md text-primary font-bold">रु २७०</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary bg-primary/10 px-2 py-0.5 rounded w-fit">ताजा कोइला पोलाइ</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                प्राकृतिक काठको कोइलामा तयार पारिएको सुगन्धित सेकुवा, लसुनको सस र सलादसँग।
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-outline font-label-caps text-label-caps border-t border-surface-variant/40">
+<span>CHARCOAL GRILLED</span>
+<span class="text-on-surface">प्लेट</span>
+</div>
+</div>
+<!-- Item 6 -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-start justify-between">
+<h4 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">मसला चिया • अर्गानिक कफी (Artisanal Brew)</h4>
+<span class="font-label-md text-label-md text-primary font-bold">रु ४० - १२०</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded w-fit">Morning &amp; Highway Brew</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                तनहुँको गाउँले सुगन्धित मसला चिया तथा नेपालको ताजा अर्गानिक बिन्सबाट बनेको कफी।
+              </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-outline font-label-caps text-label-caps border-t border-surface-variant/40">
+<span>HOT BREWS</span>
+<span class="text-on-surface">कप</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Community & Warm Hospitality Memories (Using Image_9 and Image_10) -->
+<section class="w-full bg-surface-container-low py-space-xl px-margin-mobile lg:px-margin">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Narrative -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest font-semibold">हाम्रो आत्मीयता र परिवार</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">
+          More Than a Khaja Ghar — A Bhimad Gathering Place
+        </h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          चाहे लामो यात्राबाट फर्किएका यात्रु हुन्, पोखरा-खैरेनीटार-भिमाद सडकका साथीभाइ, वा स्थानीय परिवार—सुजन'स कर्नर सबैका लागि न्यानो भेटघाटको केन्द्र हो।
+        </p>
+<div class="space-y-space-sm pt-space-xs">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">celebration</span>
+<div>
+<h5 class="font-title-lg text-title-lg text-on-surface">जन्मदिन तथा पारिवारिक जमघट</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">सानो पार्टी, भोज र विशेष अवसरहरूका लागि छुट्टै बस्ने ठाउँ।</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">two_wheeler</span>
+<div>
+<h5 class="font-title-lg text-title-lg text-on-surface">सवारी चालक तथा यात्रुका लागि सहज पहुँच</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">खुल्ला बाटो, सुरक्षित पार्किङ, र छिटो मिठो सेवा।</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Visual Grid (IMAGE_9 and IMAGE_10) -->
+<div class="lg:col-span-7 grid grid-cols-2 gap-space-md">
+<div class="rounded-2xl overflow-hidden bg-surface-container shadow-xl group">
+<div class="aspect-[3/4] overflow-hidden relative">
+<img alt="Heartwarming memories and joyful patrons spending quality time at Suzan's Corner Bhimad" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1jvAfYPpBzNuYMD8wjkPSE8rRfbBfCmW3EB0djWTngNwhcVJJQhm58R5PRO2i20JowtnXdofS-yAJlpL7gM3qglpsjGz8gxj88u_HeUSdXn_F3aXP6BKOOdVWkhsbosKuWkIE0Uz5DmRnpfke5QH-iwAbnVWB21H6pq4aB4ugbJbjLybIDGAHCl7PQYW0DZfyHtWklFWxbxQ0tTfO_HbX0aUlmVIRer35MiuDE79nNqQWYNLigb6TC6oRT5TLYPyALLs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm text-on-surface">
+<span class="font-label-caps text-label-caps text-primary">आत्मीय पलहरू</span>
+<p class="font-body-sm text-body-sm font-medium">खुसी र मिठो संवादको चौतारी</p>
+</div>
+</div>
+</div>
+<div class="rounded-2xl overflow-hidden bg-surface-container shadow-xl group -mt-6 sm:-mt-10">
+<div class="aspect-[3/4] overflow-hidden relative">
+<img alt="Family celebration, happy faces and dining experiences at Suzan's Corner Newroad Khaja Ghar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDREDN-3Xp8DtuGNjt098h5_Cz8tdP8_G_Z9geBvWqEg1GW2Lhji7mbEoChrUMJ7wW8DW3EaVYqcQNdTDsG057nbAoyU0eYaJKm1w4z0VnfKIQMPvAUOeaOrEelqYtGmUYDshnsDwOa-vCo5J0I6oq45fJfpkTLq5wTUEysCZjXGRyJZ4WbKDtNR7J7zp2z5WOHaeJbHMIYVts_-OKSZcGV27cEj7AYIBZ-97V16ww8LpIFRDb3Lo7Xop48CaWjcurrfPo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-space-sm left-space-sm right-space-sm text-on-surface">
+<span class="font-label-caps text-label-caps text-secondary">पारिवारिक माहोल</span>
+<p class="font-body-sm text-body-sm font-medium">घरजस्तै सहज र मायालु आतिथ्य</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Dedicated Google Maps, Live Directions & How to Reach Section -->
+<section class="w-full bg-surface-dim py-space-xl px-margin-mobile lg:px-margin relative" id="bhimad-location-guide">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- Section Title & Badge -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest font-semibold">नक्सा र स्थान निर्देशिका (Location Guide)</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">
+            Bhimad, Tanahun — Exactly Where We Are
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-xl">
+            सुजन'स कर्नर न्यूरोड खाजा घर पुग्न एकदमै सजिलो छ। मुख्य सडकमै अवस्थित हाम्रो भवन तपाईँको स्वागतका लागि तयार छ।
+          </p>
+</div>
+<a class="px-space-lg py-space-sm rounded-lg bg-primary hover:bg-secondary text-on-primary font-label-md text-label-md font-semibold tracking-wider flex items-center gap-2 shadow-lg transition-all" href="https://maps.google.com/?q=Bhimad+Tanahun+Nepal" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">near_me</span>
+          Google Maps मा डिरेक्सन हेर्नुहोस्
+        </a>
+</div>
+<!-- Map Block & Detailed Travel Route Guides -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Interactive Styled Map Container -->
+<div class="lg:col-span-8 rounded-2xl overflow-hidden bg-surface-container shadow-2xl relative flex flex-col">
+<!-- Live Map Simulation with Tanahun Coordinates -->
+<div class="w-full h-80 sm:h-96 lg:h-[420px] bg-cover bg-center relative" data-location="Bhimad, Tanahun, Nepal" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDwVDK9w-o7MKnhqzNBAO6A46xRFvH5Z-xzoEPoSkuYWE_F344p8mXwQFkwxW41v6ws1QDVNxsBB6jbYOv-74XsWMTXAYuyxRl7kvur4IFwspAybBis8kCkhM2F1ELfiH8uFW17SAsCAaIxdxlxR2vbmHkY8oxrWg90IAykseUwh3ciRakISF4Aw36s7B2lSJ00lLVgs_RrHK2Y6H9plpbOeBiK9y7Es0kt3S7FTFLGkf7cJAkox237Hg')">
+<div class="absolute inset-0 bg-surface-container-lowest/40 backdrop-blur-[1px]"></div>
+<!-- Custom Location Marker Overlay -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+<div class="relative flex items-center justify-center">
+<span class="animate-ping absolute h-12 w-12 rounded-full bg-primary opacity-60"></span>
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-2xl z-10">
+<span class="material-symbols-outlined text-[24px]">restaurant</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest/95 backdrop-blur-md px-space-md py-1.5 rounded-lg shadow-2xl text-center mt-2 border border-primary/30">
+<div class="font-title-lg text-title-lg text-primary font-bold">Suzan's Corner</div>
+<div class="font-label-caps text-label-caps text-on-surface">न्यूरोड, भिमाद बजार - ०६, तनहुँ</div>
+</div>
+</div>
+<!-- Map Top Overlay Control Bar -->
+<div class="absolute top-space-sm left-space-sm right-space-sm flex justify-between items-center pointer-events-none">
+<span class="bg-surface-container-lowest/90 px-space-sm py-1 rounded font-label-caps text-label-caps text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">pin_drop</span>
+                28.0067° N, 84.0534° E
+              </span>
+<span class="bg-primary text-on-primary px-space-sm py-1 rounded font-label-caps text-label-caps font-semibold">
+                Bhimad Tanahun
+              </span>
+</div>
+</div>
+<!-- Bottom Map Metadata Bar -->
+<div class="p-space-md bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">local_parking</span>
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase">पार्किङ सुविधा</span>
+<p class="font-body-sm text-body-sm text-on-surface">मोटरसाइकल, स्कुटर, कार तथा बोलेरो/४x४ जीपको लागि पर्याप्त स्थान</p>
+</div>
+</div>
+<a class="text-primary hover:text-secondary font-label-caps text-label-caps flex items-center gap-1 font-semibold" href="https://maps.google.com/?q=Bhimad+Tanahun+Nepal" rel="noopener noreferrer" target="_blank">
+              OPEN IN FULL MAPS
+              <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Right Side: How to Reach & Landmark Cards -->
+<div class="lg:col-span-4 flex flex-col gap-space-sm">
+<!-- Route 1: From Pokhara -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-primary uppercase">पोखराबाट (From Pokhara)</span>
+<span class="font-label-caps text-label-caps text-outline">~ ४५ मिनेट (३५ किमी)</span>
+</div>
+<h5 class="font-title-lg text-title-lg text-on-surface font-semibold">पृथ्वी राजमार्ग हुँदै खैरेनीटार</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              पोखराबाट खैरेनीटार चोक आइपुगेर दाहिने मोडिई भिमाद पुल पार गरेपछि मुख्य न्यूरोडमा सुजन'स कर्नर देखिन्छ।
+            </p>
+</div>
+<!-- Route 2: From Damauli -->
+<div class="bg-surface-container-low p-space-md rounded-xl shadow-md flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-primary uppercase">दमौलीबाट (From Damauli)</span>
+<span class="font-label-caps text-label-caps text-outline">~ ३० मिनेट (२२ किमी)</span>
+</div>
+<h5 class="font-title-lg text-title-lg text-on-surface font-semibold">खैरेनीटार भएर सिधै भिमाद</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              तनहुँ सदरमुकाम दमौलीबाट खैरेनीटार हुँदै सहज कालोपत्रे सडकबाट सजिलै आइपुग्न सकिन्छ।
+            </p>
+</div>
+<!-- Key Landmarks Card -->
+<div class="bg-surface-container-high p-space-md rounded-xl shadow-md flex flex-col gap-space-xs">
+<span class="font-label-caps text-label-caps text-secondary uppercase font-semibold">नजिकका मुख्य चिनारीहरू (Landmarks)</span>
+<ul class="space-y-1.5 text-body-sm font-body-sm text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+                भिमाद मुख्य बजार (Bhimad Main Bazaar)
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+                शिवालय मन्दिर करिडोर नजिकै
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+                भिमाद न्यूरोड चारपाङ्ग्रे बस/जिप स्टेसन छेउ
+              </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Table Reservation & Direct Hotline Section -->
+<section class="w-full bg-surface-container-lowest py-space-xl px-margin-mobile lg:px-margin relative" id="reservation-section">
+<div class="max-w-5xl mx-auto bg-surface-container rounded-2xl p-space-md lg:p-space-xl shadow-2xl relative overflow-hidden">
+<!-- Background Ornament -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-primary/5 blur-2xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center relative z-10">
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest font-semibold">प्रत्यक्ष सम्पर्क • टेबल बुक</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Book Your Table or Order Takeaway</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            पारिवारिक भेटघाट वा विशेष जमघटका लागि पहिले नै टेबल सुरक्षित गर्नुहोस्। तातो ताजा खाजा तपाईं आउनासाथ तयार हुनेछ।
+          </p>
+<div class="pt-space-xs flex flex-col gap-2">
+<a class="flex items-center gap-space-sm text-primary font-title-lg text-title-lg" href="tel:+9779800000000">
+<span class="material-symbols-outlined text-[24px]">call</span>
+              +977 9800000000
+            </a>
+<span class="font-body-sm text-body-sm text-outline">हप्ताको सातै दिन सेवा उपलब्ध छ</span>
+</div>
+</div>
+<!-- Reservation Form -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-md rounded-xl shadow-inner">
+<form class="flex flex-col gap-space-sm" onsubmit="event.preventDefault(); alert('सुजन\'स कर्नर भिमादमा तपाईंको टेबल अनुरोध प्राप्त भयो! हामी छिट्टै सम्पर्क गर्नेछौं।');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps text-outline uppercase">तपाईंको नाम (Your Name)</label>
+<input class="w-full bg-surface-container-highest px-space-sm py-2 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="उदा. सुजन श्रेष्ठ" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps text-outline uppercase">फोन नम्बर (Phone Number)</label>
+<input class="w-full bg-surface-container-highest px-space-sm py-2 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="९८XXXXXXXX" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps text-outline uppercase">मिति (Date)</label>
+<input class="w-full bg-surface-container-highest px-space-sm py-2 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary" required="" type="date"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps text-outline uppercase">समय (Time)</label>
+<select class="w-full bg-surface-container-highest px-space-sm py-2 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary">
+<option>१२:०० दिउँसो</option>
+<option>०२:०० दिउँसो</option>
+<option>०४:३० साँझ</option>
+<option>०६:३० साँझ</option>
+<option>०८:०० राती</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps text-outline uppercase">संख्या (Guests)</label>
+<select class="w-full bg-surface-container-highest px-space-sm py-2 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary">
+<option>१ - २ जना</option>
+<option>३ - ५ जना</option>
+<option>६ - १० जना</option>
+<option>१० भन्दा बढी (पार्टी)</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-caps text-label-caps text-outline uppercase">विशेष परिकार प्राथमिकता (Special Notes)</label>
+<input class="w-full bg-surface-container-highest px-space-sm py-2 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary" placeholder="उदा. स्पेशल झोल मःमः र सुकुटी सेट तयारी राख्नुहोला" type="text"/>
+</div>
+<button class="mt-space-xs w-full py-space-sm bg-primary hover:bg-secondary text-on-primary font-label-md text-label-md font-semibold tracking-wider rounded-lg transition-all shadow-md" type="submit">
+              रिजर्भेसन कन्फर्म गर्नुहोस् (Confirm Booking)
+            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Floating Floating Actions & Reservation Drawer Trigger Modal -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4" id="res-modal">
+<div class="bg-surface-container-lowest border border-primary/30 p-space-lg rounded-2xl max-w-md w-full relative shadow-2xl">
+<button class="absolute top-4 right-4 text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('res-modal').classList.add('hidden')">
+<span class="material-symbols-outlined">close</span>
+</button>
+<h4 class="font-title-lg text-title-lg text-primary font-semibold">सुजन'स कर्नर प्रत्यक्ष सम्पर्क</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 mb-space-md">
+        भिमाद बजार, तनहुँ (Bhimad, Tanahun)
+      </p>
+<div class="flex flex-col gap-space-sm">
+<a class="w-full py-2.5 px-space-md bg-primary text-on-primary font-label-md text-label-md font-semibold rounded-lg flex items-center justify-center gap-2" href="tel:+9779800000000">
+<span class="material-symbols-outlined">call</span> सिधै फोन गर्नुहोस् (+977 9800000000)
+        </a>
+<a class="w-full py-2.5 px-space-md bg-surface-container-high text-primary font-label-md text-label-md font-semibold rounded-lg flex items-center justify-center gap-2" href="https://maps.google.com/?q=Bhimad+Tanahun+Nepal" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined">directions</span> गुगल म्याप्स नेभिगेसन
+        </a>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest text-on-surface py-space-xl shadow-[0_-4px_24px_rgba(0,0,0,0.4)]"><div class="w-full px-margin-mobile lg:px-margin"><div class="grid grid-cols-1 md:grid-cols-4 gap-space-lg mb-space-xl"><div class="md:col-span-1"><div class="flex flex-col gap-space-xs mb-space-md"><span class="font-headline-sm text-headline-sm text-primary">Suzan's Corner</span><span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Newroad Khaja Ghar • Haute Newari</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Elevating heritage Newari culinary craftsmanship into an intimate fine-dining sanctuary in the heart of Bhimad Valley, Tanahun.</p></div><div><span class="font-label-caps text-label-caps text-primary uppercase block mb-space-sm tracking-widest">Sanctuary &amp; Salon</span><p class="font-body-sm text-body-sm text-on-surface mb-space-xs">Bhimad Bazaar-06, Tanahun</p><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-xs">Gandaki Province, Nepal (भिमाद, तनहुँ)</p><p class="font-label-caps text-label-caps text-outline">Opposite Shivalaya Mandir Corridor</p></div><div><span class="font-label-caps text-label-caps text-primary uppercase block mb-space-sm tracking-widest">Hours &amp; Service</span><p class="font-body-sm text-body-sm text-on-surface mb-space-xs">Daily Khaja Seating: 11:00 AM – 10:30 PM</p><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-xs">Evening Aila Bar &amp; Salon: 5:00 PM – Late</p><p class="font-body-sm text-body-sm text-secondary-fixed-dim">Reservations Advised for Traditional Feasts</p></div><div><span class="font-label-caps text-label-caps text-primary uppercase block mb-space-sm tracking-widest">Direct Inquiries</span><p class="font-body-sm text-body-sm text-on-surface mb-space-xs">Tasting Inquiries: +977 65-570123</p><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-xs">Concierge: hospitality@suzanscorner.com</p><p class="font-label-caps text-label-caps text-outline">Bhimad, Tanahun Delivery &amp; Banquet</p></div></div><div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-lg bg-surface-container/30 px-space-md rounded-xl"><span class="font-label-caps text-label-caps text-outline">© 2025 Suzan's Corner Newroad Khaja Ghar. All rights reserved. Bhimad, Tanahun.</span><div class="flex items-center gap-space-md"><span class="font-label-caps text-label-caps text-on-surface-variant">Crafted for Himalayan Epicures</span><span class="font-label-caps text-label-caps text-primary">भिमाद • तनहुँ</span></div></div></div></footer></body></html>
