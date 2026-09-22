@@ -1,955 +1,438 @@
+
 <!DOCTYPE html>
 
-<html lang="ne">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
-<title>Newroad Khaja Ghar | Suzan's Corner</title>
-
-<meta name="description" content="Newroad Khaja Ghar, Bhimad Tanahun — ताजा मःमः, चाउमिन, खाजा सेट, सुकुटी, खाना र नेपाली परिकार।">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-
-<script src="https://cdn.tailwindcss.com"></script>
-
-<script>
-
-tailwind.config={
-
-  theme:{
-
-    extend:{
-
-      colors:{
-
-        primary:"#b70011",
-
-        background:"#fff8f5",
-
-        surface:"#fff8f5",
-
-        secondary:"#904d00",
-
-        tertiary:"#006646"
-
-      }
-
-    }
-
-  }
-
-};
-
-</script>
-
-<style>
-
-html{scroll-behavior:smooth}
-
-body{
-
-  font-family:"Plus Jakarta Sans",sans-serif;
-
-  background:#fff8f5;
-
-  color:#1e1b19;
-
-  padding-bottom:76px
-
-}
-
-h1,h2,h3{font-family:Epilogue,sans-serif}
-
-::-webkit-scrollbar{display:none}
-
-.card{
-
-  background:#fff;
-
-  border-radius:18px;
-
-  box-shadow:0 3px 16px rgba(30,27,25,.07)
-
-}
-
-img{display:block}
-
-</style>
-
-</head>
-
-<body>
-
-<header class="fixed top-0 left-0 right-0 z-50 bg-[#fff8f5]/95 backdrop-blur-xl shadow-sm">
-
-  <div class="h-16 px-4 flex items-center justify-between gap-2">
-
-    <div class="flex items-center gap-2 min-w-0">
-
-      <div class="w-10 h-10 rounded-full overflow-hidden bg-white flex-shrink-0">
-
-        <img
-
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCZwsaVCa6ZdSiYHX6ejcNTubrc5FsVft-mGYLvQX755oczvcz7D6uonT3rGBvJNye7oTAfLjMwTfhDg5RcXGg_dxA90i0HM5L1ByAChFee7IFUKOlToZhXOyYjxWgxREsU3bjOX8scMHifqQxbWTVF6GrB9XRmnuLNhmPBhqq822lvnygNYvIus7nZ-L0Jr3Z-MEyRx-xuKUVOC3kz_tzud193L1XGPQ0pYu_AbYcViBMqeodWaMxxuOEGN9R46Df_1w"
-
-          class="w-full h-full object-cover"
-
-          alt="Suzan's Corner Logo">
-
-      </div>
-
-      <div class="min-w-0">
-
-        <div class="font-bold text-primary truncate">Suzan's Corner</div>
-
-        <div class="text-[10px] text-[#5c403c] truncate">
-
-          Newroad Khaja Ghar • भिमाद
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="flex items-center gap-1">
-
-      <span class="px-2 py-1 rounded-full bg-red-700 text-white text-xs font-bold">ने</span>
-
-      <a href="tel:9762746378"
-
-         class="w-10 h-10 rounded-full flex items-center justify-center text-primary">
-
-        <span class="material-symbols-outlined">call</span>
-
-      </a>
-
-      <a href="https://wa.me/9779762746378"
-
-         class="w-10 h-10 rounded-full flex items-center justify-center text-green-700">
-
-        <span class="material-symbols-outlined">chat</span>
-
-      </a>
-
-    </div>
-
-  </div>
-
-</header>
-
-<main class="pt-16">
-
-<!-- OPEN STATUS -->
-
-<section class="px-4 pt-3">
-
-  <div class="bg-[#eee7e3] rounded-xl p-3">
-
-    <div class="flex justify-between items-center">
-
-      <span class="text-sm font-bold text-green-700">
-
-        🟢 हाल खुला छ (Open Now)
-
-      </span>
-
-      <span class="text-xs text-[#5c403c]">
-
-        बिहान ७:०० – बेलुका ९:००
-
-      </span>
-
-    </div>
-
-    <div class="flex justify-between items-center mt-2 gap-2">
-
-      <span class="text-xs text-[#5c403c]">
-
-        📍 भिमाद - ०६, तनहुँ
-
-      </span>
-
-      <a href="tel:9762746378"
-
-         class="bg-primary text-white rounded-full px-3 py-1 text-xs font-bold">
-
-        कल ९७६२७४६३७८
-
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- HERO -->
-
-<section class="px-4 py-2">
-
-  <div class="rounded-2xl overflow-hidden bg-[#1e1b19] shadow-lg">
-
-    <div class="relative h-64">
-
-      <img
-
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9U9fvfgLsIdr0zR4YefEUedfoH5CA6QfMX__76AZGa22T_v-6rR76CroElz1W1NJuOCgjeAnvqWMQ52f7eVxgvxQKv171aqXOzYZ3oSfYOtwFTZb5lXkcpdCCrHd-AP9a0nEYTpLIgJTbxsmYhkXB4oTHixZUwJbz2EVq9j_msG_L8h2JcxKxD1tT8Xen3eMYYvhQ00OJXakt9ebX3Q4HHOofOM0G_1jsW9UJoEEoc0XuZR5ZQHAajrbEGJM4wEYH8Ls"
-
-        class="w-full h-full object-cover"
-
-        alt="Newroad Khaja Ghar Bhimad">
-
-      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
-
-      <span class="absolute top-3 left-3 bg-white/90 rounded-full px-3 py-1 text-xs font-bold">
-
-        🏪 हाम्रो पसल • Bhimad
-
-      </span>
-
-      <div class="absolute bottom-3 left-4 right-4 text-white">
-
-        <span class="inline-block bg-orange-500 text-white rounded-full px-2 py-1 text-[10px] font-bold mb-2">
-
-          🔥 स्वादको असली मजा यहाँ छ!
-
-        </span>
-
-        <h1 class="text-3xl font-extrabold">
-
-          Newroad Khaja Ghar
-
-        </h1>
-
-        <p class="text-xs text-white/85 mt-1">
-
-          पारिवारिक आतिथ्यता, ताजा मःमः, सुकुटी र मौलिक नेपाली स्वाद।
-
-        </p>
-
-        <div class="flex gap-2 mt-3">
-
-          <a href="#menu"
-
-             class="flex-1 text-center bg-primary rounded-xl py-3 text-sm font-bold">
-
-            🍽️ मेनु हेर्नुहोस्
-
-          </a>
-
-          <a href="tel:9762746378"
-
-             class="bg-white text-primary rounded-xl px-4 py-3 text-sm font-bold">
-
-            📞 अर्डर
-
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- PROPRIETOR -->
-
-<section class="px-4 py-2">
-
-  <div class="card p-3 flex items-center gap-3">
-
-    <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center text-2xl">
-
-      👨‍🍳
-
-    </div>
-
-    <div>
-
-      <div class="text-[10px] text-orange-700 font-bold uppercase">
-
-        सञ्चालक / Proprietor
-
-      </div>
-
-      <div class="font-bold">
-
-        सुजन श्रेष्ठ (Sujan Shrestha)
-
-      </div>
-
-      <p class="text-xs text-[#5c403c]">
-
-        भिमादमा गुणस्तरीय, ताजा र सफा खाजाको भरपर्दो गन्तव्य।
-
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- TODAY SPECIAL -->
-
-<section class="px-4 py-3">
-
-  <div class="bg-red-700 text-white rounded-2xl p-4">
-
-    <div class="flex justify-between items-center mb-3">
-
-      <h2 class="text-lg font-bold">
-
-        ⭐ आजको विशेष
-
-      </h2>
-
-      <span class="bg-orange-400 text-black rounded-full px-2 py-1 text-[10px] font-bold">
-
-        POPULAR
-
-      </span>
-
-    </div>
-
-    <div class="rounded-xl overflow-hidden">
-
-      <img
-
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx8vGBkKvpe8hi7z5FqajpUHGuFaLVCvTeYuCGHtv3qsxLc75YVYHvu54pyTzjCDOkYXKvmdNiD4n_Yq9h0KfS_pvPMmZMaVgu1micFcRhnv9BekkC28anpheJ7lWVG3y4-APqUzf0qLseO8smeQFdbyIR2TdsnMmyVK_OqLZe0lzCMXJhw6bLK9zl5KD-KrvfDmCsQdcqAtTHgXDA_NFedDZwXxqic0ZCYg-uD6UEdI1zxyWubbLa_9N7IAfL0etNY1A"
-
-        class="w-full h-44 object-cover"
-
-        alt="Chicken Khaja Set">
-
-    </div>
-
-    <div class="flex justify-between items-center mt-3">
-
-      <h3 class="text-lg font-bold">
-
-        चिकेन खाजा सेट
-
-      </h3>
-
-      <b class="bg-white text-primary rounded-full px-3 py-1">
-
-        रु. २००
-
-      </b>
-
-    </div>
-
-    <p class="text-xs mt-1 text-white/85">
-
-      चिकन, भात/चिउरा, कालो भटमास, आलु अचार, छोइला र विशेष घरेलु स्वाद।
-
-    </p>
-
-    <a href="tel:9762746378"
-
-       class="block text-center bg-white text-primary rounded-xl py-3 mt-3 font-bold">
-
-      📞 यो सेट अर्डर गर्नुहोस्
-
-    </a>
-
-  </div>
-
-</section>
-
-<!-- MENU -->
-
-<section id="menu" class="px-4 py-3">
-
-  <div class="flex justify-between items-end mb-3">
-
-    <div>
-
-      <h2 class="text-xl font-bold">
-
-        हाम्रो मेनु र मूल्य सूची
-
-      </h2>
-
-      <p class="text-xs text-[#5c403c]">
-
-        ताजा र गुणस्तरीय खाजाहरू
-
-      </p>
-
-    </div>
-
-    <span class="text-xs bg-[#eee7e3] rounded-full px-2 py-1">
-
-      १४+ परिकार
-
-    </span>
-
-  </div>
-
-  <div id="menuGrid" class="grid grid-cols-2 gap-3"></div>
-
-</section>
-
-<!-- SOFT DRINKS -->
-
-<section class="px-4 py-3">
-
-  <div class="card overflow-hidden">
-
-    <img
-
-      src="https://images.unsplash.com/photo-1627485937980-221c88ac04f9?auto=format&fit=crop&w=900&q=80"
-
-      class="w-full h-40 object-cover"
-
-      alt="Soft drinks">
-
-    <div class="p-4">
-
-      <h2 class="font-bold text-lg">
-
-        चिसो पेय तथा इनर्जी ड्रिङ्क्स
-
-      </h2>
-
-      <p class="text-xs text-[#5c403c] mt-1">
-
-        Coke, Fanta, Sprite, Frooti, Red Bull तथा अन्य चिसो पेयहरू उपलब्ध छन्।
-
-      </p>
-
-      <div class="mt-3 font-bold text-primary">
-
-        रु. ५० देखि सुरु
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- HARD DRINKS -->
-
-<section class="px-4 py-3">
-
-  <div class="card p-4 border-l-4 border-orange-500">
-
-    <h2 class="font-bold text-lg">
-
-      हार्ड ड्रिङ्क्स
-
-    </h2>
-
-    <p class="text-xs text-[#5c403c] mt-1">
-
-      बियर, लोकल रक्सी तथा अन्य पेयहरू उपलब्ध छन्।
-
-    </p>
-
-    <div class="mt-3 p-2 bg-orange-50 rounded-lg text-xs font-semibold">
-
-      २०+ उमेर समूह मात्र। मादक पदार्थ सेवन गरी सवारी नचलाउनुहोला।
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- GALLERY -->
-
-<section id="gallery" class="px-4 py-3">
-
-  <div class="flex justify-between items-end mb-3">
-
-    <div>
-
-      <h2 class="text-xl font-bold">
-
-        हाम्रो वास्तविक फोटोहरू
-
-      </h2>
-
-      <p class="text-xs text-[#5c403c]">
-
-        खाजा घरका मीठा पल र ताजा परिकारहरू
-
-      </p>
-
-    </div>
-
-    <span class="text-primary text-xl">
-
-      📷
-
-    </span>
-
-  </div>
-
-  <div class="grid grid-cols-2 gap-2">
-
-    <img class="w-full h-36 object-cover rounded-xl"
-
-      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSxLuZ3TWLgxZ_18HmsICLW5aOkgEKV-oVuQ0tBEzhX9TPeEUtDoBCbKuob0Gn_Mq_fPMOU00haXYqjUU8F4rqh-ewbZI_afCc9wR4fs3Nv6CtiKn5ONCJ3PpCSk3r54i-Pr6oz2Ie_MFxXgweAjoDmw20a4itefrWlmjEXREdkV8FCR3OxwhpH2fX58Lv1BW2_xnKyXjg6qaAShipX1eibVGgnOH9oh_6E3dmvWmffdidp0W8689I6iXdIFneF2zp7SE"
-
-      alt="Momo">
-
-    <img class="w-full h-36 object-cover rounded-xl"
-
-      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrdS3IyS8oeu7NiUoWg_K4kH_YcsZ_PEPqVfvPRggi9mLwgPDtkrGOML_8mlyK8hIO6F9lSkWeESBLN0VE8PzoKlXKWpSQxB-7zxm_rcByQnppeRbI9zfwMTuJafg77tFpzhlY5ng4x5u51imeU2EAh2pxX7nblntaKYEEWbL9YIqHyTY571HFZgGnO2Rw3uU8mffkoaAz58M_yliKWYW7oiZIp54s3d3MO_99bqybHOAZ-KtRRwjE3dRLsgubXIJaocA"
-
-      alt="Steamed Momo">
-
-    <img class="w-full h-36 object-cover rounded-xl"
-
-      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI-CryMCtFZSt3Mt1I2GE0EpvZI1ST2U1s9DGlfc1e2sX42e7HQFsNXEvL2lZK9eGJdo9ay3ZSF4_xBbX3EK1qlA_BZAiX1Db4PI6lguL_8a21GMpt1SFy-Az0lB_7IP4JPXMwdcF099PixX79xPoCIve6VQ3Y-MMzYr2ZqqIzWt0JU5_VEJeUW6S37utwh2jorGuie3cZBB61t9NTwaCjffEJaa04rluzNgIwNwYHl12Ioy6iJk8kpnUItlKzXuAJA6U"
-
-      alt="Customers">
-
-    <img class="w-full h-36 object-cover rounded-xl"
-
-      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV1Z-4ye69bVnY3cVUs1dhVrEBmhyxq42asVlkTg-_24Jb2FTiyR3eDOaYTxrnw48kbuofvj715Tfl_3fQguMQuFcnWx1CCPCOtHLax4PPDG9s5BNwFsMZdmev9hp57JitPhDkenpWhC1-W1HXLYTrWffL2cgsjkU6CNw9-jRpQZIuTNmGxzFTEKOalBIEMGmNoZDUUDubUtjJY343M8SLovLQ73EwXftrsXPOczIElykTH8bx1oVUgQQ5LeTh-AUNbic"
-
-      alt="Happy customers">
-
-    <img class="w-full h-36 object-cover rounded-xl"
-
-      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcwR2pyFlWLa9MSQKw5pss_-Y_kma_jjhDZZDuzRjYsdwzEulgPUqyJV6t0PNvQePwEFvkMPf_jKtfJ3ZcMaZpLpgDQfohOUEZ4pmWajz05yU2XNLPZrn6w8YeUi__udHlriwzk2xwwwySNCpOGftg-oenQRmxi2UnQNQqZLLQQT6tJWg6hoUc19LVHYPdSiWnAfmXK9FQtJoU8jb8wqTxAKg2pqoetezN5rRGoEA8rpnrIK3x2EsQqGOhmoIAKKlIUL4"
-
-      alt="Family">
-
-    <img class="w-full h-36 object-cover rounded-xl"
-
-      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE_HSOSVPreFf1YAyNEQMNUkvMypZekntLQyUyIVtOEhWz6ri1niNxxpi3klt1jSM_XtF2OIvuRI6LJdk46cackfXECWTbnvTRZl9Bq_UM91GwsrcDe1ThHn3TlU9Vqlov8Q8sz3_UqE9Q1A5RCgmDdDOSvFPZAD2AUHVhQKnULzocQkEnkxdCMqhscJCoSp1PZHFlxMEqn7qyWQ2Fai96hhx2n-k0kvWZRndJQr9_EcQufHfEjeUMgQKhRljbuPiAmNc"
-
-      alt="Nepali food">
-
-  </div>
-
-</section>
-
-<!-- CONTACT / LOCATION -->
-
-<section id="contact" class="px-4 py-3">
-
-  <div class="card p-4">
-
-    <h2 class="text-xl font-bold mb-3">
-
-      📍 हाम्रो लोकेसन र सम्पर्क
-
-    </h2>
-
-    <img
-
-      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUAEdR9lV8kf8MIGa31X0cpy_Ks43KSW7SQ49P20Xd-ksBflAgKCHafqrE_JId2ziArqFUvcA5SUmN1i7aq3Cgifmwz32wW1JIVz11WKu8bZkXwSRBJy2fktkxecYLRmxF0qEuwBVHmgOshnTXPQfuNMWoCMHppnz6yy3SB2xThqoCk0APDQdGFWbHNmOkw8RJTgEva1tSOdjyMvL6z_oEMjqgfI3ZMKgV2AsxzGw2C3aYoP1uJrz5390TTkHn92BRsMo"
-
-      class="w-full h-48 object-cover rounded-xl"
-
-      alt="Newroad Khaja Ghar">
-
-    <div class="mt-3 space-y-2 text-sm">
-
-      <p>
-
-        📍 न्यूरोड बजार, वडा नं ०६, भिमाद, तनहुँ
-
-      </p>
-
-      <p>
-
-        🕖 बिहान ७:०० देखि बेलुका ९:०० सम्म
-
-      </p>
-
-      <p>
-
-        📞 ९७६२७४६३७८
-
-      </p>
-
-    </div>
-
-    <a
-
-      href="https://maps.app.goo.gl/cbBT5p86nnh98DXB7?g_st=ic"
-
-      target="_blank"
-
-      rel="noopener"
-
-      class="block text-center mt-4 bg-primary text-white rounded-xl py-3 font-bold">
-
-      🗺️ Google Maps मा हेर्नुहोस्
-
-    </a>
-
-  </div>
-
-</section>
-
-<!-- REVIEWS -->
-
-<section class="px-4 py-3">
-
-  <div class="card p-4">
-
-    <h2 class="text-xl font-bold mb-3">
-
-      ⭐ ग्राहक प्रतिक्रिया
-
-    </h2>
-
-    <div class="space-y-3">
-
-      <div class="bg-[#faf2ee] rounded-xl p-3 text-sm italic">
-
-        “खाना साँच्चै स्वादिलो छ, सेवा पनि राम्रो छ। भिमाद बजारमा एकचोटी खानै पर्ने ठाउँ हो!”
-
-      </div>
-
-      <div class="bg-[#faf2ee] rounded-xl p-3 text-sm italic">
-
-        “भिमाद आउँदा सधैं रोकिने ठाउँ। यहाँको मःमः र साँधेको सुकुटी एकदमै राम्रो लाग्छ।”
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer class="px-4 py-4">
-
-  <div class="card p-5 text-center">
-
-    <h2 class="text-primary text-lg font-bold">
-
-      न्यूरोड खाजा घर
-
-    </h2>
-
-    <p class="text-sm font-semibold mt-1">
-
-      Proprietor: सुजन श्रेष्ठ
-
-    </p>
-
-    <p class="text-xs text-[#5c403c] mt-1">
-
-      भिमाद-०६, तनहुँ • ७ AM – ९ PM
-
-    </p>
-
-    <div class="flex gap-2 mt-4">
-
-      <a href="tel:9762746378"
-
-         class="flex-1 bg-primary text-white rounded-xl py-3 font-bold">
-
-        📞 Call
-
-      </a>
-
-      <a href="https://wa.me/9779762746378"
-
-         class="flex-1 bg-green-700 text-white rounded-xl py-3 font-bold">
-
-        WhatsApp
-
-      </a>
-
-    </div>
-
-  </div>
-
-</footer>
-
-</main>
-
-<!-- BOTTOM NAV -->
-
-<nav class="fixed bottom-0 left-0 right-0 z-50 bg-[#fff8f5]/95 backdrop-blur-xl border-t shadow-lg">
-
-  <div class="h-16 flex justify-around items-center text-xs">
-
-    <a href="#" class="text-primary font-bold text-center">
-
-      🏠<br>गृह
-
-    </a>
-
-    <a href="#menu" class="text-center">
-
-      🍽️<br>मेनु
-
-    </a>
-
-    <a href="#gallery" class="text-center">
-
-      📷<br>ग्यालरी
-
-    </a>
-
-    <a href="tel:9762746378" class="text-primary font-bold text-center">
-
-      📞<br>अर्डर
-
-    </a>
-
-    <a href="#contact" class="text-center">
-
-      📍<br>सम्पर्क
-
-    </a>
-
-  </div>
-
-</nav>
-
-<script>
-
-const menu=[
-
-[
-
-"Buff Momo",
-
-"बफ मःमः",
-
-"१३०",
-
-"https://lh3.googleusercontent.com/aida-public/AB6AXuAY0g0MkPNdtlmHjKU_6gF3nnrdKzR9T0n1B0kT6hiAed6SQdpYINx6db9ZJ_UeG5_6Q6QXm9jOImFt4prUsac7MzleBoxGO60m4kcjSKDAIY1eWUJogsp9F6aSA5S3ruwHciIqpiQmv3OiP9j86yqQlafQUnWBUc7i6sYy58KXeBkdDFxMdaH80iXd_c2nGtSCA4MUazN0eJvqep8Vd6CRwoayjpAdHEPipxm6TCa84vFHHMoB1OSvrovs5rrk8gTb92Q"
-
-],
-
-[
-
-"Chicken Momo",
-
-"चिकेन मःमः",
-
-"१२०",
-
-"https://lh3.googleusercontent.com/aida-public/AB6AXuCiravK4up8HCnzgIeBmrRCBwyLyxR_uSuoxCw7-51z11LEyL-wG5xyUQ81lxLiGwGo7DNBAZ24aQ03rFm3KODP2c4V7zAc5LphiQTy8Mua6EU3dJGQ-BHxKDTldfK4oSps9DrtvkgnkQT2x4EJpszpCE1U9Oq05ao5Iz-7NlIMPWnt7tAiDm7bVsQPW1aY2N3aIJQ4jnaxVFLPepG9V9JEkpl56RkIQl5Tb-3SDR68Ygos8sBB4DdJsH1c0gt1v1mbfQY"
-
-],
-
-[
-
-"Buff Chowmin",
-
-"बफ चाउमिन",
-
-"१४०",
-
-"https://images.unsplash.com/photo-1617622141573-2c9c4f7f0b2e?auto=format&fit=crop&w=600&q=80"
-
-],
-
-[
-
-"Chicken Chowmin",
-
-"चिकेन चाउमिन",
-
-"१३०",
-
-"https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80"
-
-],
-
-[
-
-"Cambo Set",
-
-"कम्बो सेट",
-
-"१३०",
-
-"https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80"
-
-],
-
-[
-
-"Anda Tarkari Roti",
-
-"अण्डा तरकारी रोटी",
-
-"१००",
-
-"https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80"
-
-],
-
-[
-
-"Sada Khana",
-
-"सादा खाना",
-
-"१५०",
-
-"https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80"
-
-],
-
-[
-
-"Masu Khana",
-
-"मासु खाना",
-
-"२५०",
-
-"https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80"
-
-],
-
-[
-
-"Buff Khaja Set",
-
-"बफ खाजा सेट",
-
-"२००",
-
-"https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=600&q=80"
-
-],
-
-[
-
-"Chicken Khaja Set",
-
-"चिकेन खाजा सेट",
-
-"२००",
-
-"https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80"
-
-],
-
-[
-
-"Black Tea",
-
-"कालो चिया",
-
-"२०",
-
-"https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80"
-
-],
-
-[
-
-"Milk Tea",
-
-"दूध चिया",
-
-"३०",
-
-"https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a7?auto=format&fit=crop&w=600&q=80"
-
-],
-
-[
-
-"Black Coffee",
-
-"कालो कफी",
-
-"६०",
-
-"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80"
-
-],
-
-[
-
-"Milk Coffee",
-
-"दूध कफी",
-
-"८०",
-
-"https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
-
-]
-
-];
-
-document.getElementById("menuGrid").innerHTML=menu.map(x=>`
-
-<div class="card p-2 overflow-hidden">
-
-  <img
-
-    src="${x[3]}"
-
-    class="w-full h-28 object-cover rounded-xl"
-
-    alt="${x[0]}"
-
-    loading="lazy">
-
-  <div class="pt-2">
-
-    <h3 class="font-bold text-sm truncate">
-
-      ${x[0]}
-
-    </h3>
-
-    <p class="text-[11px] text-[#5c403c] truncate">
-
-      ${x[1]}
-
-    </p>
-
-    <div class="text-primary font-extrabold mt-1">
-
-      रु. ${x[2]}
-
-    </div>
-
-    <a
-
-      href="tel:9762746378"
-
-      class="block text-center bg-[#eee7e3] text-primary rounded-lg py-2 mt-2 text-xs font-bold">
-
-      📞 अर्डर
-
-    </a>
-
-  </div>
-
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container": "#f4ece8", "primary-fixed": "#ffdad6", "surface-variant": "#e9e1dd", "primary-container": "#dc2626", "tertiary-container": "#00825a", "on-primary-fixed-variant": "#93000b", "inverse-primary": "#ffb4ab", "surface-tint": "#bf0715", "on-tertiary": "#ffffff", "on-surface-variant": "#5c403c", "on-tertiary-fixed-variant": "#005137", "surface-container-highest": "#e9e1dd", "surface-container-low": "#faf2ee", "surface-bright": "#fff8f5", "primary-fixed-dim": "#ffb4ab", "on-error": "#ffffff", "outline": "#916f6b", "inverse-on-surface": "#f7efeb", "on-secondary-fixed": "#2f1500", "on-primary": "#ffffff", "background": "#fff8f5", "on-primary-fixed": "#410002", "on-tertiary-fixed": "#002114", "on-tertiary-container": "#e1ffec", "error-container": "#ffdad6", "on-error-container": "#93000a", "surface-dim": "#e0d8d5", "secondary-fixed": "#ffdcc3", "tertiary-fixed": "#85f8c4", "primary": "#b70011", "on-secondary": "#ffffff", "secondary-container": "#fe932c", "tertiary": "#006646", "error": "#ba1a1a", "surface": "#fff8f5", "secondary-fixed-dim": "#ffb77d", "surface-container-high": "#eee7e3", "tertiary-fixed-dim": "#68dba9", "on-primary-container": "#fff6f5", "on-secondary-container": "#663500", "outline-variant": "#e6bdb8", "inverse-surface": "#33302d", "on-surface": "#1e1b19", "on-background": "#1e1b19", "surface-container-lowest": "#ffffff", "secondary": "#904d00", "on-secondary-fixed-variant": "#6e3900" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "margin": "1rem", "gutter-lg": "2rem", "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem", "margin-lg": "3.5rem", "gutter": "1rem", "space-xl": "2.5rem", "gutter-md": "1.5rem", "margin-md": "2rem" }, fontFamily: { "label-md": ["Plus Jakarta Sans"], "headline-xl": ["Epilogue"], "body-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg": ["Epilogue"], "headline-xl-mobile": ["Epilogue"], "display-lg": ["Epilogue"], "headline-md": ["Epilogue"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "display-lg-mobile": ["Epilogue"], "headline-sm": ["Epilogue"], "body-xl": ["Plus Jakarta Sans"] }, fontSize: { "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "700" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-xl-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-md": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "700" }], "display-lg-mobile": ["38px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "body-xl": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col antialiased min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-20 px-margin flex items-center justify-between gap-space-sm"><div class="flex flex-col justify-center min-w-0"><div class="flex items-center gap-space-xs"><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate">Newroad Khaja Ghar</h1><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary text-label-sm font-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>खुला छ</span></div><div class="flex items-center gap-1"><span class="font-label-sm text-label-sm text-on-surface-variant truncate">न्यूरोड खाजा घर • भिमाद, तनहुँ</span></div></div><div class="flex items-center gap-space-xs shrink-0"><a aria-label="Call Newroad Khaja Ghar" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-primary transition-transform active:scale-95" href="tel:9800000000"><span class="material-symbols-outlined text-[20px]">call</span></a><a aria-label="Chat on WhatsApp" class="w-11 h-11 rounded-full bg-surface-container flex items-center justify-center text-tertiary transition-transform active:scale-95" href="https://wa.me/9779800000000"><span class="material-symbols-outlined text-[20px]">chat</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-0.5 shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-20 bg-surface min-h-[calc(100vh-5rem)] pb-28"><div class="flex flex-col w-full">
+<!-- Top Notice / Welcome Badge -->
+<div class="px-margin pt-space-xs pb-space-sm">
+<div class="flex items-center justify-between bg-surface-container px-space-md py-space-sm rounded-xl">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">local_fire_department</span>
+<span class="font-label-md text-label-md text-on-surface truncate">ताजा, स्वादिलो र अर्गानिक खाजा घर</span>
 </div>
-
-`).join("");
-
-</script>
-
-</body>
-
-</html>
+<span class="font-label-sm text-label-sm text-secondary shrink-0 font-bold bg-secondary-fixed/50 px-2 py-0.5 rounded-full">भिमाद बजार</span>
+</div>
+</div>
+<!-- Hero Shop Exterior Card -->
+<section class="px-margin mb-space-lg">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high shadow-md">
+<div class="relative h-56 w-full overflow-hidden">
+<img alt="Newroad Khaja Ghar Bhimad Tanahun exterior view" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMngim1pEmeE5U96jh6ZZZ3BnKJ_Y3bIrkJBjM8rDkjwwv0wwoRm_E0mKRJw15I6dzwI56cOA_Fe41cc3bBUI2uoiUqAHfO3Pt060J0QOG12i3W0MnsnNnzSEyFcf2ZoEWThsAgU18RP_ONBPUkew1MKBt0TilczAHpfuxurtjqpSilakLc9MAVuFJa1Nd6b5xfp16zYeXiQrH7eLlvBwq67ZbBEqy_PKbQ7sLf82Pao3jMOsN-nukGl_TycF3TWeaCI8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent"></div>
+<div class="absolute top-3 left-3 bg-primary text-on-primary font-label-md text-label-md px-space-sm py-1 rounded-full shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">storefront</span>
+<span>न्यूरोड खाजा घर</span>
+</div>
+<div class="absolute top-3 right-3 bg-tertiary-container text-on-tertiary font-label-sm text-label-sm px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+<span>खुला छ</span>
+</div>
+<div class="absolute bottom-3 left-3 right-3 text-white">
+<h2 class="font-headline-md text-headline-md font-extrabold tracking-tight text-white drop-shadow-sm">Newroad Khaja Ghar</h2>
+<p class="font-body-sm text-body-sm text-surface-variant font-medium mt-0.5">सञ्चालक: सुजन श्रेष्ठ • न्यूरोड बजार, भिमाद-०६, तनहुँ</p>
+</div>
+</div>
+<!-- Quick Info Pills Strip -->
+<div class="p-space-md bg-surface-container-lowest grid grid-cols-2 gap-space-sm">
+<div class="flex items-center gap-space-xs p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-secondary text-[22px]">schedule</span>
+<div class="min-w-0">
+<span class="block font-label-sm text-label-sm text-on-surface-variant">समय (Daily)</span>
+<span class="block font-label-md text-label-md text-on-surface font-bold truncate">7:00 AM - 9:00 PM</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-tertiary text-[22px]">local_parking</span>
+<div class="min-w-0">
+<span class="block font-label-sm text-label-sm text-on-surface-variant">पार्किङ</span>
+<span class="block font-label-md text-label-md text-tertiary font-bold truncate">नि:शुल्क बोलेरो/बाइक</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Today's Special Dish Banner -->
+<section class="px-margin mb-space-lg">
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary-container to-primary text-on-primary p-space-md shadow-lg">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-1 bg-white/20 backdrop-blur-sm px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[16px] text-amber-300">workspace_premium</span>
+<span class="font-label-sm text-label-sm font-bold tracking-wide uppercase text-white">आजको विशेष खाजा</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-black text-amber-200">रु. २००</span>
+</div>
+<div class="flex items-center gap-space-md mt-space-sm">
+<div class="w-24 h-24 rounded-xl overflow-hidden shrink-0 shadow-md bg-white/10">
+<img alt="Chicken Khaja Set Newroad Khaja Ghar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmpWW0C_wQtFZhQFyOIs3DjCPiUT1nTofnZ0ouBfxcMtm8xciXmT0Wwlz1b7urCD4ipRRTlv1ALNW2E9xvvYeWr1nrYzsoNZZJo65Jv8afZ8S3ufPRrqDQv1h6Urb-6tac4P_HFeIdzHO8KpvHDFIV47CR-xumaey_ZCT45KO_q49Y9HyEffOjdn9jq-nCX6x30Iw7X1ijQzJVVnOUWc-VUSINZDhRRNnJmpPBpzYfzUvD-R4ljfVa_GGGpxnfITl4ehk"/>
+</div>
+<div class="flex flex-col justify-center min-w-0">
+<h3 class="font-headline-sm text-headline-sm font-black text-white leading-tight">चिकन खाजा सेट</h3>
+<p class="font-body-sm text-body-sm text-white/90 line-clamp-2 mt-0.5">ताजा भुटेको चिकन, च्युरा, भटमास, आलुदम, मुलाको अचार र सलाद ।</p>
+<a class="mt-2.5 inline-flex items-center justify-center gap-1 bg-white text-primary px-3 py-1.5 rounded-full font-label-md text-label-md font-black shadow-md transition-transform active:scale-95 w-fit" href="tel:9762746378">
+<span class="material-symbols-outlined text-[16px]">phone_forwarded</span>
+<span>अहिले अर्डर गर्नुहोस्</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Menu Section Header & Filter Pills -->
+<section class="px-margin mb-space-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h2 class="font-headline-md text-headline-md font-extrabold text-on-surface">हाम्रो लोकप्रिय मेनु</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">घरजस्तै शुद्ध र स्वादिष्ट परिकारहरू</p>
+</div>
+<a class="flex items-center gap-1 font-label-md text-label-md text-primary font-bold" href="tel:9762746378">
+<span>सिधै कल</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- Category Pills -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-xs">
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm">सबै खाजा</button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-bold">म:म विशेष</button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-bold">चाउमिन</button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-bold">सुकुटी &amp; सेकुवा</button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-bold">चिया र कफी</button>
+</div>
+</section>
+<!-- Food Items Grid (Vertical Stack Optimized for Mobile) -->
+<section class="px-margin flex flex-col gap-space-md mb-space-xl">
+<!-- Item 1: Buff Momo -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex gap-space-md items-center">
+<div class="relative w-24 h-24 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+<img alt="Buff Momo Newroad Khaja Ghar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5-v85HZ6jgawIamLVSq4d9VftzpnCUANA6qEJd1ZsIDEonZabnhO5KqEvhSikK9cfc7fn-Ue93HoNdEV3Np7Z5fJll9PhcFIo9Yg4TumKLzLkoTcsadKeIQiO-msz81kjBq9Mpqdx-lcyWnTf1UfapTYxuh7JA--3jqrpMmKGrEpXKyxiE1dUlNVClXm9JIoqWQkIhwxJhHq6AT5ORzkC8n_-BFANsqHyqFkVFpHKHjx7_2UcdFw2FvxiQntgbKO90qc"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-primary-container text-on-primary text-[10px] font-bold">म:म</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<h4 class="font-headline-sm text-headline-sm font-extrabold text-on-surface leading-snug truncate">बफ म:म (Buff Momo)</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">हातैले बनाएको ताजा र रसदार विशेष अचारसहित</p>
+<div class="flex items-center justify-between mt-2.5">
+<span class="font-headline-sm text-headline-sm font-black text-primary">रु. १३०</span>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-bold shadow-sm transition-transform active:scale-95" href="tel:9762746378">
+<span class="material-symbols-outlined text-[16px]">add_call</span>
+<span>+ अर्डर</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Item 2: Chicken Momo -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex gap-space-md items-center">
+<div class="relative w-24 h-24 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+<img alt="Chicken Momo Bhimad" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6a-NS-5KRyMllKsLMnbu6TLoMNN2uO7lviKU7ERD7lLCEfH4Z0ZsLZSBhuGgeRwBVJUcTqjWRuC1QHjsX8oxAhKhK1bmKBK0xGkUqbG3Fo02egMwo4NrgCixH6TP7JJoxSwpFUOf6SR_VdojGOWfP_BOVrBxDJ3VFKOvC1sty0DChvGFYvH24YAb2a-ZMZs4NU0CRyH_Tum1hsgSxl2WJJq8d30Huotkn-72vd88U1QDjbSR3RvV9RwNyAvwKS70j-HE"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-secondary text-on-secondary text-[10px] font-bold">लोकप्रिय</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<h4 class="font-headline-sm text-headline-sm font-extrabold text-on-surface leading-snug truncate">चिकन म:म (Chicken Momo)</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">ताजा कुखुराको किमा र विशेष नेपाली मसला</p>
+<div class="flex items-center justify-between mt-2.5">
+<span class="font-headline-sm text-headline-sm font-black text-primary">रु. १३०</span>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-bold shadow-sm transition-transform active:scale-95" href="tel:9762746378">
+<span class="material-symbols-outlined text-[16px]">add_call</span>
+<span>+ अर्डर</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Item 3: Chicken Chowmin -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex gap-space-md items-center">
+<div class="relative w-24 h-24 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+<img alt="Chicken Chowmin Bhimad" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2z47XioHPB-MmhjCgQ6_wQuOC76wT9qT0Bp9yGiwcDwlYMu3Zxs6ck8MY15YX_6tn3FIciMi6o0Ur3nLdM8IEcwAEp4H3kj25Z_aXetDCU_ytVHzfxkvHKIGJZMdpQCSwxidERSp3VM-a4sqP3BoUcuHBfBgjw-BIzYc6e8t71BesBSobLDNH4G7l6tgK7ONNR3VUEqAxsEMu9w54oUMvMozSDZODjHYb8ufllVlHe_tltTShLSfQrUwZojkPAuyzUOY"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-primary text-on-primary text-[10px] font-bold">चाउमिन</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<h4 class="font-headline-sm text-headline-sm font-extrabold text-on-surface leading-snug truncate">चिकन चाउमिन</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">चिकन पिस, बन्दा, साग र नेपाली शैलीको स्वाद</p>
+<div class="flex items-center justify-between mt-2.5">
+<span class="font-headline-sm text-headline-sm font-black text-primary">रु. १४०</span>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-bold shadow-sm transition-transform active:scale-95" href="tel:9762746378">
+<span class="material-symbols-outlined text-[16px]">add_call</span>
+<span>+ अर्डर</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Item 4: Veg Chowmin -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex gap-space-md items-center">
+<div class="relative w-24 h-24 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+<img alt="Veg Chowmin" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL-ELsLdkyyT8V8kTmGZvCE8sZJBkxYAfFDcgQzHn4i_LmYM5EL8-R-jV5TRa4eAfW5EoBQu0KY3AXULOInIrpXUUumDadzPVuV9x_SIIw2aLJLGrjW9UuJrLo6C2l6mpuRYEKI3vEBsT3p4_zVWAYSv49toeZ02oap0R3JBTK4K9EQDJIDKCtHIZcOf8gOEg70AKqcr2bzFKvt2usDnA9e3xTbXv6YKzZQtADBMfzTsPdCR6HKs4wVe37_x2dz2Mx_L4"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-tertiary text-on-tertiary text-[10px] font-bold">शाकाहारी</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<h4 class="font-headline-sm text-headline-sm font-extrabold text-on-surface leading-snug truncate">भेज चाउमिन (Veg Chowmin)</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">हरियो तरकारी र च्याउको स्वादिलो मिश्रण</p>
+<div class="flex items-center justify-between mt-2.5">
+<span class="font-headline-sm text-headline-sm font-black text-primary">रु. १००</span>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-bold shadow-sm transition-transform active:scale-95" href="tel:9762746378">
+<span class="material-symbols-outlined text-[16px]">add_call</span>
+<span>+ अर्डर</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Item 5: Sadeko Sukuti -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex gap-space-md items-center">
+<div class="relative w-24 h-24 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+<img alt="Sadeko Sukuti Tanahun" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQR6VQVXZ2FO-zcogC2lhOvKyhVuQzY23IwuIp8sBU0dstupt6rob5eoK_VhDOD-GoT2ebWA4Z-oCHd9Qyn6eFMzkEh3ZU4dyukx0TsgiyP_MELNwkQ61oZ6rR71pq5QOSchDIjkikm7PKBjAR9mjHMjJPZB2xtOX8VrfkS5zrgQw2RlqoTb2b9DNlRHeOJHW9wAajNrMYQnymD4Hoj9IQAIEdEe1YxDy0PqxydlGiDsqARfFXkBiUHutfFU2BQbjl6fw"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container text-[10px] font-bold">पिरो/साधेको</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<h4 class="font-headline-sm text-headline-sm font-extrabold text-on-surface leading-snug truncate">साधेको सुकुटी</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">तोरीको तेल, लसुन, अदुवा, प्याज र टिमुरले साधेको</p>
+<div class="flex items-center justify-between mt-2.5">
+<span class="font-headline-sm text-headline-sm font-black text-primary">रु. २५०</span>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-bold shadow-sm transition-transform active:scale-95" href="tel:9762746378">
+<span class="material-symbols-outlined text-[16px]">add_call</span>
+<span>+ अर्डर</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Item 6: Sada Sukuti Plate -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex gap-space-md items-center">
+<div class="relative w-24 h-24 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+<img alt="Sada Sukuti Plate" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCOLW0qrHrziknJoc4pKMW_n3ZdgAZKBfx7GOHfs32lCywc0gGlZNNVu-5Ko_-Yg2XEedb4GcI2k2ruW-91atw7RvyruCF6dUqEnE7UKV9pzL9dW_14KBB2gWD6dGjEM-ndelHTdh2J16wY8c0Gfn5W4cYUWy8ExAIffxznzGBwY9KDgRPOxtNb4VnzM78wAddOwKTzookPplssvFmqXpjfw7SbkaLYSBnsA1Y1W4hfm8TXFAsWH8InIRgSYNut6MYLsw"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-surface-variant text-on-surface-variant text-[10px] font-bold">सुकुटी</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<h4 class="font-headline-sm text-headline-sm font-extrabold text-on-surface leading-snug truncate">सादा सुकुटी प्लेट</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">सफा र कुरकुरे भुटेको सुकुटी</p>
+<div class="flex items-center justify-between mt-2.5">
+<span class="font-headline-sm text-headline-sm font-black text-primary">रु. २००</span>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-bold shadow-sm transition-transform active:scale-95" href="tel:9762746378">
+<span class="material-symbols-outlined text-[16px]">add_call</span>
+<span>+ अर्डर</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Item 7: Combo Khaja Set -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex gap-space-md items-center">
+<div class="relative w-24 h-24 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+<img alt="Combo Khaja Set Newroad Khaja Ghar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbPc6NGT5JNhJFMkIgbtrRmkZ6hNY-0KUR159CWfCgtL-sHDG8qW7Dm_WAxwHstxRAdsiw-tCUBgLYFIqqzwIjDg-2lwN2Dz4YnpKRvCv1vSx5CA-MiE2zn2nZPAv48OUBe-e4gH_6o2FS6l2vvL7Ds2r_84w0kPh0elmEnTJmQ7NDygViVY3iLmsl62LSKuwHVEVy4U4jX-W7l-gHlnTSOoPPlETm-h57JnyPZtwXcgYXfsAwgXIAvmBjp9q7470RZxU"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-tertiary-container text-on-tertiary text-[10px] font-bold">कम्बो</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<h4 class="font-headline-sm text-headline-sm font-extrabold text-on-surface leading-snug truncate">कम्बो खाजा सेट</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">च्युरा, चना/भटमास, आलुदम, भुटेको मासु र अचार</p>
+<div class="flex items-center justify-between mt-2.5">
+<span class="font-headline-sm text-headline-sm font-black text-primary">रु. १४०</span>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-bold shadow-sm transition-transform active:scale-95" href="tel:9762746378">
+<span class="material-symbols-outlined text-[16px]">add_call</span>
+<span>+ अर्डर</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Item 8: Egg Tarkari Roti -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex gap-space-md items-center">
+<div class="relative w-24 h-24 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+<img alt="Egg Tarkari Roti" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsqnvH_XkVevt6cop7eSjm4Gz0LKXryElMSF5jS20n0c8GNZcFYu72vMp3fRrvJBxMONpRg4homGvQYp4YA9p7c4By-47F3X3zBCZI_KX2ORZrtVSFAgfdWdEtbzbdgU3x58H8hN_G8ma3DhbfmN1h1xZv3VRTMc0tD5V31aqtF4NduppsLtragfovfIuqByQhxTM95UdTrYOPz9m5gB-KYJpq3p2gXTnBeO7dKfB1_p9_nBq0PxiTXRYZngqv-mHOVoc"/>
+<span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-surface-variant text-on-surface-variant text-[10px] font-bold">बिहानी</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-start justify-between gap-1">
+<h4 class="font-headline-sm text-headline-sm font-extrabold text-on-surface leading-snug truncate">अन्डा तरकारी रोटी</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 mt-0.5">तातो तातो रोटी, अण्डा पोच/अम्लेट र चनाको तरकारी</p>
+<div class="flex items-center justify-between mt-2.5">
+<span class="font-headline-sm text-headline-sm font-black text-primary">रु. १००</span>
+<a class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-bold shadow-sm transition-transform active:scale-95" href="tel:9762746378">
+<span class="material-symbols-outlined text-[16px]">add_call</span>
+<span>+ अर्डर</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Hot Beverages Pair (Tea & Coffee) -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Tea -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="h-28 rounded-lg overflow-hidden bg-surface-container mb-space-xs">
+<img alt="Nepali Hot Fresh Tea" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD351g4p5l6LVn4zvJfoF_2jQmXK2X2vPikE9Gmq8hN0IL8HBRxA98WVnzgyBbLVy91zQXQR_Fm00i2Rtepdq7qiuF9ufGeifq1Zr6r5Dj8tUpTaNt5M4J5p3cNEJq0I9G5SAIPMibeXytcigrejZFI5aZqzWjB-78BTIduwJ4Kwsl_K6faVzN4wvP1ZRuKpOZlaj9sinc5esaXSMoP2sg7r0fjwcuN5faIasfQvR_ksQ5ZQOeG9y6DbytYkrC4rDBcVtE"/>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-extrabold text-on-surface">ताजा चिया (Tea)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">कालो: रु. २० • दुध: रु. ४०</p>
+</div>
+<a class="mt-space-sm w-full py-1.5 rounded-lg bg-surface-container text-primary font-label-md text-label-md font-bold flex items-center justify-center gap-1" href="tel:9762746378">
+<span class="material-symbols-outlined text-[16px]">call</span>
+<span>अर्डर</span>
+</a>
+</div>
+<!-- Coffee -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="h-28 rounded-lg overflow-hidden bg-surface-container mb-space-xs">
+<img alt="Hot Coffee Bhimad" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB64SRRLAOEIQMrRvpS46OG-j4EpzADcbwzavN_BlyMcBJgrqxMeNKMGPCNhdbZrHInaKWrJ6MPh0dlBdmMJjMF6beOQ1JyTjLVsOeND4BA7L_sX5bLAw9_giMVbknseG78OqFWiaNrSJIKpf6OBl5NubQn8kcBrKa5N-M4OQNud1NBQ7oZwkVrzs7IhkwDDaYPuya7TuBJQo4bldubC7T2NfITtlqeG5LLfAvdcsX8MldPtKW1EUjauxZdcUD8NhyIeXM"/>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-extrabold text-on-surface">तातो कफी (Coffee)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">कालो: रु. ६० • दुध: रु. ८०</p>
+</div>
+<a class="mt-space-sm w-full py-1.5 rounded-lg bg-surface-container text-primary font-label-md text-label-md font-bold flex items-center justify-center gap-1" href="tel:9762746378">
+<span class="material-symbols-outlined text-[16px]">call</span>
+<span>अर्डर</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Beverages & Bar Section -->
+<section class="px-margin mb-space-xl">
+<div class="mb-space-sm">
+<h2 class="font-headline-md text-headline-md font-extrabold text-on-surface">पेय पदार्थ तथा बार काउन्टर</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">चिसो पेय, इनर्जी ड्रिंक्स र पेयपदार्थ सेवा</p>
+</div>
+<!-- Soft Drinks Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm mb-space-sm flex items-center gap-space-md">
+<div class="w-24 h-24 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+<img alt="Soft and Energy Drinks Newroad Khaja Ghar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1UiM8ihr969qBdujx2Nnya9Erf24MwVGyGSRuW9ZeYKWjkVM7ELFOj-rgI3ObCl_i3RhL3mphklAMSir_JEY0jJ8vsR3Bk_2jcN-pVfWTYkWOsC8jtp6rE2co2-065Re8iBvNhjP1nLSp5U3MSDsmmX-3Wi7ZLpoEJEP8Maj4s6PGCkRnl_sbkbLN0_86K_T75M6qMkBkAS6DbqrO0HL6Mmpxh3YC_pupJoBbTpUh-MHracOjceBCmO762Z"/>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<h3 class="font-headline-sm text-headline-sm font-extrabold text-on-surface">सफ्ट &amp; इनर्जी ड्रिंक्स</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Coke, Fanta, Sprite, Red Bull, Real Juice &amp; Water</p>
+<div class="flex items-center justify-between mt-2">
+<span class="font-headline-sm text-headline-sm font-black text-secondary">रु. ५० देखि सुरु</span>
+<a class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-bold" href="tel:9762746378">माग्नुहोस्</a>
+</div>
+</div>
+</div>
+<!-- Hard Drinks & Beer Card with Responsibility Notice -->
+<div class="relative overflow-hidden rounded-xl bg-inverse-surface text-inverse-on-surface p-space-md shadow-md">
+<div class="flex items-center gap-space-md">
+<div class="w-24 h-28 rounded-lg overflow-hidden shrink-0 bg-white/10">
+<img alt="Bar Shelf Newroad Khaja Ghar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XV1G5vQPZyirA51evLyROvPFe4I5lNwE5jK7FQHgKFbRHBxr7z6dQlpLPXKKJwR8pzcY9uBP54n96x93SAobmIj36RYYJE0d0VHI2ivMJVwc2A_dWiFY_3xWbRcQ173QTVmfP97FOZm6N3S1JjRa8bCKO74_0dtTqD3BLCHtZQ4ouRGNI45s6OzB62iRiirfcCC420AFdoIJkUyrBwN88ojr_p8GL_9DX-0prHWLjJoU_t4cHos6AQo_Xm"/>
+</div>
+<div class="flex flex-col justify-center flex-1 min-w-0">
+<div class="flex items-center gap-1 text-secondary-fixed mb-0.5">
+<span class="material-symbols-outlined text-[16px]">liquor</span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider">बार काउन्टर (Bar Counter)</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-black text-white">बियर तथा ब्रान्डेड ड्रिंक्स</h3>
+<p class="font-body-sm text-body-sm text-surface-variant mt-0.5">Tuborg, Carlsberg, Gorkha, Whisky &amp; Rum</p>
+<div class="mt-2 flex items-center gap-1.5">
+<span class="bg-error text-on-error font-label-sm text-label-sm px-2 py-0.5 rounded font-bold">Age 20+ Only</span>
+<span class="font-label-sm text-label-sm text-surface-variant">जिम्मेवारीपूर्वक पिउनुहोस्</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Real Customer & Celebration Moments Gallery -->
+<section class="px-margin mb-space-xl">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h2 class="font-headline-md text-headline-md font-extrabold text-on-surface">ग्राहक र पार्टीका रमाइला क्षणहरू</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">न्यूरोड खाजा घरमा जमघट र खुसीयाली</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-[24px]">celebration</span>
+</div>
+<!-- Visual Bento Strip of Real Photos -->
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="h-36 rounded-xl overflow-hidden bg-surface-container shadow-sm">
+<img alt="Customer gathering Newroad Khaja Ghar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-moWPg4Q_h_pCFNvLKFJyolO2WHX0ow0h1P14TIK6tK-yDe7en0fUW2Kkw_XIgoMqeeWT3GPCwOSp5uZvf6s29etZ5jAiEEDV_29a4M_YFpdhZj9ZaeNX0ecziCvrs1GMbWppcH2ENpJ0ag2grMr1UoAcXsATv-MHxnDdt_m9aIZl_zhFcBnjCAKjhDNqdCJz1rkaq29OGDjMPMsJuQ8mdEAThJ93zMtOMh8EH2ZojHX_xjocYPpl5vXeDbJP2fXAf1s"/>
+</div>
+<div class="h-36 rounded-xl overflow-hidden bg-surface-container shadow-sm">
+<img alt="Party celebration Newroad Khaja Ghar Bhimad" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTmAOjbNFSL48E0iek_f8dphB8-GoGhyZlEGTX11P8RcgEtT6RJMj7-WVEi4RxQcjNQ8Ko_-oMRr3vnxUMyG4jnAgw1y3IQlAl3stKLU1qkS2rh9IPxzVR6uQryhcGaqMyWxqqF4_MiKG9aAcRypYjO-qk4LDZVe7GwSpnuG_m7IUt1Xwf25mogM6Zx1Tx49FpVZsMQ4UWdXhXKxHOWA9cVSN1ormwR02OwiAxrwpUbLnNo9L4Alc1-AFnfeplQmhiojY"/>
+</div>
+<div class="h-36 rounded-xl overflow-hidden bg-surface-container shadow-sm">
+<img alt="Local patrons Newroad Khaja Ghar Tanahun" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_i64mzerANJB0OW7zmY-G5SuVJSdY2VFOFpdJfQ4knN9623ypxFWzxqNWx90icXq8hrrcaj7U_eIUk4IKhzlNFpDHCk1KnR5YO_LQC9vbSCaL_lGXTQ1xf-ju9G2Ec4OiouJKzqcLiuES3t9Rye1ypvVVK0CwV6luveD5gkJ6cqWaOuRXYWd4mdH6cr_3faX32Re_UaojjvLQlB83U_DoaXvr9UcKJhwaq-pwVgvRT7DdRfWL07wQbExVLRRc5uvbz9c"/>
+</div>
+</div>
+<!-- Small Community Feedback / Welcome Banner -->
+<div class="mt-space-sm p-space-md rounded-xl bg-surface-container-low flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[26px] shrink-0">groups</span>
+<div class="min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold block truncate">पारिवारिक तथा साथीभाइको जमघट</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">जन्मदिन, गेट-टुगेदर र खाजा पार्टीका लागि अगावै सिट सुरक्षित गर्न सक्नुहुन्छ।</span>
+</div>
+</div>
+</section>
+<!-- Location, Contact & Free Parking Section -->
+<section class="px-margin mb-space-lg">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+<div class="flex items-center gap-2 mb-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">pin_drop</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-extrabold text-on-surface">ठेगाना र सम्पर्क विवरण</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">न्यूरोड बजार, भिमाद नगरपालिका-०६, तनहुँ</p>
+</div>
+</div>
+<div class="space-y-space-xs mb-space-md">
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">badge</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">सञ्चालक</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">सुजन श्रेष्ठ (Sujan Shrestha)</span>
+</div>
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">call</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">फोन नम्बर</span>
+</div>
+<a class="font-headline-sm text-headline-sm font-black text-primary underline" href="tel:9762746378">९७६२७४६३७८</a>
+</div>
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">directions_car</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">पार्किङ</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-tertiary">नि:शुल्क बोलेरो, ट्याक्सी, मोटरसाइकल</span>
+</div>
+</div>
+<!-- Action Buttons Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<a class="flex items-center justify-center gap-1.5 py-3 rounded-xl bg-primary text-on-primary font-headline-sm text-headline-sm font-extrabold shadow-md active:scale-95 transition-transform" href="tel:9762746378">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span>कल गर्नुहोस्</span>
+</a>
+<a class="flex items-center justify-center gap-1.5 py-3 rounded-xl bg-tertiary-container text-on-tertiary font-headline-sm text-headline-sm font-extrabold shadow-md active:scale-95 transition-transform" href="https://wa.me/9779762746378?text=Hello%20Newroad%20Khaja%20Ghar,%20I%20want%20to%20order%20khaja">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>ह्वाट्सएप</span>
+</a>
+</div>
+<a class="mt-space-sm w-full py-2.5 rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg font-bold flex items-center justify-center gap-1.5" href="https://maps.google.com/?q=Bhimad+06+Tanahun+Nepal" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-primary">near_me</span>
+<span>गुगल नक्सामा हेर्नुहोस् (Open Maps)</span>
+</a>
+</div>
+</section>
+<!-- Sticky Quick Contact Dock for High Conversion -->
+<div class="fixed bottom-20 left-0 right-0 z-40 px-margin pointer-events-none">
+<div class="max-w-md mx-auto pointer-events-auto bg-surface-bright/95 backdrop-blur-md p-2 rounded-2xl shadow-xl flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-2 pl-2 min-w-0">
+<div class="w-3 h-3 rounded-full bg-tertiary animate-pulse shrink-0"></div>
+<div class="truncate">
+<span class="block font-label-sm text-label-sm text-on-surface-variant font-bold leading-tight">सिधै अर्डर वा पार्सल</span>
+<span class="block font-headline-sm text-headline-sm text-primary font-black leading-tight truncate">९७६२७४६३७८</span>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<a aria-label="WhatsApp Us" class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center active:scale-90 transition-transform shadow-sm" href="https://wa.me/9779762746378">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</a>
+<a aria-label="Direct Phone Call" class="px-4 h-10 rounded-full bg-primary text-on-primary flex items-center gap-1 font-label-md text-label-md font-extrabold active:scale-90 transition-transform shadow-md" href="tel:9762746378">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>कल</span>
+</a>
+</div>
+</div>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(41,37,36,0.06)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] transition-colors text-primary font-bold" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">restaurant</span><span class="font-label-sm text-label-sm tracking-tight">गृह</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="menu" href="#"><span class="material-symbols-outlined text-[22px]">lunch_dining</span><span class="font-label-sm text-label-sm tracking-tight">मेनु</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="drinks" href="#"><span class="material-symbols-outlined text-[22px]">local_cafe</span><span class="font-label-sm text-label-sm tracking-tight">पेय</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="order-call" href="#"><span class="material-symbols-outlined text-[22px]">phone_in_talk</span><span class="font-label-sm text-label-sm tracking-tight">कल</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="location" href="#"><span class="material-symbols-outlined text-[22px]">pin_drop</span><span class="font-label-sm text-label-sm tracking-tight">सम्पर्क</span></a></div></nav></body></html>
