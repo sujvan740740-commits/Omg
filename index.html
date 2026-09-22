@@ -1,1054 +1,955 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="ne"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
-<meta content="mobile_tab" name="shell-type"/>
-<title>Suzan's Corner - Newroad Khaja Ghar | Bhimad, Tanahun</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "momo-rose": "#f43f5e",
-            "momo-dark": "#881337",
-            "chowmin-amber": "#f59e0b",
-            "set-emerald": "#10b981",
-            "sukuti-orange": "#f97316",
-            "beverage-cyan": "#06b6d4",
-            "beverage-blue": "#3b82f6",
-            "dark-bg": "#0f1115",
-            "card-bg": "#181b20",
-            "card-border": "#282d36"
-          },
-          fontFamily: {
-            "display": ["Playfair Display", "serif"],
-            "body": ["Plus Jakarta Sans", "sans-serif"],
-            "caps": ["Space Grotesk", "sans-serif"]
-          }
-        }
-      }
-    };
-  </script>
-<style>
-    @layer base {
-      html, body {
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-        background-color: #0f1115;
-      }
-      body {
-        overscroll-behavior: none;
-      }
-      .pb-safe {
-        padding-bottom: env(safe-area-inset-bottom, 0px);
-      }
-      .pt-safe {
-        padding-top: env(safe-area-inset-top, 0px);
-      }
-    }
-    ::-webkit-scrollbar {
-      display: none;
-    }
-    .badge-glow {
-      box-shadow: 0 0 12px currentColor;
-    }
-  </style>
-</head>
-<body class="bg-[#0f1115] font-body text-[#e5e2e1] antialiased min-h-screen flex flex-col selection:bg-rose-500 selection:text-white">
-<!-- Top App Bar / Header with Nepali/English Switch Toggle -->
-<header class="fixed top-0 w-full z-50 pt-safe bg-[#0f1115]/95 backdrop-blur-xl border-b border-[#242933] shadow-lg">
-<div class="h-16 px-3.5 flex items-center justify-between gap-2 max-w-md mx-auto">
-<div class="flex items-center gap-2 min-w-0 flex-1">
-<div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-rose-500 via-amber-500 to-emerald-400 p-[1.5px] flex-shrink-0 shadow-md">
-<div class="w-full h-full bg-[#181b20] rounded-[10px] flex items-center justify-center">
-<span class="material-symbols-outlined text-amber-400 text-[18px]">restaurant</span>
-</div>
-</div>
-<div class="flex flex-col min-w-0">
-<div class="flex items-center gap-1.5 flex-wrap">
-<h1 class="font-caps text-[12px] font-bold text-white tracking-wide truncate" data-i18n="shop-name">सुजन'स कर्नर</h1>
-<span class="px-1.5 py-0.5 rounded text-[9px] font-caps uppercase tracking-wider bg-rose-500/20 text-rose-400 border border-rose-500/30 font-semibold">Newroad</span>
-</div>
-<div class="flex items-center gap-1 text-[10px] text-[#9ca3af]">
-<span class="material-symbols-outlined text-[12px] text-emerald-400">location_on</span>
-<span class="truncate" data-i18n="location-short">भिमाद - ०६, तनहुँ</span>
-<span class="inline-block w-1 h-1 rounded-full bg-emerald-400/60"></span>
-<span class="text-[10px] font-medium text-emerald-400 flex items-center gap-0.5">
-<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-<span data-i18n="open-badge">खुला छ</span>
-</span>
-</div>
-</div>
-</div>
-<!-- Right Actions: Language Switch Toggle [नेपाली | EN] & Quick Call & WhatsApp -->
-<div class="flex items-center gap-1.5 flex-shrink-0">
-<!-- Language Switcher Pill Toggle -->
-<button class="flex items-center p-0.5 bg-[#181b20] rounded-lg border border-amber-500/40 text-[10px] font-caps font-bold transition-all shadow-sm active:scale-95" id="lang-toggle-btn" title="Switch Language / भाषा परिवर्तन गर्नुहोस्">
-<span class="px-1.5 py-0.5 rounded-md bg-amber-400 text-slate-950 transition-all" id="lang-np-chip">नेपाली</span>
-<span class="px-1.5 py-0.5 rounded-md text-amber-400/80 hover:text-white transition-all" id="lang-en-chip">EN</span>
-</button>
-<a aria-label="Direct Phone Call" class="h-8 px-2 rounded-lg bg-emerald-500/20 hover:bg-emerald-500 text-emerald-300 hover:text-black border border-emerald-500/40 flex items-center gap-0.5 transition-all active:scale-95 shadow-sm text-[11px] font-caps font-semibold" href="tel:9762746378">
-<span class="material-symbols-outlined text-[15px]">call</span>
-<span data-i18n="call-btn">कल</span>
-</a>
-<a aria-label="WhatsApp Message" class="w-8 h-8 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center transition-all active:scale-95 shadow-sm" href="https://wa.me/9779762746378?text=नमस्ते,%20मलाई%20सुजन'स%20कर्नरबाट%20खाजा%20अर्डर%20गर्नु%20थियो।" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[17px]">chat</span>
-</a>
-</div>
-</div>
-</header>
-<!-- Floating Quick Language Switcher Trigger (Subtle & Persistent) -->
-<div class="fixed top-18 right-3 z-40">
-<button class="flex items-center gap-1 bg-[#181b20]/90 backdrop-blur-md px-2.5 py-1 rounded-full border border-amber-500/40 text-[10px] font-caps text-amber-300 shadow-xl hover:border-amber-400 active:scale-95 transition-all" id="floating-lang-pill">
-<span class="material-symbols-outlined text-[13px] text-amber-400">translate</span>
-<span class="font-bold" id="floating-lang-label">नेपाली / EN</span>
-</button>
-</div>
-<!-- Main Scrollable Content -->
-<main class="flex-1 flex flex-col relative w-full pt-20 pb-24 max-w-md mx-auto">
-<!-- Top Highlight Banner: Opening Hours & Direct Order Strip -->
-<section class="px-4 py-2">
-<div class="w-full bg-gradient-to-r from-rose-950/40 via-amber-950/30 to-emerald-950/40 border border-amber-500/25 rounded-2xl p-3 flex items-center justify-between gap-2 shadow-lg backdrop-blur-md">
-<div class="flex items-center gap-2.5">
-<div class="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0 border border-amber-500/30">
-<span class="material-symbols-outlined text-[18px]">schedule</span>
-</div>
-<div class="flex flex-col">
-<span class="text-[10px] font-caps uppercase tracking-wider text-amber-300 font-semibold" data-i18n="timing-label">समय तालिका</span>
-<span class="text-xs font-semibold text-white" data-i18n="timing-hours">बिहान ७:०० – बेलुका ९:००</span>
-</div>
-</div>
-<a class="px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-500 to-rose-500 text-slate-950 font-caps text-[11px] font-bold tracking-wider uppercase flex items-center gap-1 shadow-md hover:brightness-110 active:scale-95" href="tel:9762746378">
-<span data-i18n="hero-phone-num">९७६२७४६३७८</span>
-</a>
-</div>
-</section>
-<!-- Hero Card: Newroad Khaja Ghar Bhimad Tanahun (Storefront Showcase) -->
-<section class="px-4 pt-2 pb-3">
-<div class="relative w-full rounded-2xl overflow-hidden bg-[#181b20] border border-[#2a303c] shadow-2xl group">
-<div class="relative h-64 w-full overflow-hidden bg-black/60">
-<img alt="Suzan's corner Newroad Khaja Ghar storefront with 4x4 outdoor vehicle in Bhimad Tanahun" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtYRAHzKpv0QjYIcj3h4fKBZAAV9l0vp1qRaL_Oz_pEICj48RFUWScNMj60PZTYJH_SmHAhNzj8HtPkHSjrbKcQtsC3J3B0d7_U7IxhrtqQxDCLh6BRHrDUbV-Dm1_gkcPxLWiNCagxqduYcNGmIZLDZG2eHXuPJbYVfRwwjPArd_I_qE0U1ENinnySdDCFS5TKRySkH0eIcXgA4B1gn18QJzO3KI-DGnJVvldEC08H8a6-6dkZOIaGHWTy_ZMKI2Ca1c"/>
-<div class="absolute inset-0 bg-gradient-to-t from-[#181b20] via-[#181b20]/50 to-black/30"></div>
-<!-- Badges overlay -->
-<div class="absolute top-3 left-3 right-3 flex items-center justify-between">
-<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-black/70 backdrop-blur-md border border-amber-400/40 text-[11px] font-caps text-amber-300 font-medium">
-<span class="material-symbols-outlined text-[14px] text-amber-400" style="font-variation-settings: 'FILL' 1;">stars</span>
-<span data-i18n="hero-rating">४.९ ★ लोकप्रिय खाजा घर</span>
-</span>
-<span class="px-2.5 py-1 rounded-full bg-rose-500/80 backdrop-blur-md text-[10px] font-caps uppercase tracking-wider text-white font-bold border border-rose-300/40 shadow-sm" data-i18n="hero-tag">
-              भिमाद, तनहुँ
-            </span>
-</div>
-<div class="absolute bottom-3 left-3 right-3 flex flex-col gap-0.5">
-<p class="text-[11px] font-caps uppercase tracking-widest text-amber-400 font-bold" data-i18n="hero-subhead">स्वादिलो, सफा र पारिवारिक</p>
-<h2 class="font-display text-2xl text-white font-bold leading-tight drop-shadow-md" data-i18n="hero-title">
-              सुजन'स कर्नर - न्यूरोड खाजा घर
-            </h2>
-<p class="text-xs text-[#cbd5e1] font-body" data-i18n="hero-desc">भिमाद बजार - ०६, तनहुँ (पार्किङ सुविधा सहित)</p>
-</div>
-</div>
-<!-- Quick Call to Action Strip -->
-<div class="p-3.5 flex items-center gap-2 bg-[#181b20]">
-<button class="flex-1 py-2.5 px-3 rounded-xl bg-gradient-to-r from-rose-500 via-amber-500 to-orange-500 text-slate-950 font-caps text-xs font-bold uppercase flex items-center justify-center gap-1.5 shadow-lg shadow-rose-500/20 active:scale-95 transition-all" onclick="document.getElementById('full-menu').scrollIntoView({behavior: 'smooth'})">
-<span class="material-symbols-outlined text-[17px]">restaurant_menu</span>
-<span data-i18n="btn-view-menu">मेनु र मूल्य हेर्नुहोस्</span>
-</button>
-<a class="py-2.5 px-3 rounded-xl bg-[#242933] hover:bg-[#2d3440] text-emerald-400 border border-emerald-500/30 font-caps text-xs font-semibold flex items-center justify-center gap-1 active:scale-95 transition-all" href="tel:9762746378">
-<span class="material-symbols-outlined text-[17px]">phone_in_talk</span>
-<span data-i18n="btn-direct-call">सिधा कल</span>
-</a>
-</div>
-</div>
-</section>
-<!-- Multi-Color Interactive Category Pills Selector -->
-<section class="px-4 py-2 sticky top-16 z-40 bg-[#0f1115]/95 backdrop-blur-md border-b border-[#242933]/70">
-<div class="flex items-center gap-1.5 overflow-x-auto py-1 scrollbar-none" id="category-bar">
-<button class="cat-pill active-pill px-3 py-1.5 rounded-xl text-xs font-caps font-bold transition-all whitespace-nowrap bg-gradient-to-r from-rose-500 to-amber-500 text-slate-950 shadow-md" data-category="all" data-i18n="cat-all">
-          सबै परिकार
-        </button>
-<button class="cat-pill px-3 py-1.5 rounded-xl text-xs font-caps font-semibold transition-all whitespace-nowrap bg-[#181b20] text-rose-400 border border-rose-500/30 hover:bg-rose-500/10" data-category="momo" data-i18n="cat-momo">
-          🥟 म:म विशेष
-        </button>
-<button class="cat-pill px-3 py-1.5 rounded-xl text-xs font-caps font-semibold transition-all whitespace-nowrap bg-[#181b20] text-amber-400 border border-amber-500/30 hover:bg-amber-500/10" data-category="chowmin" data-i18n="cat-chowmin">
-          🍜 चाउमिन
-        </button>
-<button class="cat-pill px-3 py-1.5 rounded-xl text-xs font-caps font-semibold transition-all whitespace-nowrap bg-[#181b20] text-emerald-400 border border-emerald-500/30 hover:bg-emerald-500/10" data-category="khaja" data-i18n="cat-khaja">
-          🍱 खाजा सेट
-        </button>
-<button class="cat-pill px-3 py-1.5 rounded-xl text-xs font-caps font-semibold transition-all whitespace-nowrap bg-[#181b20] text-orange-400 border border-orange-500/30 hover:bg-orange-500/10" data-category="sukuti" data-i18n="cat-sukuti">
-          🔥 सुकुटी/विशेष
-        </button>
-<button class="cat-pill px-3 py-1.5 rounded-xl text-xs font-caps font-semibold transition-all whitespace-nowrap bg-[#181b20] text-cyan-400 border border-cyan-500/30 hover:bg-cyan-500/10" data-category="drinks" data-i18n="cat-drinks">
-          ☕ चिया/कफी
-        </button>
-</div>
-</section>
-<!-- Handcrafted Fresh Momo Showcase (Real Momos Tray Images: IMAGE_17 & IMAGE_18) -->
-<section class="px-4 pt-4 pb-2">
-<div class="flex items-center justify-between mb-2">
-<div class="flex items-center gap-1.5">
-<span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-ping"></span>
-<h3 class="font-display text-lg text-white font-bold" data-i18n="momo-sec-title">हातले बेरिएका ताजा मोमोहरू</h3>
-</div>
-<span class="text-[11px] font-caps uppercase tracking-wider text-rose-400 font-bold bg-rose-500/10 px-2 py-0.5 rounded-md border border-rose-500/30" data-i18n="fresh-daily-tag">
-          दैनिक ताजा
-        </span>
-</div>
-<div class="grid grid-cols-2 gap-2.5">
-<!-- Tray 1: Crescent Fold Momos (IMAGE_17) -->
-<div class="bg-[#181b20] border border-rose-500/30 rounded-xl overflow-hidden shadow-md flex flex-col group">
-<div class="relative h-32 w-full overflow-hidden">
-<img alt="Fresh crescent handcrafted momos lined up on metal preparation tray at Suzan's Corner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfYH8KyeIBA8WhTOpq1D1cEmphrB1dx5CVsKlvtHUXqljzIp6BiVoNv3Z0Pklg1DS_EL4-w30dUxv8dOS1HTnRVOpKqz6m24dAkxVFaXDxGdZx_WWuBDUZ9FmAGkrKczGvW0g0cg95m4MWEc2RXyxpnYQ4O6cWoBeZnoaiwMIq4X_zao8hMyMjpWJRNiAaFtks8vAWhEAVYjTtKmCtE0UMnlJdmOYt7nXIPEN-IryEshw-yEksB_MLbsE_lbcZTArWCy8"/>
-<span class="absolute bottom-1.5 left-1.5 bg-black/80 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-caps font-semibold text-rose-300 border border-rose-500/40" data-i18n="momo-tag-1">
-              बफ / चिकेन
-            </span>
-</div>
-<div class="p-2.5 flex flex-col gap-0.5">
-<span class="font-caps text-xs font-bold text-white" data-i18n="momo-card-1-title">हातले बेरिएको म:म</span>
-<span class="text-[11px] text-[#9ca3af]" data-i18n="momo-card-1-sub">पातलो पत्र र रसिलो किमा</span>
-<span class="text-xs font-bold text-rose-400 mt-1" data-i18n="momo-card-1-price">रु. १३० बाट सुरु</span>
-</div>
-</div>
-<!-- Tray 2: Swirl Round Pleat Momos (IMAGE_18) -->
-<div class="bg-[#181b20] border border-amber-500/30 rounded-xl overflow-hidden shadow-md flex flex-col group">
-<div class="relative h-32 w-full overflow-hidden">
-<img alt="Handcrafted swirl pleated momos on tray ready for steaming at Suzan's Corner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGe0MB2MLBOwW153B50rQvSogSImOelHi_Qm27M7kyoEZNVa6oQChGAyu-ivuAi_-Fk2s4kVLC975nRyipGn_EZXmg-Ve7oi11S1KzaJXEyLM_MggK423tIl2y-kNCq2Ht4Wf-ZtEdaxqzmR6EhVg2z29VdOtt9r5xPL7RJLunq7uxeHPoU8uDjRwj-Ducyo0r0cpxjjXlxWMIC5J5LlJGEKarF0FAVs0mlVg6o2JZOxC3ek7P05IYqy-L6QA4nA7QhZ4"/>
-<span class="absolute bottom-1.5 left-1.5 bg-black/80 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-caps font-semibold text-amber-300 border border-amber-500/40" data-i18n="momo-tag-2">
-              परम्परागत शैली
-            </span>
-</div>
-<div class="p-2.5 flex flex-col gap-0.5">
-<span class="font-caps text-xs font-bold text-white" data-i18n="momo-card-2-title">विशेष स्टीम मोमो</span>
-<span class="text-[11px] text-[#9ca3af]" data-i18n="momo-card-2-sub">स्वादिलो टिमुरको अचार</span>
-<span class="text-xs font-bold text-amber-400 mt-1" data-i18n="momo-card-2-price">तातो र स्वच्छ</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Delight Moment Card: Child Savoring Momos (IMAGE_16) -->
-<section class="px-4 py-2">
-<div class="w-full bg-[#181b20] border border-rose-500/30 rounded-2xl overflow-hidden shadow-xl relative">
-<div class="relative h-64 w-full overflow-hidden">
-<img alt="Little kid enjoying delicious hot steamed momo at Suzan's Corner" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4TfqkfU623d5FXjBtw74EexlsLzLQW5mjTVAQI36aC4J-OJnqm_2JLUARH-r09MhOZdPbgsIpiJp8bOTWiMKEFzLNyTh5P6Idgb8r7xx9gV_KZ_Uh5st2-tMeq6cPcTrK7lnKHEoXMLqtBRX3gXV4b-HRxtBC2eDhigGvlWBadX49gmANLAJ7SGuNi_Ov762nQSro8jbfv0cDrbEHkS5qbDaG-huidXiX2tCbXr9EvblXRNAzjwrEaBs4AGH85vATUt0"/>
-<div class="absolute inset-0 bg-gradient-to-t from-[#181b20] via-black/40 to-transparent"></div>
-<div class="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-2.5 py-1 rounded-full border border-rose-500/40 flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[14px] text-rose-400">favorite</span>
-<span class="text-[11px] font-caps text-rose-300 font-bold uppercase tracking-wider" data-i18n="quote-badge">सुजन'स मोमो स्पेशल</span>
-</div>
-<div class="absolute bottom-3 left-3 right-3 flex flex-col gap-1">
-<h4 class="font-display text-xl text-white font-bold leading-snug drop-shadow-md" data-i18n="quote-title">
-              "घरकै जस्तै स्वाद, हरेक गाँसमा खुशी"
-            </h4>
-<p class="text-xs text-[#e2e8f0] font-body opacity-95" data-i18n="quote-desc">
-              बच्चादेखि वृद्धसम्म सबैका लागि स्वच्छ, स्वस्थ र ताजा मसलाबाट तयार पारिएको रसिलो म:म।
-            </p>
-</div>
-</div>
-</div>
-</section>
-<!-- FULL CATEGORIZED MENU SECTION -->
-<section class="px-4 pt-3 flex flex-col gap-4" id="full-menu">
-<div class="flex items-center justify-between border-b border-[#242933] pb-2">
-<div>
-<span class="text-[11px] font-caps uppercase tracking-wider text-amber-400 font-bold" data-i18n="menu-header-sub">आधिकारिक मूल्य सूची</span>
-<h3 class="font-display text-xl text-white font-bold" data-i18n="menu-header-title">पूर्ण खाजा मेनु</h3>
-</div>
-<a class="text-[11px] font-caps font-semibold text-emerald-400 flex items-center gap-1 bg-emerald-500/10 px-2.5 py-1 rounded-lg border border-emerald-500/30" href="tel:9762746378">
-<span class="material-symbols-outlined text-[14px]">phone</span>
-<span data-i18n="menu-order-phone">अर्डर: 9762746378</span>
-</a>
-</div>
-<!-- Category 1: म:म परिकार (Momo Special) -->
-<div class="menu-group flex flex-col gap-2" data-cat="momo">
-<div class="flex items-center gap-2 px-1">
-<span class="w-3 h-3 rounded-full bg-rose-500 shadow-sm shadow-rose-500"></span>
-<h4 class="font-caps text-sm font-bold text-rose-400 tracking-wide uppercase" data-i18n="cat-head-momo">म:म परिकार (Momo Special)</h4>
-<span class="text-[10px] font-caps text-rose-300/80 bg-rose-500/10 px-2 py-0.5 rounded-full ml-auto border border-rose-500/20" data-i18n="momo-serving-note">१० पिस + अचार</span>
-</div>
-<div class="flex flex-col gap-2">
-<!-- Buff momo -->
-<div class="p-3 rounded-xl bg-[#181b20] border border-rose-500/30 hover:border-rose-500/60 transition-all flex items-center justify-between gap-3 shadow-md">
-<div class="flex items-center gap-3 min-w-0">
-<div class="w-10 h-10 rounded-lg bg-rose-500/15 border border-rose-500/30 flex items-center justify-center flex-shrink-0 text-rose-400">
-<span class="material-symbols-outlined text-[20px]">lunch_dining</span>
-</div>
-<div class="flex flex-col min-w-0">
-<h5 class="text-sm font-semibold text-white truncate" data-i18n="item-buff-momo-name">बफ म:म (Buff Momo)</h5>
-<p class="text-[11px] text-[#9ca3af]" data-i18n="item-buff-momo-desc">ताजा किमा, विशेष मसला र स्वादिष्ट पिरो-अमिलो अचार</p>
-</div>
-</div>
-<div class="flex items-center gap-2 flex-shrink-0">
-<span class="font-caps font-bold text-rose-400 text-sm bg-rose-500/10 px-2 py-1 rounded-lg border border-rose-500/20" data-i18n="price-130">रु. १३०</span>
-<button aria-label="Order Buff Momo" class="order-add-btn w-8 h-8 rounded-lg bg-rose-500 hover:bg-rose-400 text-slate-950 flex items-center justify-center active:scale-90 transition-transform font-bold" data-item-en="Buff Momo (Rs. 130)" data-item-np="बफ म:म (रु. १३०)">
-<span class="material-symbols-outlined text-[18px]">add</span>
-</button>
-</div>
-</div>
-<!-- Chicken momo -->
-<div class="p-3 rounded-xl bg-[#181b20] border border-rose-500/30 hover:border-rose-500/60 transition-all flex items-center justify-between gap-3 shadow-md">
-<div class="flex items-center gap-3 min-w-0">
-<div class="w-10 h-10 rounded-lg bg-rose-500/15 border border-rose-500/30 flex items-center justify-center flex-shrink-0 text-rose-400">
-<span class="material-symbols-outlined text-[20px]">lunch_dining</span>
-</div>
-<div class="flex flex-col min-w-0">
-<h5 class="text-sm font-semibold text-white truncate" data-i18n="item-chk-momo-name">चिकेन म:म (Chicken Momo)</h5>
-<p class="text-[11px] text-[#9ca3af]" data-i18n="item-chk-momo-desc">सफा कुखुराको रसिलो मासुबाट बनेको ताजा स्टीम म:म</p>
-</div>
-</div>
-<div class="flex items-center gap-2 flex-shrink-0">
-<span class="font-caps font-bold text-rose-400 text-sm bg-rose-500/10 px-2 py-1 rounded-lg border border-rose-500/20" data-i18n="price-130">रु. १३०</span>
-<button aria-label="Order Chicken Momo" class="order-add-btn w-8 h-8 rounded-lg bg-rose-500 hover:bg-rose-400 text-slate-950 flex items-center justify-center active:scale-90 transition-transform font-bold" data-item-en="Chicken Momo (Rs. 130)" data-item-np="चिकेन म:म (रु. १३०)">
-<span class="material-symbols-outlined text-[18px]">add</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<!-- Category 2: चाउमिन (Chowmin) -->
-<div class="menu-group flex flex-col gap-2" data-cat="chowmin">
-<div class="flex items-center gap-2 px-1 pt-1">
-<span class="w-3 h-3 rounded-full bg-amber-400 shadow-sm shadow-amber-400"></span>
-<h4 class="font-caps text-sm font-bold text-amber-400 tracking-wide uppercase" data-i18n="cat-head-chowmin">चाउमिन (Chowmin)</h4>
-<span class="text-[10px] font-caps text-amber-300/80 bg-amber-500/10 px-2 py-0.5 rounded-full ml-auto border border-amber-500/20" data-i18n="chowmin-note">ताजा भुटेको</span>
-</div>
-<div class="flex flex-col gap-2">
-<!-- Veg chowmin -->
-<div class="p-3 rounded-xl bg-[#181b20] border border-amber-500/30 hover:border-amber-500/60 transition-all flex items-center justify-between gap-3 shadow-md">
-<div class="flex items-center gap-3 min-w-0">
-<div class="w-10 h-10 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0 text-amber-400">
-<span class="material-symbols-outlined text-[20px]">ramen_dining</span>
-</div>
-<div class="flex flex-col min-w-0">
-<h5 class="text-sm font-semibold text-white truncate" data-i18n="item-veg-chow-name">भेज चाउमिन (Veg Chowmin)</h5>
-<p class="text-[11px] text-[#9ca3af]" data-i18n="item-veg-chow-desc">ताजा बन्दा, गाजर, सिमला मिर्च र विशेष सस</p>
-</div>
-</div>
-<div class="flex items-center gap-2 flex-shrink-0">
-<span class="font-caps font-bold text-amber-400 text-sm bg-amber-500/10 px-2 py-1 rounded-lg border border-amber-500/20" data-i18n="price-100">रु. १००</span>
-<button aria-label="Order Veg Chowmin" class="order-add-btn w-8 h-8 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-950 flex items-center justify-center active:scale-90 transition-transform font-bold" data-item-en="Veg Chowmin (Rs. 100)" data-item-np="भेज चाउमिन (रु. १००)">
-<span class="material-symbols-outlined text-[18px]">add</span>
-</button>
-</div>
-</div>
-<!-- Chicken chowmin -->
-<div class="p-3 rounded-xl bg-[#181b20] border border-amber-500/30 hover:border-amber-500/60 transition-all flex items-center justify-between gap-3 shadow-md">
-<div class="flex items-center gap-3 min-w-0">
-<div class="w-10 h-10 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0 text-amber-400">
-<span class="material-symbols-outlined text-[20px]">ramen_dining</span>
-</div>
-<div class="flex flex-col min-w-0">
-<h5 class="text-sm font-semibold text-white truncate" data-i18n="item-chk-chow-name">चिकेन चाउमिन (Chicken Chowmin)</h5>
-<p class="text-[11px] text-[#9ca3af]" data-i18n="item-chk-chow-desc">नरम चिकेन टुक्रा र हरियो तरकारीसँग मज्जाले भुटेको</p>
-</div>
-</div>
-<div class="flex items-center gap-2 flex-shrink-0">
-<span class="font-caps font-bold text-amber-400 text-sm bg-amber-500/10 px-2 py-1 rounded-lg border border-amber-500/20" data-i18n="price-140">रु. १४०</span>
-<button aria-label="Order Chicken Chowmin" class="order-add-btn w-8 h-8 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-950 flex items-center justify-center active:scale-90 transition-transform font-bold" data-item-en="Chicken Chowmin (Rs. 140)" data-item-np="चिकेन चाउमिन (रु. १४०)">
-<span class="material-symbols-outlined text-[18px]">add</span>
-</button>
-</div>
-</div>
-<!-- Buff sukuti chowmin -->
-<div class="p-3 rounded-xl bg-[#181b20] border border-amber-500/30 hover:border-amber-500/60 transition-all flex items-center justify-between gap-3 shadow-md">
-<div class="flex items-center gap-3 min-w-0">
-<div class="w-10 h-10 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center flex-shrink-0 text-amber-400">
-<span class="material-symbols-outlined text-[20px]">local_fire_department</span>
-</div>
-<div class="flex flex-col min-w-0">
-<div class="flex items-center gap-1.5">
-<h5 class="text-sm font-semibold text-white truncate" data-i18n="item-buff-suk-chow-name">बफ सुकुटी चाउमिन</h5>
-<span class="text-[9px] font-caps uppercase bg-orange-500/20 text-orange-400 px-1 rounded border border-orange-500/30 font-bold" data-i18n="badge-popular">लोकप्रिय</span>
-</div>
-<p class="text-[11px] text-[#9ca3af]" data-i18n="item-buff-suk-chow-desc">मसालेदार सुकुटीको क्रन्च र चाउमिनको मौलिक सम्मिश्रण</p>
-</div>
-</div>
-<div class="flex items-center gap-2 flex-shrink-0">
-<span class="font-caps font-bold text-amber-400 text-sm bg-amber-500/10 px-2 py-1 rounded-lg border border-amber-500/20" data-i18n="price-150">रु. १५०</span>
-<button aria-label="Order Buff Sukuti Chowmin" class="order-add-btn w-8 h-8 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-950 flex items-center justify-center active:scale-90 transition-transform font-bold" data-item-en="Buff Sukuti Chowmin (Rs. 150)" data-item-np="बफ सुकुटी चाउमिन (रु. १५०)">
-<span class="material-symbols-outlined text-[18px]">add</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<!-- Category 3: खाजा सेट तथा कम्बो (Khaja Sets & Combos) -->
-<div class="menu-group flex flex-col gap-2" data-cat="khaja">
-<div class="flex items-center gap-2 px-1 pt-1">
-<span class="w-3 h-3 rounded-full bg-emerald-400 shadow-sm shadow-emerald-400"></span>
-<h4 class="font-caps text-sm font-bold text-emerald-400 tracking-wide uppercase" data-i18n="cat-head-khaja">खाजा सेट तथा कम्बो</h4>
-<span class="text-[10px] font-caps text-emerald-300/80 bg-emerald-500/10 px-2 py-0.5 rounded-full ml-auto border border-emerald-500/20" data-i18n="khaja-note">भरपेट खाजा</span>
-</div>
-<div class="flex flex-col gap-2">
-<!-- Combo set -->
-<div class="p-3 rounded-xl bg-[#181b20] border border-emerald-500/30 hover:border-emerald-500/60 transition-all flex items-center justify-between gap-3 shadow-md">
-<div class="flex items-center gap-3 min-w-0">
-<div class="w-10 h-10 rounded-lg bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center flex-shrink-0 text-emerald-400">
-<span class="material-symbols-outlined text-[20px]">set_meal</span>
-</div>
-<div class="flex flex-col min-w-0">
-<h5 class="text-sm font-semibold text-white truncate" data-i18n="item-combo-name">कम्बो सेट (Combo Set)</h5>
-<p class="text-[11px] text-[#9ca3af]" data-i18n="item-combo-desc">च्यूरा, भुटेको भटमास, चना, आलुदम र अचार</p>
-</div>
-</div>
-<div class="flex items-center gap-2 flex-shrink-0">
-<span class="font-caps font-bold text-emerald-400 text-sm bg-emerald-500/10 px-2 py-1 rounded-lg border border-emerald-500/20" data-i18n="price-140">रु. १४०</span>
-<button aria-label="Order Combo Set" class="order-add-btn w-8 h-8 rounded-lg bg-emerald-400 hover:bg-emerald-300 text-slate-950 flex items-center justify-center active:scale-90 transition-transform font-bold" data-item-en="Combo Set (Rs. 140)" data-item-np="कम्बो सेट (रु. १४०)">
-<span class="material-symbols-outlined text-[18px]">add</span>
-</button>
-</div>
-</div>
-<!-- Chicken Khaja set -->
-<div class="p-3 rounded-xl bg-[#181b20] border border-emerald-500/30 hover:border-emerald-500/60 transition-all flex items-center justify-between gap-3 shadow-md">
-<div class="flex items-center gap-3 min-w-0">
-<div class="w-10 h-10 rounded-lg bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center flex-shrink-0 text-emerald-400">
-<span class="material-symbols-outlined text-[20px]">dinner_dining</span>
-</div>
-<div class="flex flex-col min-w-0">
-<h5 class="text-sm font-semibold text-white truncate" data-i18n="item-chk-set-name">चिकेन खाजा सेट (Chicken Khaja Set)</h5>
-<p class="text-[11px] text-[#9ca3af]" data-i18n="item-chk-set-desc">स्वादिष्ट चिकेन करी, च्यूरा, भुटेको भटमास, अचार र सलाद</p>
-</div>
-</div>
-<div class="flex items-center gap-2 flex-shrink-0">
-<span class="font-caps font-bold text-emerald-400 text-sm bg-emerald-500/10 px-2 py-1 rounded-lg border border-emerald-500/20" data-i18n="price-200">रु. २००</span>
-<button aria-label="Order Chicken Khaja Set" class="order-add-btn w-8 h-8 rounded-lg bg-emerald-400 hover:bg-emerald-300 text-slate-950 flex items-center justify-center active:scale-90 transition-transform font-bold" data-item-en="Chicken Khaja Set (Rs. 200)" data-item-np="चिकेन खाजा सेट (रु. २००)">
-<span class="material-symbols-outlined text-[18px]">add</span>
-</button>
-</div>
-</div>
-<!-- Buff Khaja set -->
-<div class="p-3 rounded-xl bg-[#181b20] border border-emerald-500/30 hover:border-emerald-500/60 transition-all flex items-center justify-between gap-3 shadow-md">
-<div class="flex items-center gap-3 min-w-0">
-<div class="w-10 h-10 rounded-lg bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center flex-shrink-0 text-emerald-400">
-<span class="material-symbols-outlined text-[20px]">restaurant</span>
-</div>
-<div class="flex flex-col min-w-0">
-<h5 class="text-sm font-semibold text-white truncate" data-i18n="item-buff-set-name">बफ खाजा सेट (Buff Khaja Set)</h5>
-<p class="text-[11px] text-[#9ca3af]" data-i18n="item-buff-set-desc">मसालेदार बफ छोइला/करी, च्यूरा, अचार र भटमास सेट</p>
-</div>
-</div>
-<div class="flex items-center gap-2 flex-shrink-0">
-<span class="font-caps font-bold text-emerald-400 text-sm bg-emerald-500/10 px-2 py-1 rounded-lg border border-emerald-500/20" data-i18n="price-200">रु. २००</span>
-<button aria-label="Order Buff Khaja Set" class="order-add-btn w-8 h-8 rounded-lg bg-emerald-400 hover:bg-emerald-300 text-slate-950 flex items-center justify-center active:scale-90 transition-transform font-bold" data-item-en="Buff Khaja Set (Rs. 200)" data-item-np="बफ खाजा सेट (रु. २००)">
-<span class="material-symbols-outlined text-[18px]">add</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<!-- Category 4: सुकुटी तथा विशेष परिकार (Sukuti & Specials) -->
-<div class="menu-group flex flex-col gap-2" data-cat="sukuti">
-<div class="flex items-center gap-2 px-1 pt-1">
-<span class="w-3 h-3 rounded-full bg-orange-500 shadow-sm shadow-orange-500"></span>
-<h4 class="font-caps text-sm font-bold text-orange-400 tracking-wide uppercase" data-i18n="cat-head-sukuti">सुकुटी तथा विशेष परिकार</h4>
-<span class="text-[10px] font-caps text-orange-300/80 bg-orange-500/10 px-2 py-0.5 rounded-full ml-auto border border-orange-500/20" data-i18n="sukuti-note">पिरो-अमिलो</span>
-</div>
-<div class="flex flex-col gap-2">
-<!-- Plain sukuti -->
-<div class="p-3 rounded-xl bg-[#181b20] border border-orange-500/30 hover:border-orange-500/60 transition-all flex items-center justify-between gap-3 shadow-md">
-<div class="flex items-center gap-3 min-w-0">
-<div class="w-10 h-10 rounded-lg bg-orange-500/15 border border-orange-500/30 flex items-center justify-center flex-shrink-0 text-orange-400">
-<span class="material-symbols-outlined text-[20px]">kebab_dining</span>
-</div>
-<div class="flex flex-col min-w-0">
-<h5 class="text-sm font-semibold text-white truncate" data-i18n="item-plain-suk-name">सादा सुकुटी (Plain Sukuti)</h5>
-<p class="text-[11px] text-[#9ca3af]" data-i18n="item-plain-suk-desc">धुँवामा सुकाइएको क्रन्ची मासु तोरीको तेलमा फ्राइ</p>
-</div>
-</div>
-<div class="flex items-center gap-2 flex-shrink-0">
-<span class="font-caps font-bold text-orange-400 text-sm bg-orange-500/10 px-2 py-1 rounded-lg border border-orange-500/20" data-i18n="price-200">रु. २००</span>
-<button aria-label="Order Plain Sukuti" class="order-add-btn w-8 h-8 rounded-lg bg-orange-500 hover:bg-orange-400 text-slate-950 flex items-center justify-center active:scale-90 transition-transform font-bold" data-item-en="Plain Sukuti (Rs. 200)" data-item-np="सादा सुकुटी (रु. २००)">
-<span class="material-symbols-outlined text-[18px]">add</span>
-</button>
-</div>
-</div>
-<!-- Sadeko sukuti -->
-<div class="p-3 rounded-xl bg-[#181b20] border border-orange-500/30 hover:border-orange-500/60 transition-all flex items-center justify-between gap-3 shadow-md">
-<div class="flex items-center gap-3 min-w-0">
-<div class="w-10 h-10 rounded-lg bg-orange-500/15 border border-orange-500/30 flex items-center justify-center flex-shrink-0 text-orange-400">
-<span class="material-symbols-outlined text-[20px]">local_fire_department</span>
-</div>
-<div class="flex flex-col min-w-0">
-<div class="flex items-center gap-1.5">
-<h5 class="text-sm font-semibold text-white truncate" data-i18n="item-sad-suk-name">साँधेको सुकुटी (Sadeko Sukuti)</h5>
-<span class="text-[9px] font-caps uppercase bg-rose-500/20 text-rose-400 px-1 rounded border border-rose-500/30 font-bold" data-i18n="badge-special">स्पेसल</span>
-</div>
-<p class="text-[11px] text-[#9ca3af]" data-i18n="item-sad-suk-desc">प्याज, हरियो खुर्सानी, टिमुर, अदुवा र कागतीमा साँधेको</p>
-</div>
-</div>
-<div class="flex items-center gap-2 flex-shrink-0">
-<span class="font-caps font-bold text-orange-400 text-sm bg-orange-500/10 px-2 py-1 rounded-lg border border-orange-500/20" data-i18n="price-250">रु. २५०</span>
-<button aria-label="Order Sadeko Sukuti" class="order-add-btn w-8 h-8 rounded-lg bg-orange-500 hover:bg-orange-400 text-slate-950 flex items-center justify-center active:scale-90 transition-transform font-bold" data-item-en="Sadeko Sukuti (Rs. 250)" data-item-np="साँधेको सुकुटी (रु. २५०)">
-<span class="material-symbols-outlined text-[18px]">add</span>
-</button>
-</div>
-</div>
-<!-- Pork curry -->
-<div class="p-3 rounded-xl bg-[#181b20] border border-orange-500/30 hover:border-orange-500/60 transition-all flex items-center justify-between gap-3 shadow-md">
-<div class="flex items-center gap-3 min-w-0">
-<div class="w-10 h-10 rounded-lg bg-orange-500/15 border border-orange-500/30 flex items-center justify-center flex-shrink-0 text-orange-400">
-<span class="material-symbols-outlined text-[20px]">soup_kitchen</span>
-</div>
-<div class="flex flex-col min-w-0">
-<h5 class="text-sm font-semibold text-white truncate" data-i18n="item-pork-curry-name">पोर्क करी (Pork Curry)</h5>
-<p class="text-[11px] text-[#9ca3af]" data-i18n="item-pork-curry-desc">स्थानीय शैलीमा पकाइएको रसिलो एवं स्वादिलो पोर्क ग्रेभी</p>
-</div>
-</div>
-<div class="flex items-center gap-2 flex-shrink-0">
-<span class="font-caps font-bold text-orange-400 text-sm bg-orange-500/10 px-2 py-1 rounded-lg border border-orange-500/20" data-i18n="price-150">रु. १५०</span>
-<button aria-label="Order Pork Curry" class="order-add-btn w-8 h-8 rounded-lg bg-orange-500 hover:bg-orange-400 text-slate-950 flex items-center justify-center active:scale-90 transition-transform font-bold" data-item-en="Pork Curry (Rs. 150)" data-item-np="पोर्क करी (रु. १५०)">
-<span class="material-symbols-outlined text-[18px]">add</span>
-</button>
-</div>
-</div>
-<!-- Anda tarkari roti -->
-<div class="p-3 rounded-xl bg-[#181b20] border border-orange-500/30 hover:border-orange-500/60 transition-all flex items-center justify-between gap-3 shadow-md">
-<div class="flex items-center gap-3 min-w-0">
-<div class="w-10 h-10 rounded-lg bg-orange-500/15 border border-orange-500/30 flex items-center justify-center flex-shrink-0 text-orange-400">
-<span class="material-symbols-outlined text-[20px]">egg_alt</span>
-</div>
-<div class="flex flex-col min-w-0">
-<h5 class="text-sm font-semibold text-white truncate" data-i18n="item-anda-roti-name">अण्डा तरकारी रोटी</h5>
-<p class="text-[11px] text-[#9ca3af]" data-i18n="item-anda-roti-desc">तातो रोटी, अण्डा आम्लेट/करी र ताजा मौसमी तरकारी</p>
-</div>
-</div>
-<div class="flex items-center gap-2 flex-shrink-0">
-<span class="font-caps font-bold text-orange-400 text-sm bg-orange-500/10 px-2 py-1 rounded-lg border border-orange-500/20" data-i18n="price-100">रु. १००</span>
-<button aria-label="Order Anda Tarkari Roti" class="order-add-btn w-8 h-8 rounded-lg bg-orange-500 hover:bg-orange-400 text-slate-950 flex items-center justify-center active:scale-90 transition-transform font-bold" data-item-en="Egg Curry Roti (Rs. 100)" data-item-np="अण्डा तरकारी रोटी (रु. १००)">
-<span class="material-symbols-outlined text-[18px]">add</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<!-- Category 5: चिया तथा कफी (Tea & Coffee) -->
-<div class="menu-group flex flex-col gap-2" data-cat="drinks">
-<div class="flex items-center gap-2 px-1 pt-1">
-<span class="w-3 h-3 rounded-full bg-cyan-400 shadow-sm shadow-cyan-400"></span>
-<h4 class="font-caps text-sm font-bold text-cyan-400 tracking-wide uppercase" data-i18n="cat-head-drinks">चिया तथा कफी (Tea &amp; Coffee)</h4>
-<span class="text-[10px] font-caps text-cyan-300/80 bg-cyan-500/10 px-2 py-0.5 rounded-full ml-auto border border-cyan-500/20" data-i18n="drinks-note">तातो पेय</span>
-</div>
-<div class="grid grid-cols-2 gap-2">
-<!-- Black tea -->
-<div class="p-2.5 rounded-xl bg-[#181b20] border border-cyan-500/30 hover:border-cyan-500/60 transition-all flex flex-col justify-between gap-2 shadow-md">
-<div class="flex items-center gap-2">
-<div class="w-8 h-8 rounded-lg bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center text-cyan-400 flex-shrink-0">
-<span class="material-symbols-outlined text-[18px]">emoji_food_beverage</span>
-</div>
-<div class="flex flex-col min-w-0">
-<h5 class="text-xs font-semibold text-white truncate" data-i18n="item-black-tea">कालो चिया</h5>
-<span class="text-[10px] text-[#9ca3af]">Black Tea</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-1 border-t border-[#282d36]">
-<span class="font-caps font-bold text-cyan-400 text-xs" data-i18n="price-20">रु. २०</span>
-<button aria-label="Order Black Tea" class="order-add-btn w-7 h-7 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 flex items-center justify-center active:scale-90 font-bold" data-item-en="Black Tea (Rs. 20)" data-item-np="कालो चिया (रु. २०)">
-<span class="material-symbols-outlined text-[16px]">add</span>
-</button>
-</div>
-</div>
-<!-- Milk tea -->
-<div class="p-2.5 rounded-xl bg-[#181b20] border border-cyan-500/30 hover:border-cyan-500/60 transition-all flex flex-col justify-between gap-2 shadow-md">
-<div class="flex items-center gap-2">
-<div class="w-8 h-8 rounded-lg bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center text-cyan-400 flex-shrink-0">
-<span class="material-symbols-outlined text-[18px]">coffee</span>
-</div>
-<div class="flex flex-col min-w-0">
-<h5 class="text-xs font-semibold text-white truncate" data-i18n="item-milk-tea">दूध चिया</h5>
-<span class="text-[10px] text-[#9ca3af]">Milk Tea</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-1 border-t border-[#282d36]">
-<span class="font-caps font-bold text-cyan-400 text-xs" data-i18n="price-40">रु. ४०</span>
-<button aria-label="Order Milk Tea" class="order-add-btn w-7 h-7 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-950 flex items-center justify-center active:scale-90 font-bold" data-item-en="Milk Tea (Rs. 40)" data-item-np="दूध चिया (रु. ४०)">
-<span class="material-symbols-outlined text-[16px]">add</span>
-</button>
-</div>
-</div>
-<!-- Black coffee -->
-<div class="p-2.5 rounded-xl bg-[#181b20] border border-blue-500/30 hover:border-blue-500/60 transition-all flex flex-col justify-between gap-2 shadow-md">
-<div class="flex items-center gap-2">
-<div class="w-8 h-8 rounded-lg bg-blue-500/15 border border-blue-500/30 flex items-center justify-center text-blue-400 flex-shrink-0">
-<span class="material-symbols-outlined text-[18px]">local_cafe</span>
-</div>
-<div class="flex flex-col min-w-0">
-<h5 class="text-xs font-semibold text-white truncate" data-i18n="item-black-coffee">कालो कफी</h5>
-<span class="text-[10px] text-[#9ca3af]">Black Coffee</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-1 border-t border-[#282d36]">
-<span class="font-caps font-bold text-blue-400 text-xs" data-i18n="price-60">रु. ६०</span>
-<button aria-label="Order Black Coffee" class="order-add-btn w-7 h-7 rounded-lg bg-blue-500 hover:bg-blue-400 text-slate-950 flex items-center justify-center active:scale-90 font-bold" data-item-en="Black Coffee (Rs. 60)" data-item-np="कालो कफी (रु. ६०)">
-<span class="material-symbols-outlined text-[16px]">add</span>
-</button>
-</div>
-</div>
-<!-- Milk coffee -->
-<div class="p-2.5 rounded-xl bg-[#181b20] border border-blue-500/30 hover:border-blue-500/60 transition-all flex flex-col justify-between gap-2 shadow-md">
-<div class="flex items-center gap-2">
-<div class="w-8 h-8 rounded-lg bg-blue-500/15 border border-blue-500/30 flex items-center justify-center text-blue-400 flex-shrink-0">
-<span class="material-symbols-outlined text-[18px]">local_cafe</span>
-</div>
-<div class="flex flex-col min-w-0">
-<h5 class="text-xs font-semibold text-white truncate" data-i18n="item-milk-coffee">दूध कफी</h5>
-<span class="text-[10px] text-[#9ca3af]">Milk Coffee</span>
-</div>
-</div>
-<div class="flex items-center justify-between pt-1 border-t border-[#282d36]">
-<span class="font-caps font-bold text-blue-400 text-xs" data-i18n="price-80">रु. ८०</span>
-<button aria-label="Order Milk Coffee" class="order-add-btn w-7 h-7 rounded-lg bg-blue-500 hover:bg-blue-400 text-slate-950 flex items-center justify-center active:scale-90 font-bold" data-item-en="Milk Coffee (Rs. 80)" data-item-np="दूध कफी (रु. ८०)">
-<span class="material-symbols-outlined text-[16px]">add</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Quick Floating Toast Notification for Order Addition -->
-<div class="hidden fixed bottom-24 left-4 right-4 z-50 max-w-md mx-auto bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 px-4 py-2.5 rounded-xl items-center justify-between shadow-2xl font-caps font-bold text-xs" id="cart-toast">
-<span class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px]">check_circle</span>
-<span id="toast-text">अर्डर सूचीमा थपियो!</span>
-</span>
-<a class="bg-slate-950 text-emerald-400 px-2.5 py-1 rounded-lg text-[11px] uppercase tracking-wider font-bold" data-i18n="toast-call-btn" href="tel:9762746378">
-        कल गरेर मगाउनुहोस्
-      </a>
-</div>
-<!-- Family & Hospitality Gallery (Preserving IMAGE_13 & IMAGE_14) -->
-<section class="px-4 pt-5 pb-2">
-<div class="flex items-center justify-between mb-2.5">
-<div>
-<span class="text-[11px] font-caps uppercase tracking-wider text-rose-400 font-bold" data-i18n="gallery-sub">हाम्रो परिवार</span>
-<h3 class="font-display text-lg text-white font-bold" data-i18n="gallery-title">सम्झनाहरू र आतिथ्य</h3>
-</div>
-<span class="material-symbols-outlined text-rose-400">photo_camera</span>
-</div>
-<div class="grid grid-cols-2 gap-2.5">
-<div class="relative h-60 rounded-xl overflow-hidden bg-[#181b20] border border-[#282d36] shadow-md group">
-<img alt="Happy celebration at Suzan's Corner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk9t3AhdZu4oV2bP0EgnPpsJFqnzRB2c6o9WncnLK101jqOuXpSzvwRaTRw7WhzuUsH_gR-oSZdaJ0suyoAEGmlafscCtcbaDHRqGgss2e5P1WGEW4zqlfHTFCQNlejV1A4uMhmnTDRKiCIDw0U8Pmps_2LnptGIyrq-XpojXNT4LoNOYIJGrjN8vEJqZWK-ONDVacVPrOEqjqUSD2oknp-9O4uvaPL7mRQhIasEeSRCRSM7FlWSK7OgLGyzf_V1wWC50"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex items-end p-2.5">
-<span class="text-[11px] font-caps text-white font-medium" data-i18n="gallery-cap-1">स्नेही भेटघाट र उत्सव</span>
-</div>
-</div>
-<div class="relative h-60 rounded-xl overflow-hidden bg-[#181b20] border border-[#282d36] shadow-md group">
-<img alt="Kids enjoying food at Suzan's Corner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxzA-jG6isS8x1u6g766nS542KbJeXO5EruB6Jto7Sansv3I0ZoPL48wx9F4OixRc-oyUHsF8HEnEnWo2wcV9GUMRpJC2dv990W0ysmkh_609qgdXsejfY_uzogA9RVZA-uG404v2Ta65v0-aLFsR_gwwVgKYWjMnXMwipBex79IUEAeJTbmWe62KhUdQ15mzEu3ydV1fQYKt-UlXTYMjDNcgSPyL3Z6hLRLp1Gini-y0x08gjeF0hnuZAN3QH5NqnIVo"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex items-end p-2.5">
-<span class="text-[11px] font-caps text-white font-medium" data-i18n="gallery-cap-2">मौलिक सेवा र खुशी</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Location & Storefront Contact Card -->
-<section class="px-4 py-3">
-<div class="w-full bg-[#181b20] border border-amber-500/30 rounded-2xl p-4 flex flex-col gap-3 shadow-xl">
-<div class="flex items-center gap-2">
-<div class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center flex-shrink-0 border border-amber-500/30">
-<span class="material-symbols-outlined text-[20px]">store</span>
-</div>
-<div>
-<h4 class="font-caps text-sm font-bold text-white" data-i18n="card-shop-name">सुजन'स कर्नर - न्यूरोड खाजा घर</h4>
-<p class="text-xs text-[#9ca3af]" data-i18n="card-shop-loc">भिमाद बजार - ०६, तनहुँ (पार्किङ सुविधा उपलब्ध)</p>
-</div>
-</div>
-<!-- Hours & Contact Badges -->
-<div class="grid grid-cols-2 gap-2 text-xs">
-<div class="bg-[#0f1115] p-2.5 rounded-xl border border-[#282d36] flex items-center gap-2">
-<span class="material-symbols-outlined text-amber-400 text-[18px]">alarm</span>
-<div>
-<p class="text-[10px] font-caps uppercase text-[#9ca3af]" data-i18n="info-time-label">समय</p>
-<p class="font-bold text-white text-[11px]">७:०० AM - ९:०० PM</p>
-</div>
-</div>
-<div class="bg-[#0f1115] p-2.5 rounded-xl border border-[#282d36] flex items-center gap-2">
-<span class="material-symbols-outlined text-emerald-400 text-[18px]">phone</span>
-<div>
-<p class="text-[10px] font-caps uppercase text-[#9ca3af]" data-i18n="info-phone-label">सम्पर्क फोन</p>
-<a class="font-bold text-emerald-400 text-[11px]" href="tel:9762746378">९७६२७४६३७८</a>
-</div>
-</div>
-</div>
-<!-- Action Buttons: Google Maps & Direct WhatsApp Call -->
-<div class="grid grid-cols-2 gap-2 pt-1">
-<a class="py-2.5 px-3 rounded-xl bg-[#242933] hover:bg-[#2d3440] text-white font-caps text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors border border-[#353b47]" href="https://maps.google.com/?q=Bhimad+Tanahun+Nepal" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-amber-400 text-[16px]">directions</span>
-<span data-i18n="btn-maps">नक्सामा हेर्नुहोस्</span>
-</a>
-<a class="py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-caps text-xs font-bold flex items-center justify-center gap-1.5 transition-colors shadow-md shadow-emerald-900/30" href="https://wa.me/9779762746378?text=नमस्ते%20सुजन'स%20कर्नर!%20खाजा%20अर्डर%20गर्नु%20थियो।" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[16px]">send</span>
-<span data-i18n="btn-whatsapp">ह्वाट्सएप अर्डर</span>
-</a>
-</div>
-</div>
-</section>
-<!-- Footer Signoff with complete info -->
-<footer class="w-full text-center py-4 px-4 flex flex-col items-center justify-center gap-1.5 border-t border-[#1f242d] mt-2">
-<div class="w-12 h-1 bg-gradient-to-r from-rose-500 via-amber-400 to-emerald-400 rounded-full mb-1"></div>
-<p class="text-xs font-caps uppercase tracking-widest text-amber-400 font-bold" data-i18n="footer-name">
-        सुजन'स कर्नर - न्यूरोड खाजा घर
-      </p>
-<p class="text-[11px] text-[#9ca3af]">
-<span data-i18n="footer-address">भिमाद बजार - ०६, तनहुँ</span> • <span data-i18n="footer-phone-label">फोन:</span> <a class="text-white hover:underline" href="tel:9762746378">९७६२७४६३७८</a>
-</p>
-<p class="text-[10px] text-[#6b7280]" data-i18n="footer-timing">
-        खुल्ने समय: बिहान ७:०० - बेलुका ९:०० (हप्ताको सातै दिन)
-      </p>
-</footer>
-</main>
-<!-- Sticky Bottom Navigation Bar with localized labels -->
-<nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#0f1115]/95 backdrop-blur-xl border-t border-[#242933] shadow-[0_-2px_15px_rgba(0,0,0,0.6)]">
-<div class="flex justify-around items-center h-16 px-2 max-w-md mx-auto">
-<a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-amber-400 transition-transform active:scale-95" href="#">
-<span class="material-symbols-outlined text-[22px]">cottage</span>
-<span class="font-caps text-[10px] font-bold tracking-tight" data-i18n="nav-home">गृहपृष्ठ</span>
-</a>
-<a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-[#9ca3af] hover:text-rose-400 transition-colors" href="#full-menu">
-<span class="material-symbols-outlined text-[22px]">restaurant_menu</span>
-<span class="font-caps text-[10px] tracking-tight" data-i18n="nav-menu">मेनु</span>
-</a>
-<a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-[#9ca3af] hover:text-emerald-400 transition-colors" href="tel:9762746378">
-<div class="w-9 h-9 rounded-full bg-emerald-500 text-slate-950 flex items-center justify-center shadow-lg shadow-emerald-500/30">
-<span class="material-symbols-outlined text-[20px]">call</span>
-</div>
-</a>
-<a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-[#9ca3af] hover:text-cyan-400 transition-colors" href="https://wa.me/9779762746378" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[22px]">chat</span>
-<span class="font-caps text-[10px] tracking-tight" data-i18n="nav-whatsapp">ह्वाट्सएप</span>
-</a>
-<a class="flex flex-col items-center justify-center gap-1 w-14 h-14 text-[#9ca3af] hover:text-amber-400 transition-colors" href="https://maps.google.com/?q=Bhimad+Tanahun+Nepal" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[22px]">pin_drop</span>
-<span class="font-caps text-[10px] tracking-tight" data-i18n="nav-location">स्थान</span>
-</a>
-</div>
-</nav>
-<!-- Comprehensive Interactive Localization & Menu Script -->
+<html lang="ne">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Newroad Khaja Ghar | Suzan's Corner</title>
+
+<meta name="description" content="Newroad Khaja Ghar, Bhimad Tanahun — ताजा मःमः, चाउमिन, खाजा सेट, सुकुटी, खाना र नेपाली परिकार।">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
 <script>
-    // Bilingual dictionary
-    const translations = {
-      np: {
-        "shop-name": "सुजन'स कर्नर",
-        "location-short": "भिमाद - ०६, तनहुँ",
-        "open-badge": "खुला छ",
-        "call-btn": "कल",
-        "timing-label": "समय तालिका",
-        "timing-hours": "बिहान ७:०० – बेलुका ९:००",
-        "hero-phone-num": "९७६२७४६३७८",
-        "hero-rating": "४.९ ★ लोकप्रिय खाजा घर",
-        "hero-tag": "भिमाद, तनहुँ",
-        "hero-subhead": "स्वादिलो, सफा र पारिवारिक",
-        "hero-title": "सुजन'स कर्नर - न्यूरोड खाजा घर",
-        "hero-desc": "भिमाद बजार - ०६, तनहुँ (पार्किङ सुविधा सहित)",
-        "btn-view-menu": "मेनु र मूल्य हेर्नुहोस्",
-        "btn-direct-call": "सिधा कल",
-        "cat-all": "सबै परिकार",
-        "cat-momo": "🥟 म:म विशेष",
-        "cat-chowmin": "🍜 चाउमिन",
-        "cat-khaja": "🍱 खाजा सेट",
-        "cat-sukuti": "🔥 सुकुटी/विशेष",
-        "cat-drinks": "☕ चिया/कफी",
-        "momo-sec-title": "हातले बेरिएका ताजा मोमोहरू",
-        "fresh-daily-tag": "दैनिक ताजा",
-        "momo-tag-1": "बफ / चिकेन",
-        "momo-card-1-title": "हातले बेरिएको म:म",
-        "momo-card-1-sub": "पातलो पत्र र रसिलो किमा",
-        "momo-card-1-price": "रु. १३० बाट सुरु",
-        "momo-tag-2": "परम्परागत शैली",
-        "momo-card-2-title": "विशेष स्टीम मोमो",
-        "momo-card-2-sub": "स्वादिलो टिमुरको अचार",
-        "momo-card-2-price": "तातो र स्वच्छ",
-        "quote-badge": "सुजन'स मोमो स्पेशल",
-        "quote-title": "\"घरकै जस्तै स्वाद, हरेक गाँसमा खुशी\"",
-        "quote-desc": "बच्चादेखि वृद्धसम्म सबैका लागि स्वच्छ, स्वस्थ र ताजा मसलाबाट तयार पारिएको रसिलो म:म।",
-        "menu-header-sub": "आधिकारिक मूल्य सूची",
-        "menu-header-title": "पूर्ण खाजा मेनु",
-        "menu-order-phone": "अर्डर: 9762746378",
-        "cat-head-momo": "म:म परिकार (Momo Special)",
-        "momo-serving-note": "१० पिस + अचार",
-        "item-buff-momo-name": "बफ म:म (Buff Momo)",
-        "item-buff-momo-desc": "ताजा किमा, विशेष मसला र स्वादिष्ट पिरो-अमिलो अचार",
-        "item-chk-momo-name": "चिकेन म:म (Chicken Momo)",
-        "item-chk-momo-desc": "सफा कुखुराको रसिलो मासुबाट बनेको ताजा स्टीम म:म",
-        "cat-head-chowmin": "चाउमिन (Chowmin)",
-        "chowmin-note": "ताजा भुटेको",
-        "item-veg-chow-name": "भेज चाउमिन (Veg Chowmin)",
-        "item-veg-chow-desc": "ताजा बन्दा, गाजर, सिमला मिर्च र विशेष सस",
-        "item-chk-chow-name": "चिकेन चाउमिन (Chicken Chowmin)",
-        "item-chk-chow-desc": "नरम चिकेन टुक्रा र हरियो तरकारीसँग मज्जाले भुटेको",
-        "item-buff-suk-chow-name": "बफ सुकुटी चाउमिन",
-        "badge-popular": "लोकप्रिय",
-        "item-buff-suk-chow-desc": "मसालेदार सुकुटीको क्रन्च र चाउमिनको मौलिक सम्मिश्रण",
-        "cat-head-khaja": "खाजा सेट तथा कम्बो",
-        "khaja-note": "भरपेट खाजा",
-        "item-combo-name": "कम्बो सेट (Combo Set)",
-        "item-combo-desc": "च्यूरा, भुटेको भटमास, चना, आलुदम र अचार",
-        "item-chk-set-name": "चिकेन खाजा सेट (Chicken Khaja Set)",
-        "item-chk-set-desc": "स्वादिष्ट चिकेन करी, च्यूरा, भुटेको भटमास, अचार र सलाद",
-        "item-buff-set-name": "बफ खाजा सेट (Buff Khaja Set)",
-        "item-buff-set-desc": "मसालेदार बफ छोइला/करी, च्यूरा, अचार र भटमास सेट",
-        "cat-head-sukuti": "सुकुटी तथा विशेष परिकार",
-        "sukuti-note": "पिरो-अमिलो",
-        "item-plain-suk-name": "सादा सुकुटी (Plain Sukuti)",
-        "item-plain-suk-desc": "धुँवामा सुकाइएको क्रन्ची मासु तोरीको तेलमा फ्राइ",
-        "item-sad-suk-name": "साँधेको सुकुटी (Sadeko Sukuti)",
-        "badge-special": "स्पेसल",
-        "item-sad-suk-desc": "प्याज, हरियो खुर्सानी, टिमुर, अदुवा र कागतीमा साँधेको",
-        "item-pork-curry-name": "पोर्क करी (Pork Curry)",
-        "item-pork-curry-desc": "स्थानीय शैलीमा पकाइएको रसिलो एवं स्वादिलो पोर्क ग्रेभी",
-        "item-anda-roti-name": "अण्डा तरकारी रोटी",
-        "item-anda-roti-desc": "तातो रोटी, अण्डा आम्लेट/करी र ताजा मौसमी तरकारी",
-        "cat-head-drinks": "चिया तथा कफी (Tea & Coffee)",
-        "drinks-note": "तातो पेय",
-        "item-black-tea": "कालो चिया",
-        "item-milk-tea": "दूध चिया",
-        "item-black-coffee": "कालो कफी",
-        "item-milk-coffee": "दूध कफी",
-        "price-130": "रु. १३०",
-        "price-100": "रु. १००",
-        "price-140": "रु. १४०",
-        "price-150": "रु. १५०",
-        "price-200": "रु. २००",
-        "price-250": "रु. २५०",
-        "price-20": "रु. २०",
-        "price-40": "रु. ४०",
-        "price-60": "रु. ६०",
-        "price-80": "रु. ८०",
-        "gallery-sub": "हाम्रो परिवार",
-        "gallery-title": "सम्झनाहरू र आतिथ्य",
-        "gallery-cap-1": "स्नेही भेटघाट र उत्सव",
-        "gallery-cap-2": "मौलिक सेवा र खुशी",
-        "card-shop-name": "सुजन'स कर्नर - न्यूरोड खाजा घर",
-        "card-shop-loc": "भिमाद बजार - ०६, तनहुँ (पार्किङ सुविधा उपलब्ध)",
-        "info-time-label": "समय",
-        "info-phone-label": "सम्पर्क फोन",
-        "btn-maps": "नक्सामा हेर्नुहोस्",
-        "btn-whatsapp": "ह्वाट्सएप अर्डर",
-        "footer-name": "सुजन'स कर्नर - न्यूरोड खाजा घर",
-        "footer-address": "भिमाद बजार - ०६, तनहुँ",
-        "footer-phone-label": "फोन:",
-        "footer-timing": "खुल्ने समय: बिहान ७:०० - बेलुका ९:०० (हप्ताको सातै दिन)",
-        "nav-home": "गृहपृष्ठ",
-        "nav-menu": "मेनु",
-        "nav-whatsapp": "ह्वाट्सएप",
-        "nav-location": "स्थान",
-        "toast-call-btn": "कल गरेर मगाउनुहोस्"
-      },
-      en: {
-        "shop-name": "Suzan's Corner",
-        "location-short": "Bhimad-06, Tanahun",
-        "open-badge": "Open Now",
-        "call-btn": "Call",
-        "timing-label": "Opening Hours",
-        "timing-hours": "7:00 AM – 9:00 PM",
-        "hero-phone-num": "9762746378",
-        "hero-rating": "4.9 ★ Popular Eatery",
-        "hero-tag": "Bhimad, Tanahun",
-        "hero-subhead": "Tasty, Clean & Family Friendly",
-        "hero-title": "Suzan's Corner - Newroad Khaja Ghar",
-        "hero-desc": "Bhimad Bazaar - 06, Tanahun (With Parking Space)",
-        "btn-view-menu": "View Menu & Prices",
-        "btn-direct-call": "Direct Call",
-        "cat-all": "All Items",
-        "cat-momo": "🥟 Momo Special",
-        "cat-chowmin": "🍜 Chowmin",
-        "cat-khaja": "🍱 Khaja Sets",
-        "cat-sukuti": "🔥 Sukuti & Specials",
-        "cat-drinks": "☕ Tea / Coffee",
-        "momo-sec-title": "Handcrafted Fresh Momos",
-        "fresh-daily-tag": "Fresh Daily",
-        "momo-tag-1": "Buff / Chicken",
-        "momo-card-1-title": "Hand-folded Momos",
-        "momo-card-1-sub": "Delicate wrap & juicy mince",
-        "momo-card-1-price": "Starts at Rs. 130",
-        "momo-tag-2": "Traditional Fold",
-        "momo-card-2-title": "Special Steamed Momo",
-        "momo-card-2-sub": "Served with timur chutney",
-        "momo-card-2-price": "Hot & Fresh",
-        "quote-badge": "Suzan's Momo Special",
-        "quote-title": "\"Home-style Taste, Joy in Every Bite\"",
-        "quote-desc": "Crafted with fresh hygienic spices, loved by kids, youth, and elders alike.",
-        "menu-header-sub": "Official Price List",
-        "menu-header-title": "Complete Food Menu",
-        "menu-order-phone": "Order: 9762746378",
-        "cat-head-momo": "Momo Specials (10 pcs + Chutney)",
-        "momo-serving-note": "10 Pcs + Chutney",
-        "item-buff-momo-name": "Buff Momo",
-        "item-buff-momo-desc": "Fresh seasoned minced buff with authentic spicy-sour achar",
-        "item-chk-momo-name": "Chicken Momo",
-        "item-chk-momo-desc": "Juicy chicken mince momos steamed freshly per order",
-        "cat-head-chowmin": "Chowmin Noodles",
-        "chowmin-note": "Freshly Fried",
-        "item-veg-chow-name": "Veg Chowmin",
-        "item-veg-chow-desc": "Cabbage, carrots, bell pepper tossed in house sauce",
-        "item-chk-chow-name": "Chicken Chowmin",
-        "item-chk-chow-desc": "Wok-tossed noodles with tender chicken and crisp greens",
-        "item-buff-suk-chow-name": "Buff Sukuti Chowmin",
-        "badge-popular": "Popular",
-        "item-buff-suk-chow-desc": "Signature combo of crunchy spiced sukuti and noodles",
-        "cat-head-khaja": "Khaja Sets & Combos",
-        "khaja-note": "Hearty Meal",
-        "item-combo-name": "Combo Set",
-        "item-combo-desc": "Beaten rice (chyura), bhatmas, spiced chickpeas & potato curry",
-        "item-chk-set-name": "Chicken Khaja Set",
-        "item-chk-set-desc": "Tasty chicken curry, beaten rice, fried soybean, achar & salad",
-        "item-buff-set-name": "Buff Khaja Set",
-        "item-buff-set-desc": "Spiced buff choila/curry, beaten rice, chutney and bhatmas",
-        "cat-head-sukuti": "Sukuti & House Specials",
-        "sukuti-note": "Spicy & Tangy",
-        "item-plain-suk-name": "Plain Sukuti",
-        "item-plain-suk-desc": "Crispy smoked meat fried golden in mustard oil",
-        "item-sad-suk-name": "Sadeko Sukuti",
-        "badge-special": "Special",
-        "item-sad-suk-desc": "Marinated with onion, green chillies, timur, ginger & lime",
-        "item-pork-curry-name": "Pork Curry",
-        "item-pork-curry-desc": "Locally prepared rich savory pork gravy",
-        "item-anda-roti-name": "Egg Curry / Omelette Roti",
-        "item-anda-roti-desc": "Warm freshly made rotis served with egg curry and veg",
-        "cat-head-drinks": "Tea & Coffee",
-        "drinks-note": "Hot Drinks",
-        "item-black-tea": "Black Tea",
-        "item-milk-tea": "Milk Tea",
-        "item-black-coffee": "Black Coffee",
-        "item-milk-coffee": "Milk Coffee",
-        "price-130": "Rs. 130",
-        "price-100": "Rs. 100",
-        "price-140": "Rs. 140",
-        "price-150": "Rs. 150",
-        "price-200": "Rs. 200",
-        "price-250": "Rs. 250",
-        "price-20": "Rs. 20",
-        "price-40": "Rs. 40",
-        "price-60": "Rs. 60",
-        "price-80": "Rs. 80",
-        "gallery-sub": "Our Hospitality",
-        "gallery-title": "Memories & Warm Smiles",
-        "gallery-cap-1": "Celebrations & Gatherings",
-        "gallery-cap-2": "Warm Service & Happiness",
-        "card-shop-name": "Suzan's Corner - Newroad Khaja Ghar",
-        "card-shop-loc": "Bhimad Bazaar - 06, Tanahun (Parking Available)",
-        "info-time-label": "Hours",
-        "info-phone-label": "Contact Phone",
-        "btn-maps": "View on Google Maps",
-        "btn-whatsapp": "WhatsApp Order",
-        "footer-name": "Suzan's Corner - Newroad Khaja Ghar",
-        "footer-address": "Bhimad Bazaar - 06, Tanahun",
-        "footer-phone-label": "Phone:",
-        "footer-timing": "Opening Hours: 7:00 AM - 9:00 PM (All 7 Days)",
-        "nav-home": "Home",
-        "nav-menu": "Menu",
-        "nav-whatsapp": "WhatsApp",
-        "nav-location": "Location",
-        "toast-call-btn": "Call to Order Now"
+
+tailwind.config={
+
+  theme:{
+
+    extend:{
+
+      colors:{
+
+        primary:"#b70011",
+
+        background:"#fff8f5",
+
+        surface:"#fff8f5",
+
+        secondary:"#904d00",
+
+        tertiary:"#006646"
+
       }
-    };
 
-    let currentLang = 'np';
-
-    function setLanguage(lang) {
-      currentLang = lang;
-      document.documentElement.lang = lang;
-
-      // Update all text nodes with data-i18n
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-          el.textContent = translations[lang][key];
-        }
-      });
-
-      // Update toggle button chips
-      const npChip = document.getElementById('lang-np-chip');
-      const enChip = document.getElementById('lang-en-chip');
-      const floatingLabel = document.getElementById('floating-lang-label');
-
-      if (lang === 'np') {
-        npChip.className = "px-1.5 py-0.5 rounded-md bg-amber-400 text-slate-950 font-bold transition-all";
-        enChip.className = "px-1.5 py-0.5 rounded-md text-amber-400/80 hover:text-white transition-all";
-        floatingLabel.textContent = "नेपाली (EN switch)";
-      } else {
-        enChip.className = "px-1.5 py-0.5 rounded-md bg-amber-400 text-slate-950 font-bold transition-all";
-        npChip.className = "px-1.5 py-0.5 rounded-md text-amber-400/80 hover:text-white transition-all";
-        floatingLabel.textContent = "English (नेपाली switch)";
-      }
     }
 
-    document.addEventListener('DOMContentLoaded', () => {
-      // Toggle button event listeners
-      const langToggleBtn = document.getElementById('lang-toggle-btn');
-      const floatingLangPill = document.getElementById('floating-lang-pill');
+  }
 
-      function toggleNextLanguage() {
-        const next = currentLang === 'np' ? 'en' : 'np';
-        setLanguage(next);
-      }
+};
 
-      if (langToggleBtn) langToggleBtn.addEventListener('click', toggleNextLanguage);
-      if (floatingLangPill) floatingLangPill.addEventListener('click', toggleNextLanguage);
+</script>
 
-      // Category Filter Handling
-      const catPills = document.querySelectorAll('.cat-pill');
-      const menuGroups = document.querySelectorAll('.menu-group');
+<style>
 
-      catPills.forEach(pill => {
-        pill.addEventListener('click', () => {
-          const selectedCat = pill.getAttribute('data-category');
+html{scroll-behavior:smooth}
 
-          // Reset pill styles
-          catPills.forEach(p => {
-            p.classList.remove('bg-gradient-to-r', 'from-rose-500', 'to-amber-500', 'text-slate-950', 'shadow-md', 'active-pill');
-            p.classList.add('bg-[#181b20]');
-          });
+body{
 
-          // Set active pill style
-          pill.classList.remove('bg-[#181b20]');
-          pill.classList.add('bg-gradient-to-r', 'from-rose-500', 'to-amber-500', 'text-slate-950', 'shadow-md', 'active-pill');
+  font-family:"Plus Jakarta Sans",sans-serif;
 
-          // Filter menu groups
-          menuGroups.forEach(group => {
-            const groupCat = group.getAttribute('data-cat');
-            if (selectedCat === 'all' || selectedCat === groupCat) {
-              group.style.display = 'flex';
-            } else {
-              group.style.display = 'none';
-            }
-          });
-        });
-      });
+  background:#fff8f5;
 
-      // Quick Order Toast Feedback
-      const addBtns = document.querySelectorAll('.order-add-btn');
-      const cartToast = document.getElementById('cart-toast');
-      const toastText = document.getElementById('toast-text');
-      let toastTimer;
+  color:#1e1b19;
 
-      addBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const itemName = currentLang === 'np' 
-            ? (btn.getAttribute('data-item-np') || 'खाजा') 
-            : (btn.getAttribute('data-item-en') || 'Food Item');
+  padding-bottom:76px
 
-          btn.classList.add('scale-125');
-          setTimeout(() => btn.classList.remove('scale-125'), 180);
+}
 
-          toastText.textContent = currentLang === 'np' 
-            ? `${itemName} थपियो!` 
-            : `${itemName} added to order!`;
+h1,h2,h3{font-family:Epilogue,sans-serif}
 
-          cartToast.classList.remove('hidden');
-          cartToast.classList.add('flex');
+::-webkit-scrollbar{display:none}
 
-          clearTimeout(toastTimer);
-          toastTimer = setTimeout(() => {
-            cartToast.classList.add('hidden');
-            cartToast.classList.remove('flex');
-          }, 2800);
-        });
-      });
-    });
-  </script>
-</body></html>
+.card{
+
+  background:#fff;
+
+  border-radius:18px;
+
+  box-shadow:0 3px 16px rgba(30,27,25,.07)
+
+}
+
+img{display:block}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#fff8f5]/95 backdrop-blur-xl shadow-sm">
+
+  <div class="h-16 px-4 flex items-center justify-between gap-2">
+
+    <div class="flex items-center gap-2 min-w-0">
+
+      <div class="w-10 h-10 rounded-full overflow-hidden bg-white flex-shrink-0">
+
+        <img
+
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCZwsaVCa6ZdSiYHX6ejcNTubrc5FsVft-mGYLvQX755oczvcz7D6uonT3rGBvJNye7oTAfLjMwTfhDg5RcXGg_dxA90i0HM5L1ByAChFee7IFUKOlToZhXOyYjxWgxREsU3bjOX8scMHifqQxbWTVF6GrB9XRmnuLNhmPBhqq822lvnygNYvIus7nZ-L0Jr3Z-MEyRx-xuKUVOC3kz_tzud193L1XGPQ0pYu_AbYcViBMqeodWaMxxuOEGN9R46Df_1w"
+
+          class="w-full h-full object-cover"
+
+          alt="Suzan's Corner Logo">
+
+      </div>
+
+      <div class="min-w-0">
+
+        <div class="font-bold text-primary truncate">Suzan's Corner</div>
+
+        <div class="text-[10px] text-[#5c403c] truncate">
+
+          Newroad Khaja Ghar • भिमाद
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="flex items-center gap-1">
+
+      <span class="px-2 py-1 rounded-full bg-red-700 text-white text-xs font-bold">ने</span>
+
+      <a href="tel:9762746378"
+
+         class="w-10 h-10 rounded-full flex items-center justify-center text-primary">
+
+        <span class="material-symbols-outlined">call</span>
+
+      </a>
+
+      <a href="https://wa.me/9779762746378"
+
+         class="w-10 h-10 rounded-full flex items-center justify-center text-green-700">
+
+        <span class="material-symbols-outlined">chat</span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+<main class="pt-16">
+
+<!-- OPEN STATUS -->
+
+<section class="px-4 pt-3">
+
+  <div class="bg-[#eee7e3] rounded-xl p-3">
+
+    <div class="flex justify-between items-center">
+
+      <span class="text-sm font-bold text-green-700">
+
+        🟢 हाल खुला छ (Open Now)
+
+      </span>
+
+      <span class="text-xs text-[#5c403c]">
+
+        बिहान ७:०० – बेलुका ९:००
+
+      </span>
+
+    </div>
+
+    <div class="flex justify-between items-center mt-2 gap-2">
+
+      <span class="text-xs text-[#5c403c]">
+
+        📍 भिमाद - ०६, तनहुँ
+
+      </span>
+
+      <a href="tel:9762746378"
+
+         class="bg-primary text-white rounded-full px-3 py-1 text-xs font-bold">
+
+        कल ९७६२७४६३७८
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- HERO -->
+
+<section class="px-4 py-2">
+
+  <div class="rounded-2xl overflow-hidden bg-[#1e1b19] shadow-lg">
+
+    <div class="relative h-64">
+
+      <img
+
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9U9fvfgLsIdr0zR4YefEUedfoH5CA6QfMX__76AZGa22T_v-6rR76CroElz1W1NJuOCgjeAnvqWMQ52f7eVxgvxQKv171aqXOzYZ3oSfYOtwFTZb5lXkcpdCCrHd-AP9a0nEYTpLIgJTbxsmYhkXB4oTHixZUwJbz2EVq9j_msG_L8h2JcxKxD1tT8Xen3eMYYvhQ00OJXakt9ebX3Q4HHOofOM0G_1jsW9UJoEEoc0XuZR5ZQHAajrbEGJM4wEYH8Ls"
+
+        class="w-full h-full object-cover"
+
+        alt="Newroad Khaja Ghar Bhimad">
+
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+
+      <span class="absolute top-3 left-3 bg-white/90 rounded-full px-3 py-1 text-xs font-bold">
+
+        🏪 हाम्रो पसल • Bhimad
+
+      </span>
+
+      <div class="absolute bottom-3 left-4 right-4 text-white">
+
+        <span class="inline-block bg-orange-500 text-white rounded-full px-2 py-1 text-[10px] font-bold mb-2">
+
+          🔥 स्वादको असली मजा यहाँ छ!
+
+        </span>
+
+        <h1 class="text-3xl font-extrabold">
+
+          Newroad Khaja Ghar
+
+        </h1>
+
+        <p class="text-xs text-white/85 mt-1">
+
+          पारिवारिक आतिथ्यता, ताजा मःमः, सुकुटी र मौलिक नेपाली स्वाद।
+
+        </p>
+
+        <div class="flex gap-2 mt-3">
+
+          <a href="#menu"
+
+             class="flex-1 text-center bg-primary rounded-xl py-3 text-sm font-bold">
+
+            🍽️ मेनु हेर्नुहोस्
+
+          </a>
+
+          <a href="tel:9762746378"
+
+             class="bg-white text-primary rounded-xl px-4 py-3 text-sm font-bold">
+
+            📞 अर्डर
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROPRIETOR -->
+
+<section class="px-4 py-2">
+
+  <div class="card p-3 flex items-center gap-3">
+
+    <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center text-2xl">
+
+      👨‍🍳
+
+    </div>
+
+    <div>
+
+      <div class="text-[10px] text-orange-700 font-bold uppercase">
+
+        सञ्चालक / Proprietor
+
+      </div>
+
+      <div class="font-bold">
+
+        सुजन श्रेष्ठ (Sujan Shrestha)
+
+      </div>
+
+      <p class="text-xs text-[#5c403c]">
+
+        भिमादमा गुणस्तरीय, ताजा र सफा खाजाको भरपर्दो गन्तव्य।
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- TODAY SPECIAL -->
+
+<section class="px-4 py-3">
+
+  <div class="bg-red-700 text-white rounded-2xl p-4">
+
+    <div class="flex justify-between items-center mb-3">
+
+      <h2 class="text-lg font-bold">
+
+        ⭐ आजको विशेष
+
+      </h2>
+
+      <span class="bg-orange-400 text-black rounded-full px-2 py-1 text-[10px] font-bold">
+
+        POPULAR
+
+      </span>
+
+    </div>
+
+    <div class="rounded-xl overflow-hidden">
+
+      <img
+
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx8vGBkKvpe8hi7z5FqajpUHGuFaLVCvTeYuCGHtv3qsxLc75YVYHvu54pyTzjCDOkYXKvmdNiD4n_Yq9h0KfS_pvPMmZMaVgu1micFcRhnv9BekkC28anpheJ7lWVG3y4-APqUzf0qLseO8smeQFdbyIR2TdsnMmyVK_OqLZe0lzCMXJhw6bLK9zl5KD-KrvfDmCsQdcqAtTHgXDA_NFedDZwXxqic0ZCYg-uD6UEdI1zxyWubbLa_9N7IAfL0etNY1A"
+
+        class="w-full h-44 object-cover"
+
+        alt="Chicken Khaja Set">
+
+    </div>
+
+    <div class="flex justify-between items-center mt-3">
+
+      <h3 class="text-lg font-bold">
+
+        चिकेन खाजा सेट
+
+      </h3>
+
+      <b class="bg-white text-primary rounded-full px-3 py-1">
+
+        रु. २००
+
+      </b>
+
+    </div>
+
+    <p class="text-xs mt-1 text-white/85">
+
+      चिकन, भात/चिउरा, कालो भटमास, आलु अचार, छोइला र विशेष घरेलु स्वाद।
+
+    </p>
+
+    <a href="tel:9762746378"
+
+       class="block text-center bg-white text-primary rounded-xl py-3 mt-3 font-bold">
+
+      📞 यो सेट अर्डर गर्नुहोस्
+
+    </a>
+
+  </div>
+
+</section>
+
+<!-- MENU -->
+
+<section id="menu" class="px-4 py-3">
+
+  <div class="flex justify-between items-end mb-3">
+
+    <div>
+
+      <h2 class="text-xl font-bold">
+
+        हाम्रो मेनु र मूल्य सूची
+
+      </h2>
+
+      <p class="text-xs text-[#5c403c]">
+
+        ताजा र गुणस्तरीय खाजाहरू
+
+      </p>
+
+    </div>
+
+    <span class="text-xs bg-[#eee7e3] rounded-full px-2 py-1">
+
+      १४+ परिकार
+
+    </span>
+
+  </div>
+
+  <div id="menuGrid" class="grid grid-cols-2 gap-3"></div>
+
+</section>
+
+<!-- SOFT DRINKS -->
+
+<section class="px-4 py-3">
+
+  <div class="card overflow-hidden">
+
+    <img
+
+      src="https://images.unsplash.com/photo-1627485937980-221c88ac04f9?auto=format&fit=crop&w=900&q=80"
+
+      class="w-full h-40 object-cover"
+
+      alt="Soft drinks">
+
+    <div class="p-4">
+
+      <h2 class="font-bold text-lg">
+
+        चिसो पेय तथा इनर्जी ड्रिङ्क्स
+
+      </h2>
+
+      <p class="text-xs text-[#5c403c] mt-1">
+
+        Coke, Fanta, Sprite, Frooti, Red Bull तथा अन्य चिसो पेयहरू उपलब्ध छन्।
+
+      </p>
+
+      <div class="mt-3 font-bold text-primary">
+
+        रु. ५० देखि सुरु
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- HARD DRINKS -->
+
+<section class="px-4 py-3">
+
+  <div class="card p-4 border-l-4 border-orange-500">
+
+    <h2 class="font-bold text-lg">
+
+      हार्ड ड्रिङ्क्स
+
+    </h2>
+
+    <p class="text-xs text-[#5c403c] mt-1">
+
+      बियर, लोकल रक्सी तथा अन्य पेयहरू उपलब्ध छन्।
+
+    </p>
+
+    <div class="mt-3 p-2 bg-orange-50 rounded-lg text-xs font-semibold">
+
+      २०+ उमेर समूह मात्र। मादक पदार्थ सेवन गरी सवारी नचलाउनुहोला।
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery" class="px-4 py-3">
+
+  <div class="flex justify-between items-end mb-3">
+
+    <div>
+
+      <h2 class="text-xl font-bold">
+
+        हाम्रो वास्तविक फोटोहरू
+
+      </h2>
+
+      <p class="text-xs text-[#5c403c]">
+
+        खाजा घरका मीठा पल र ताजा परिकारहरू
+
+      </p>
+
+    </div>
+
+    <span class="text-primary text-xl">
+
+      📷
+
+    </span>
+
+  </div>
+
+  <div class="grid grid-cols-2 gap-2">
+
+    <img class="w-full h-36 object-cover rounded-xl"
+
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSxLuZ3TWLgxZ_18HmsICLW5aOkgEKV-oVuQ0tBEzhX9TPeEUtDoBCbKuob0Gn_Mq_fPMOU00haXYqjUU8F4rqh-ewbZI_afCc9wR4fs3Nv6CtiKn5ONCJ3PpCSk3r54i-Pr6oz2Ie_MFxXgweAjoDmw20a4itefrWlmjEXREdkV8FCR3OxwhpH2fX58Lv1BW2_xnKyXjg6qaAShipX1eibVGgnOH9oh_6E3dmvWmffdidp0W8689I6iXdIFneF2zp7SE"
+
+      alt="Momo">
+
+    <img class="w-full h-36 object-cover rounded-xl"
+
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrdS3IyS8oeu7NiUoWg_K4kH_YcsZ_PEPqVfvPRggi9mLwgPDtkrGOML_8mlyK8hIO6F9lSkWeESBLN0VE8PzoKlXKWpSQxB-7zxm_rcByQnppeRbI9zfwMTuJafg77tFpzhlY5ng4x5u51imeU2EAh2pxX7nblntaKYEEWbL9YIqHyTY571HFZgGnO2Rw3uU8mffkoaAz58M_yliKWYW7oiZIp54s3d3MO_99bqybHOAZ-KtRRwjE3dRLsgubXIJaocA"
+
+      alt="Steamed Momo">
+
+    <img class="w-full h-36 object-cover rounded-xl"
+
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI-CryMCtFZSt3Mt1I2GE0EpvZI1ST2U1s9DGlfc1e2sX42e7HQFsNXEvL2lZK9eGJdo9ay3ZSF4_xBbX3EK1qlA_BZAiX1Db4PI6lguL_8a21GMpt1SFy-Az0lB_7IP4JPXMwdcF099PixX79xPoCIve6VQ3Y-MMzYr2ZqqIzWt0JU5_VEJeUW6S37utwh2jorGuie3cZBB61t9NTwaCjffEJaa04rluzNgIwNwYHl12Ioy6iJk8kpnUItlKzXuAJA6U"
+
+      alt="Customers">
+
+    <img class="w-full h-36 object-cover rounded-xl"
+
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV1Z-4ye69bVnY3cVUs1dhVrEBmhyxq42asVlkTg-_24Jb2FTiyR3eDOaYTxrnw48kbuofvj715Tfl_3fQguMQuFcnWx1CCPCOtHLax4PPDG9s5BNwFsMZdmev9hp57JitPhDkenpWhC1-W1HXLYTrWffL2cgsjkU6CNw9-jRpQZIuTNmGxzFTEKOalBIEMGmNoZDUUDubUtjJY343M8SLovLQ73EwXftrsXPOczIElykTH8bx1oVUgQQ5LeTh-AUNbic"
+
+      alt="Happy customers">
+
+    <img class="w-full h-36 object-cover rounded-xl"
+
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcwR2pyFlWLa9MSQKw5pss_-Y_kma_jjhDZZDuzRjYsdwzEulgPUqyJV6t0PNvQePwEFvkMPf_jKtfJ3ZcMaZpLpgDQfohOUEZ4pmWajz05yU2XNLPZrn6w8YeUi__udHlriwzk2xwwwySNCpOGftg-oenQRmxi2UnQNQqZLLQQT6tJWg6hoUc19LVHYPdSiWnAfmXK9FQtJoU8jb8wqTxAKg2pqoetezN5rRGoEA8rpnrIK3x2EsQqGOhmoIAKKlIUL4"
+
+      alt="Family">
+
+    <img class="w-full h-36 object-cover rounded-xl"
+
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE_HSOSVPreFf1YAyNEQMNUkvMypZekntLQyUyIVtOEhWz6ri1niNxxpi3klt1jSM_XtF2OIvuRI6LJdk46cackfXECWTbnvTRZl9Bq_UM91GwsrcDe1ThHn3TlU9Vqlov8Q8sz3_UqE9Q1A5RCgmDdDOSvFPZAD2AUHVhQKnULzocQkEnkxdCMqhscJCoSp1PZHFlxMEqn7qyWQ2Fai96hhx2n-k0kvWZRndJQr9_EcQufHfEjeUMgQKhRljbuPiAmNc"
+
+      alt="Nepali food">
+
+  </div>
+
+</section>
+
+<!-- CONTACT / LOCATION -->
+
+<section id="contact" class="px-4 py-3">
+
+  <div class="card p-4">
+
+    <h2 class="text-xl font-bold mb-3">
+
+      📍 हाम्रो लोकेसन र सम्पर्क
+
+    </h2>
+
+    <img
+
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUAEdR9lV8kf8MIGa31X0cpy_Ks43KSW7SQ49P20Xd-ksBflAgKCHafqrE_JId2ziArqFUvcA5SUmN1i7aq3Cgifmwz32wW1JIVz11WKu8bZkXwSRBJy2fktkxecYLRmxF0qEuwBVHmgOshnTXPQfuNMWoCMHppnz6yy3SB2xThqoCk0APDQdGFWbHNmOkw8RJTgEva1tSOdjyMvL6z_oEMjqgfI3ZMKgV2AsxzGw2C3aYoP1uJrz5390TTkHn92BRsMo"
+
+      class="w-full h-48 object-cover rounded-xl"
+
+      alt="Newroad Khaja Ghar">
+
+    <div class="mt-3 space-y-2 text-sm">
+
+      <p>
+
+        📍 न्यूरोड बजार, वडा नं ०६, भिमाद, तनहुँ
+
+      </p>
+
+      <p>
+
+        🕖 बिहान ७:०० देखि बेलुका ९:०० सम्म
+
+      </p>
+
+      <p>
+
+        📞 ९७६२७४६३७८
+
+      </p>
+
+    </div>
+
+    <a
+
+      href="https://maps.app.goo.gl/cbBT5p86nnh98DXB7?g_st=ic"
+
+      target="_blank"
+
+      rel="noopener"
+
+      class="block text-center mt-4 bg-primary text-white rounded-xl py-3 font-bold">
+
+      🗺️ Google Maps मा हेर्नुहोस्
+
+    </a>
+
+  </div>
+
+</section>
+
+<!-- REVIEWS -->
+
+<section class="px-4 py-3">
+
+  <div class="card p-4">
+
+    <h2 class="text-xl font-bold mb-3">
+
+      ⭐ ग्राहक प्रतिक्रिया
+
+    </h2>
+
+    <div class="space-y-3">
+
+      <div class="bg-[#faf2ee] rounded-xl p-3 text-sm italic">
+
+        “खाना साँच्चै स्वादिलो छ, सेवा पनि राम्रो छ। भिमाद बजारमा एकचोटी खानै पर्ने ठाउँ हो!”
+
+      </div>
+
+      <div class="bg-[#faf2ee] rounded-xl p-3 text-sm italic">
+
+        “भिमाद आउँदा सधैं रोकिने ठाउँ। यहाँको मःमः र साँधेको सुकुटी एकदमै राम्रो लाग्छ।”
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="px-4 py-4">
+
+  <div class="card p-5 text-center">
+
+    <h2 class="text-primary text-lg font-bold">
+
+      न्यूरोड खाजा घर
+
+    </h2>
+
+    <p class="text-sm font-semibold mt-1">
+
+      Proprietor: सुजन श्रेष्ठ
+
+    </p>
+
+    <p class="text-xs text-[#5c403c] mt-1">
+
+      भिमाद-०६, तनहुँ • ७ AM – ९ PM
+
+    </p>
+
+    <div class="flex gap-2 mt-4">
+
+      <a href="tel:9762746378"
+
+         class="flex-1 bg-primary text-white rounded-xl py-3 font-bold">
+
+        📞 Call
+
+      </a>
+
+      <a href="https://wa.me/9779762746378"
+
+         class="flex-1 bg-green-700 text-white rounded-xl py-3 font-bold">
+
+        WhatsApp
+
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+</main>
+
+<!-- BOTTOM NAV -->
+
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-[#fff8f5]/95 backdrop-blur-xl border-t shadow-lg">
+
+  <div class="h-16 flex justify-around items-center text-xs">
+
+    <a href="#" class="text-primary font-bold text-center">
+
+      🏠<br>गृह
+
+    </a>
+
+    <a href="#menu" class="text-center">
+
+      🍽️<br>मेनु
+
+    </a>
+
+    <a href="#gallery" class="text-center">
+
+      📷<br>ग्यालरी
+
+    </a>
+
+    <a href="tel:9762746378" class="text-primary font-bold text-center">
+
+      📞<br>अर्डर
+
+    </a>
+
+    <a href="#contact" class="text-center">
+
+      📍<br>सम्पर्क
+
+    </a>
+
+  </div>
+
+</nav>
+
+<script>
+
+const menu=[
+
+[
+
+"Buff Momo",
+
+"बफ मःमः",
+
+"१३०",
+
+"https://lh3.googleusercontent.com/aida-public/AB6AXuAY0g0MkPNdtlmHjKU_6gF3nnrdKzR9T0n1B0kT6hiAed6SQdpYINx6db9ZJ_UeG5_6Q6QXm9jOImFt4prUsac7MzleBoxGO60m4kcjSKDAIY1eWUJogsp9F6aSA5S3ruwHciIqpiQmv3OiP9j86yqQlafQUnWBUc7i6sYy58KXeBkdDFxMdaH80iXd_c2nGtSCA4MUazN0eJvqep8Vd6CRwoayjpAdHEPipxm6TCa84vFHHMoB1OSvrovs5rrk8gTb92Q"
+
+],
+
+[
+
+"Chicken Momo",
+
+"चिकेन मःमः",
+
+"१२०",
+
+"https://lh3.googleusercontent.com/aida-public/AB6AXuCiravK4up8HCnzgIeBmrRCBwyLyxR_uSuoxCw7-51z11LEyL-wG5xyUQ81lxLiGwGo7DNBAZ24aQ03rFm3KODP2c4V7zAc5LphiQTy8Mua6EU3dJGQ-BHxKDTldfK4oSps9DrtvkgnkQT2x4EJpszpCE1U9Oq05ao5Iz-7NlIMPWnt7tAiDm7bVsQPW1aY2N3aIJQ4jnaxVFLPepG9V9JEkpl56RkIQl5Tb-3SDR68Ygos8sBB4DdJsH1c0gt1v1mbfQY"
+
+],
+
+[
+
+"Buff Chowmin",
+
+"बफ चाउमिन",
+
+"१४०",
+
+"https://images.unsplash.com/photo-1617622141573-2c9c4f7f0b2e?auto=format&fit=crop&w=600&q=80"
+
+],
+
+[
+
+"Chicken Chowmin",
+
+"चिकेन चाउमिन",
+
+"१३०",
+
+"https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80"
+
+],
+
+[
+
+"Cambo Set",
+
+"कम्बो सेट",
+
+"१३०",
+
+"https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80"
+
+],
+
+[
+
+"Anda Tarkari Roti",
+
+"अण्डा तरकारी रोटी",
+
+"१००",
+
+"https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80"
+
+],
+
+[
+
+"Sada Khana",
+
+"सादा खाना",
+
+"१५०",
+
+"https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80"
+
+],
+
+[
+
+"Masu Khana",
+
+"मासु खाना",
+
+"२५०",
+
+"https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80"
+
+],
+
+[
+
+"Buff Khaja Set",
+
+"बफ खाजा सेट",
+
+"२००",
+
+"https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=600&q=80"
+
+],
+
+[
+
+"Chicken Khaja Set",
+
+"चिकेन खाजा सेट",
+
+"२००",
+
+"https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=600&q=80"
+
+],
+
+[
+
+"Black Tea",
+
+"कालो चिया",
+
+"२०",
+
+"https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=600&q=80"
+
+],
+
+[
+
+"Milk Tea",
+
+"दूध चिया",
+
+"३०",
+
+"https://images.unsplash.com/photo-1597318181409-cf64d0b5d8a7?auto=format&fit=crop&w=600&q=80"
+
+],
+
+[
+
+"Black Coffee",
+
+"कालो कफी",
+
+"६०",
+
+"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80"
+
+],
+
+[
+
+"Milk Coffee",
+
+"दूध कफी",
+
+"८०",
+
+"https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
+
+]
+
+];
+
+document.getElementById("menuGrid").innerHTML=menu.map(x=>`
+
+<div class="card p-2 overflow-hidden">
+
+  <img
+
+    src="${x[3]}"
+
+    class="w-full h-28 object-cover rounded-xl"
+
+    alt="${x[0]}"
+
+    loading="lazy">
+
+  <div class="pt-2">
+
+    <h3 class="font-bold text-sm truncate">
+
+      ${x[0]}
+
+    </h3>
+
+    <p class="text-[11px] text-[#5c403c] truncate">
+
+      ${x[1]}
+
+    </p>
+
+    <div class="text-primary font-extrabold mt-1">
+
+      रु. ${x[2]}
+
+    </div>
+
+    <a
+
+      href="tel:9762746378"
+
+      class="block text-center bg-[#eee7e3] text-primary rounded-lg py-2 mt-2 text-xs font-bold">
+
+      📞 अर्डर
+
+    </a>
+
+  </div>
+
+</div>
+
+`).join("");
+
+</script>
+
+</body>
+
+</html>
