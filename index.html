@@ -313,4 +313,137 @@ if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("./sw.js");
   });
 }
+</script><script>
+const translations = {
+  "हाल खुला छ (Open Now)": "Open Now",
+  "बिहान ७:०० – बेलुका ९:००": "7:00 AM – 9:00 PM",
+  "भिमाद - ०६, तनहुँ": "Bhimad-06, Tanahun",
+  "कल ९७६२७४६३७८": "Call 9762746378",
+
+  "हाम्रो पसल (Bhimad, Tanahun)": "Our Restaurant (Bhimad, Tanahun)",
+  "स्वादको असली मजा यहाँ छ !": "Taste the real flavor here!",
+  "पारिवारिक आतिथ्यता, हातले बेरिएका ताजा म:म, सुकुटी र मौलिक नेपाली स्वाद।":
+    "Family hospitality, fresh handmade momo, sukuti and authentic Nepali flavors.",
+  "हाम्रो मेनु हेर्नुहोस्": "View Our Menu",
+  "अर्डर गर्नुहोस्": "Order Now",
+
+  "सञ्चालक / Proprietor": "Proprietor",
+  "भिमादमा गुणस्तरीय, ताजा र सफा खाजाको भरपर्दो गन्तव्य।":
+    "A trusted destination for fresh, clean and quality food in Bhimad.",
+
+  "आजको विशेष (Today's Special)": "Today's Special",
+  "लोकप्रिय / Popular": "Popular",
+  "चिकेन खाजा सेट (Chicken Khaja Set)": "Chicken Khaja Set",
+  "चिकन, भात/चिउरा, कालो भटमास, ताजा आलु अचार, छोइला र विशेष घरेलु स्वाद।":
+    "Chicken, rice/chiura, black soybean, fresh potato pickle, choila and our special homemade flavor.",
+  "यो सेट अर्डर गर्नुहोस् (Order Now)": "Order This Set (Order Now)",
+
+  "हाम्रो मेनु र मूल्य सूची": "Our Menu & Prices",
+  "ताजा र गुणस्तरीय खाजाहरू (Authentic Menu)": "Fresh & Quality Food (Authentic Menu)",
+  "१६+ परिकार": "16+ Items",
+
+  "बफ म:म (१० पिस)": "Buff Momo (10 pcs)",
+  "चिकेन म:म (१० पिस)": "Chicken Momo (10 pcs)",
+  "ताजा": "Fresh",
+  "अर्डर (+)": "Order (+)",
+
+  "सधैं चिसो र ताजा (Ice Chilled)": "Always Cold & Fresh (Ice Chilled)",
+  "चिसो पेय तथा इनर्जी ड्रिङ्क्स": "Soft & Energy Drinks",
+  "Coke, Fanta, Sprite, Frooti, Red Bull तथा अन्य चिसो इनर्जी ड्रिङ्क्सहरू उपलब्ध छन्।":
+    "Coke, Fanta, Sprite, Frooti, Red Bull and other cold energy drinks are available.",
+  "मूल्य": "Price",
+  "रु. ५० देखि सुरु": "Starting from Rs. 50",
+  "अर्डर कल गर्नुहोस्": "Call to Order",
+
+  "प्रिमियम बियर र स्पिरिट्स": "Premium Beer & Spirits",
+  "हार्ड ड्रिङ्क्स (Hard Drinks)": "Hard Drinks",
+  "ब्राण्डेड ह्विस्की, रम, भोड्का, चिसो नेपाली तथा विदेशी बियरहरू बार काउन्टरमा उपलब्ध।":
+    "Branded whisky, rum, vodka, Nepali and foreign beers are available at the bar counter.",
+  "२०+ उमेर समूह मात्र": "Age 20+ Only",
+  "उमेर २०+ मात्र (Age 20+ Only - Drink Responsibly)। मादक पदार्थ सेवन गरी सवारी नचलाउनुहोला।":
+    "Age 20+ Only (Drink Responsibly). Do not drive after consuming alcohol.",
+  "काउन्टर दर": "Counter Price",
+  "मेनु अनुसार": "As per Menu",
+  "सोधपुछ / अर्डर": "Inquiry / Order",
+
+  "हाम्रो वास्तविक फोटोहरू": "Our Real Photos",
+  "खाजा घरका मीठा पल र ताजा परिकारहरू": "Sweet moments and fresh dishes from our restaurant",
+  "हातले बेरेको ताजा मोमो": "Fresh Handmade Momo",
+  "तातो स्टिम म:म": "Hot Steamed Momo",
+  "बालबालिकाको रोजाइ": "Kids' Favorite",
+  "खुसी ग्राहकहरू": "Happy Customers",
+  "पारिवारिक जमघट": "Family Gathering",
+  "नेपाली मौलिक थाली": "Authentic Nepali Thali",
+
+  "हाम्रो लोकेसन र सम्पर्क": "Our Location & Contact",
+  "सधैं खुला (७ AM - ९ PM)": "Open (7 AM - 9 PM)",
+  "न्यूरोड बजार, वडा नं ०६, भिमाद, तनहुँ": "Newroad Bazaar, Ward No. 06, Bhimad, Tanahun",
+  "पोखराबाट ४५ मिनेट • खैरेनीटारबाट १० मिनेट मात्र":
+    "45 minutes from Pokhara • Only 10 minutes from Khairenitar",
+  "नि:शुल्क पार्किङ सुविधा उपलब्ध छ": "Free Parking Available",
+  "मोटरसाइकल, ट्याक्सी, बोलेरो जीप सहजै पार्क गर्न सकिने":
+    "Easy parking for motorcycles, taxis and Bolero jeeps",
+  "📍 हाम्रो Exact Location हेर्नुहोस्": "📍 View Our Exact Location",
+  "🚗 यहाँ कसरी आउने? (Get Directions)": "🚗 Get Directions",
+
+  "ग्राहक प्रतिक्रिया (Reviews)": "Customer Reviews",
+  "नियमित ग्राहक": "Regular Customer",
+  "यात्रु": "Traveler",
+
+  "सिधा कल गर्नुहोस्": "Call Directly",
+  "गृह": "Home",
+  "मेनु": "Menu",
+  "ग्यालरी": "Gallery",
+  "अर्डर कल": "Order Call",
+  "सम्पर्क": "Contact"
+};
+
+const originalTexts = new Map();
+
+function translatePage(lang) {
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll("*").forEach(el => {
+    if (el.children.length === 0) {
+      const current = el.textContent.trim();
+
+      if (!originalTexts.has(el)) {
+        originalTexts.set(el, current);
+      }
+
+      const nepali = originalTexts.get(el);
+
+      if (lang === "en" && translations[nepali]) {
+        el.textContent = translations[nepali];
+      } else if (lang === "ne") {
+        el.textContent = nepali;
+      }
+    }
+  });
+
+  localStorage.setItem("language", lang);
+
+  document.querySelectorAll("button").forEach(btn => {
+    if (btn.textContent.trim() === "ने") {
+      btn.classList.toggle("bg-primary", lang === "ne");
+      btn.classList.toggle("text-on-primary", lang === "ne");
+      btn.classList.toggle("text-on-surface-variant", lang === "en");
+    }
+
+    if (btn.textContent.trim() === "EN") {
+      btn.classList.toggle("bg-primary", lang === "en");
+      btn.classList.toggle("text-on-primary", lang === "en");
+      btn.classList.toggle("text-on-surface-variant", lang === "ne");
+    }
+  });
+}
+
+function setLanguage(lang) {
+  translatePage(lang);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLanguage = localStorage.getItem("language") || "ne";
+  translatePage(savedLanguage);
+});
 </script></body></html>
