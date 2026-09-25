@@ -446,20 +446,4 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedLanguage = localStorage.getItem("language") || "ne";
   translatePage(savedLanguage);
 });
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const buttons = document.querySelectorAll("button");
-
-  buttons.forEach(button => {
-    const text = button.textContent.trim();
-
-    if (text === "ने") {
-      button.addEventListener("click", () => setLanguage("ne"));
-    }
-
-    if (text === "EN") {
-      button.addEventListener("click", () => setLanguage("en"));
-    }
-  });
-});
-</script></script></body></html>
+</script></body></html>
